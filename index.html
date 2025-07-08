@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>付费实习</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    rel="stylesheet"
+  />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#000000",
+            secondary: "#EC4899",
+            dark: "#1E293B",
+            light: "#F8FAFC",
+            grayIndicator: "#333", // 黑灰色
+          },
+          fontFamily: {
+            inter: ["Inter", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+  <style type="text/tailwindcss">
+      @layer utilities {
+          .content-auto {
+              content-visibility: auto;
+          }
+
+          .text-shadow {
+              text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          }
+
+          .animate-float {
+              animation: float 3s ease-in-out infinite;
+          }
+
+          .animate-fade-in {
+              animation: fadeIn 0.8s ease-in-out forwards;
+          }
+
+          .animate-slide-up {
+              animation: slideUp 0.8s ease-out forwards;
+          }
+
+          .animate-scale-in {
+              animation: scaleIn 0.5s ease-out forwards;
+          }
+
+          .animate-blur {
+              animation: blur 0.8s ease-out forwards;
+          }
+
+          .animate-unblur {
+              animation: unblur 0.8s ease-out forwards;
+          }
+
+          .scrollbar-hide::-webkit-scrollbar {
+              display: none;
+          }
+
+          .scrollbar-hide {
+              -ms-overflow-style: none;
+              scrollbar-width: none;
+          }
+
+          .click-indicator {
+              position: relative;
+              width: 30px;
+              height: 50px;
+              border: 2px solid #333;
+              border-radius: 30px;
+          }
+
+              .click-indicator::after {
+                  content: "";
+                  position: absolute;
+                  top: 8px;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  width: 6px;
+                  height: 6px;
+                  background-color: #333;
+                  border-radius: 50%;
+                  animation: scroll-indicator 2s infinite;
+              }
+
+          .arrow-indicator {
+              position: relative;
+              width: 30px;
+              height: 30px;
+          }
+
+              .arrow-indicator::before,
+              .arrow-indicator::after {
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  width: 2px;
+                  height: 20px;
+                  background-color: #333;
+              }
+
+              .arrow-indicator::before {
+                  left: 10px;
+                  transform: rotate(-45deg);
+              }
+
+              .arrow-indicator::after {
+                  right: 10px;
+                  transform: rotate(45deg);
+              }
+
+          .center-indicator {
+              position: fixed;
+              bottom: 6rem;
+              left: 50%;
+              transform: translateX(-50%);
+              z-index: 50;
+          }
+
+          .fade-out {
+              animation: fadeOut 1s ease-out forwards;
+          }
+
+          .indicator-text {
+              color: #333;
+              text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+          }
+
+          .indicator-text-white {
+              color: white;
+              text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+          }
+
+          .transparent-bg {
+              background-color: transparent;
+          }
+
+          .animate-pulse-slow {
+              animation: pulse 3s ease-in-out infinite;
+          }
+      }
+
+      @keyframes float {
+          0% {
+              transform: translateY(0px);
+          }
+
+          50% {
+              transform: translateY(-15px);
+          }
+
+          100% {
+              transform: translateY(0px);
+          }
+      }
+
+      @keyframes fadeIn {
+          from {
+              opacity: 0;
+          }
+
+          to {
+              opacity: 1;
+          }
+      }
+
+      @keyframes fadeOut {
+          from {
+              opacity: 1;
+          }
+
+          to {
+              opacity: 0;
+          }
+      }
+
+      @keyframes slideUp {
+          from {
+              transform: translateY(50px);
+              opacity: 0;
+          }
+
+          to {
+              transform: translateY(0);
+              opacity: 1;
+          }
+      }
+
+      @keyframes scaleIn {
+          from {
+              transform: scale(0.9);
+              opacity: 0;
+          }
+
+          to {
+              transform: scale(1);
+              opacity: 1;
+          }
+      }
+
+      @keyframes blur {
+          from {
+              filter: blur(0);
+              transform: scale(1);
+          }
+
+          to {
+              filter: blur(8px);
+              transform: scale(1.1);
+          }
+      }
+
+      @keyframes unblur {
+          from {
+              filter: blur(8px);
+              transform: scale(1.1);
+          }
+
+          to {
+              filter: blur(0);
+              transform: scale(1);
+          }
+      }
+
+      @keyframes scroll-indicator {
+          0% {
+              opacity: 1;
+              transform: translate(-50%, 0);
+          }
+
+          100% {
+              opacity: 0;
+              transform: translate(-50%, 20px);
+          }
+      }
+
+      @keyframes pulse {
+          0%, 100% {
+              opacity: 1;
+          }
+
+          50% {
+              opacity: 0.5;
+          }
+      }
+  </style>
+</head>
+
+<body class="font-inter overflow-x-hidden scrollbar-hide transparent-bg">
+  <!-- 透明背景 -->
+  <!-- 第一页：全屏视频 -->
+    <section id="page1" class="h-screen w-full relative overflow-hidden">
+        <video autoplay
+               muted
+               loop
+               playsinline
+               class="absolute min-w-full min-h-full object-cover opacity-70">
+            <source src="弹幕.mp4" type="video/mp4" />
+        </video><!-- 内容区域 -->
+        <div class="absolute inset-0 flex flex-col items-center justify-center z-10 px-4">
+            <div class="text-center max-w-3xl">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">
+                    付费实习产业链调查&emsp;&emsp;&emsp;&emsp;
+                </h1>
+                <p class="text-4xl md:text-5xl font-bold mb-6 animate-fade-in" style="animation-delay: 0.3s;">
+                    &emsp;&emsp;&emsp;&emsp;谁在售卖"镀金"机会？
+                </p>
+
+                <!-- 交互提示 -->
+                <div id="playIndicator" class="mt-12 animate-fade-in" style="animation-delay: 0.6s;">
+                    <div class="flex flex-col items-center">
+                        <button class="bg-gradient-to-r from-amber-500 to-yellow-600 text-white px-8 py-3
+rounded-full font-semibold shadow-lg hover:shadow-xl
+transition-all duration-500 hover:from-amber-600 hover:to-yellow-700
+transform hover:scale-105 active:scale-95 animate-pulse">
+                            开始探索
+                        </button>
+                        <div class="flex items-center text-sm opacity-80" style="margin:10px">
+                            <i class="fas fa-mouse-pointer mr-2"></i>
+                            <span>点击按钮</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+  <!-- 第二页：女孩图片和交互图片 -->
+  <section id="page2" class="h-screen w-full relative overflow-hidden hidden">
+    <div class="absolute bottom-0 left-20 z-10">
+      <img
+        id="girlImage"
+        src="插画.png"
+        alt="女孩背影"
+        class="w-32 h-auto animate-fade-in translate-x-1/2 bottom-0"
+      />
+    </div>
+    <div
+      class="container mx-auto px-4 py-16 flex items-center justify-center h-full"
+    >
+      <div
+        id="imageContainer"
+        class="hidden opacity-0 transition-opacity duration-1000 relative"
+      >
+        <img
+          id="imageA"
+          src="小红书.jpg"
+          alt="图片A"
+          class="w-80 h-auto rounded-lg shadow-2xl cursor-pointer"
+        />
+        <!-- 新增指示器容器 -->
+        <div
+          id="clickIndicator"
+          class="absolute -bottom-20 left-1/2 -translate-x-1/2 text-center hidden"
+        >
+          <div class="click-indicator mb-2 mx-auto animate-float"></div>
+          <p class="indicator-text">点击任意帖子继续</p>
+        </div>
+        <img
+          id="imageB"
+          src="wx/p1.jpg"
+          alt="图片B"
+          class="w-80 h-auto rounded-lg shadow-2xl hidden"
+        />
+        <img
+          id="imageC"
+          src="wx/p2.jpg"
+          alt="图片C"
+          class="w-80 h-auto rounded-lg shadow-2xl hidden"
+        />
+        <!-- 新增图片D到G -->
+        <img
+          id="imageD"
+          src="wx/p3.jpg"
+          alt="图片D"
+          class="w-80 h-auto rounded-lg shadow-2xl hidden"
+        />
+        <img
+          id="imageE"
+          src="wx/p4.jpg"
+          alt="图片E"
+          class="w-80 h-auto rounded-lg shadow-2xl hidden"
+        />
+        <img
+          id="imageF"
+          src="wx/p5.jpg"
+          alt="图片F"
+          class="w-80 h-auto rounded-lg shadow-2xl hidden"
+        />
+        <img
+          id="imageG"
+          src="wx/p6.jpg"
+          alt="图片G"
+          class="w-80 h-auto rounded-lg shadow-2xl hidden"
+        />
+        <!-- 新增图片H到I -->
+        <img
+          id="imageH"
+          src="wx/p7.jpg"
+          alt="图片H"
+          class="w-80 h-auto rounded-lg shadow-2xl hidden"
+        />
+        <img
+          id="imageI"
+          src="wx/聊天记录.jpg"
+          alt="图片I"
+          class="w-80 h-auto rounded-lg shadow-2xl hidden cursor-pointer"
+        />
+      </div>
+    </div>
+
+    <!-- 黑灰色滚动指示 -->
+    <div
+      class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 hidden"
+      id="scrollDownIndicator"
+    >
+      <div class="animate-bounce flex flex-col items-center">
+        <div class="click-indicator mb-2"></div>
+        <span class="text-center indicator-text">向下滚动鼠标</span>
+      </div>
+    </div>
+
+    <!-- 新增点击内推提示 -->
+    <div
+      class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 hidden"
+      id="clickForReferral"
+    >
+      <div class="flex flex-col items-center animate-pulse">
+        <i class="fa fa-hand-pointer-o text-3xl text-primary mb-2"></i>
+        <span class="text-center text-primary font-bold text-lg">点击中介内推</span>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // 获取所有页面元素
+      const pages = {
+        page1: document.getElementById("page1"),
+        page2: document.getElementById("page2"),
+      };
+
+      // 获取交互元素
+      const playIndicator = document.getElementById("playIndicator");
+      const girlImage = document.getElementById("girlImage");
+      const imageContainer = document.getElementById("imageContainer");
+      const imageA = document.getElementById("imageA");
+      const clickIndicator = document.getElementById("clickIndicator");
+      const scrollDownIndicator = document.getElementById("scrollDownIndicator");
+      const clickForReferral = document.getElementById("clickForReferral");
+      const imageI = document.getElementById("imageI");
+
+      // 图片ID数组
+      const imageIds = ['B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'];
+
+      // 页面1到页面2的过渡
+      playIndicator.addEventListener("click", function () {
+        transitionToPage2();
+      });
+
+      // 图片A点击事件 - 切换到图片B
+      imageA.addEventListener("click", function () {
+        // 新增提示音
+        const audio = new Audio('微信提示音.mp3');
+        audio.play();
+        
+        clickIndicator.classList.add("hidden");
+        imageA.classList.add("hidden");
+        
+        const imageB = document.getElementById("imageB");
+        imageB.classList.remove("hidden");
+
+        // 移除旧的窗口滚动监听
+        window.onscroll = null;
+
+        // 为图片绑定滚轮事件
+        bindWheelEvents();
+
+        setTimeout(() => scrollDownIndicator.classList.remove("hidden"), 500);
+      });
+
+      // 图片I点击事件 - 跳转到百度
+      imageI.addEventListener("click", function () {
+        window.location.href = "main.html";
+      });
+
+      // 滚动事件处理
+      let currentImageIndex = 0;
+      let isScrolling = false;
+      window.addEventListener("scroll", throttle(function () {
+        if (
+          !isScrolling &&
+          currentImageIndex < imageIds.length &&
+          window.scrollY > 50 &&
+          !pages.page2.classList.contains("hidden")
+        ) {
+          isScrolling = true;
+          showNextImage();
+          setTimeout(() => {
+            isScrolling = false;
+          }, 500);
+        }
+      }, 200));
+
+      // 过渡到第二页
+      function transitionToPage2() {
+        pages.page1.classList.add("hidden");
+        pages.page2.classList.remove("hidden");
+
+        // 延迟显示图片A和点击指示
+        setTimeout(() => {
+          imageContainer.classList.remove("hidden");
+          imageContainer.style.opacity = "1";
+
+          // 延迟显示点击指示
+          setTimeout(() => {
+            clickIndicator.classList.remove("hidden");
+          }, 1000);
+        }, 1000);
+      }
+
+      // 绑定滚轮事件
+      function bindWheelEvents() {
+        imageIds.forEach((id) => {
+          const image = document.getElementById(`image${id}`);
+          if (image) {
+            image.addEventListener("wheel", handleWheel);
+          }
+        });
+      }
+
+      // 处理滚轮事件
+      function handleWheel(e) {
+        if (e.deltaY > 5) {
+          showNextImage();
+        }
+      }
+
+      // 显示下一张图片
+      function showNextImage() {
+        const currentImage = document.getElementById(`image${String.fromCharCode(66 + currentImageIndex)}`);
+        const nextImageIndex = currentImageIndex + 1;
+        const nextImage = document.getElementById(`image${String.fromCharCode(66 + nextImageIndex)}`);
+
+        if (currentImage && nextImage) {
+          currentImage.classList.add("hidden");
+          nextImage.classList.remove("hidden");
+          currentImageIndex++;
+        }
+
+        // 到达图片I后隐藏滚动提示，显示点击内推提示
+        if (currentImageIndex === imageIds.length - 1) {
+          scrollDownIndicator.classList.add("hidden");
+          setTimeout(() => {
+            clickForReferral.classList.remove("hidden");
+          }, 500);
+        }
+      }
+
+      // 节流函数
+      function throttle(func, delay) {
+        let timer = null;
+        return function () {
+          if (!timer) {
+            func.apply(this, arguments);
+            timer = setTimeout(() => {
+              timer = null;
+            }, delay);
+          }
+        };
+      }
+    });
+  </script>
+</body>
+
+</html>

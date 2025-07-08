@@ -1,0 +1,80 @@
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: absolute;
+    animation: float 8s ease-in-out infinite alternate;
+    will-change: transform;
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 0.5rem;
+    overflow: hidden;
+    color: #000;
+}
+
+.circle:hover {
+    transform: scale(1.1);
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(5px, 10px) rotate(5deg);
+    }
+    50% {
+        transform: translate(10px, 5px) rotate(-5deg);
+    }
+    75% {
+        transform: translate(5px, -10px) rotate(3deg);
+    }
+    100% {
+        transform: translate(-5px, 5px) rotate(-3deg);
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background-color: rgba(0, 0, 0, 0.5);*/
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    /*background-color: white;*/
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.circle-container {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+}
+
+.bg-purple {
+    background-color: #6f42c1;
+}
+.bg-orange {
+    background-color: #fd7e14;
+}
+.bg-pink {
+    background-color: #d63384;
+}
+.bg-indigo {
+    background-color: #6610f2;
+}
