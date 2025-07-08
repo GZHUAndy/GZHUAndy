@@ -1,0 +1,724 @@
+/* 漩涡特效样式 */
+.vortex-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    pointer-events: none;
+    display: none;
+}
+
+.vortex-container.active {
+    display: block;
+}
+
+.vortex-center {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 50px 30px white;
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.vortex-center.expand {
+    width: 3000px;
+    height: 3000px;
+    transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.vortex-ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 0.8);
+    transform: translate(-50%, -50%) scale(0);
+    animation: vortex-expand 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+@keyframes vortex-expand {
+    0% {
+        transform: translate(-50%, -50%) scale(0) rotate(0deg);
+        opacity: 1;
+        border-width: 20px;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(15) rotate(360deg);
+        opacity: 0;
+        border-width: 1px;
+    }
+}
+
+.vortex-particle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* 小红书帖子网格样式 */
+.xiaohongshu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.xiaohongshu-item {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.xiaohongshu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.xiaohongshu-item.active {
+    transform: scale(1.1) translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    z-index: 20;
+}
+
+.xiaohongshu-item.fade-out {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.xiaohongshu-thumbnail {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.xiaohongshu-content {
+    padding: 15px;
+}
+
+.xiaohongshu-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.xiaohongshu-desc {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* 过渡页面样式 */
+.transition-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.transition-page.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* 平滑过渡效果 */
+body {
+    transition: background-color 0.5s ease;
+}
+
+.container, .xiaohongshu-grid {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* iframe预加载容器样式 */
+#preloader-frame {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    z-index: 9990;
+    opacity: 0;
+    transition: opacity 0.8s ease; /* 平滑过渡 */
+}
+
+#preloader-frame.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* 增强漩涡效果 */
+.vortex-effect.enhanced {
+    filter: blur(0);
+    animation: enhance-vortex 1s forwards;
+}
+
+@keyframes enhance-vortex {
+    0% {
+        filter: blur(0);
+    }
+    50% {
+        filter: blur(2px);
+    }
+    100% {
+        filter: blur(0);
+    }
+}
+
+/* 页面过渡遮罩 */
+.page-transition-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 9998;
+    transition: opacity 0.5s ease;
+}
+
+.page-transition-mask.show {
+    opacity: 1;
+}
+
+/* 备用动画 - 在漩涡动画失败时使用 */
+.fallback-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.fallback-transition.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.fallback-transition::after {
+    content: '';
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    border-top-color: #ff2442;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* 简化漩涡动画相关样式 */
+.vortex-effect {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+    visibility: visible;
+    opacity: 1;
+    transform: translate3d(0, 0, 0); /* 启用硬件加速 */
+    will-change: transform; /* 优化性能 */
+}
+
+.vortex-active {
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 9999 !important;
+    display: block !important;
+}
+
+/* 添加中心点标记效果 */
+.vortex-center-mark {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    margin-left: -15px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+    z-index: 10000;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.95); opacity: 0.7; }
+    50% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(0.95); opacity: 0.7; }
+}
+
+/* 强制显示漩涡 */
+canvas.vortex-effect.vortex-active {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 9999 !important;
+    transform: translate3d(0, 0, 0); /* 启用硬件加速 */
+}
+
+/* 性能优化 - 启用硬件加速 */
+.video-container,
+.xiaohongshu-grid,
+.vortex-effect,
+#preloader-frame {
+    transform: translateZ(0);
+    will-change: transform, opacity;
+}
+
+/* 
+ * 现代化旋涡效果样式 
+ * 用于配合PIXI.js实现高级旋涡动画效果
+ */
+
+/* 旋涡效果的基础样式 */
+.vortex-effect {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 50;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.vortex-active {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* 漩涡中心效果 */
+.vortex-center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 30px 15px rgba(255, 255, 255, 0.7);
+    z-index: 51;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+.vortex-center.active {
+    opacity: 1;
+    width: 40px;
+    height: 40px;
+}
+
+/* 网格吸入效果增强 */
+.grid-shrinking {
+    animation: gridShrinkAndRotate 4s ease-in forwards; /* 增加动画时间 */
+    will-change: transform, opacity;
+    transform-origin: center center; /* 确保从中心旋转 */
+}
+
+@keyframes gridShrinkAndRotate {
+    0% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+        filter: brightness(1.2);
+    }
+    20% {
+        transform: scale(0.85) rotate(10deg);
+        opacity: 0.95;
+        filter: brightness(1.4);
+    }
+    40% {
+        transform: scale(0.6) rotate(-15deg);
+        opacity: 0.9;
+        filter: brightness(1.6);
+    }
+    60% {
+        transform: scale(0.4) rotate(20deg);
+        opacity: 0.85;
+        filter: brightness(1.8);
+    }
+    80% {
+        transform: scale(0.2) rotate(-10deg);
+        opacity: 0.5;
+        filter: brightness(2.0);
+    }
+    100% {
+        transform: scale(0.05) translateY(50px) rotate(360deg);
+        opacity: 0;
+        filter: brightness(2.2);
+    }
+}
+
+/* 更现代化的网格项动画 */
+.xiaohongshu-item {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                box-shadow 0.3s ease,
+                filter 0.3s ease,
+                opacity 0.3s ease;
+}
+
+.xiaohongshu-item:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(255, 69, 0, 0.2);
+    z-index: 10;
+    filter: brightness(1.05);
+}
+
+/* 点击动画 */
+.xiaohongshu-item:active {
+    transform: scale(0.98);
+    box-shadow: 0 5px 15px rgba(255, 69, 0, 0.15);
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+/* 已点击项目的样式 */
+.xiaohongshu-item.clicked-item {
+    position: relative;
+    z-index: 100;
+    animation: itemPulse 0.5s ease-out;
+}
+
+@keyframes itemPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 165, 0, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 20px rgba(255, 165, 0, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 165, 0, 0);
+    }
+}
+
+/* 背景遮罩 */
+.background-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.05); /* 更淡的遮罩，适合白色背景 */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+    z-index: 9;
+}
+
+.background-mask.active {
+    opacity: 1;
+}
+
+/* 可见漩涡 */
+.visible-vortex {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #FFFFFF, #F0F0F0); /* 白色渐变 */
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    z-index: 100; /* 提高层级 */
+    pointer-events: none;
+    box-shadow: 0 0 60px 30px rgba(255, 255, 255, 0.9); /* 简化为单一白色阴影 */
+    transition: all 0.5s ease; /* 增长过渡时间 */
+}
+
+.visible-vortex.active {
+    opacity: 1;
+    width: 20px;
+    height: 20px;
+    box-shadow: 0 0 80px 40px rgba(255, 255, 255, 0.95);
+}
+
+.visible-vortex.expand {
+    width: 3000px;
+    height: 3000px;
+    background: radial-gradient(circle, #FFFFFF, #F8F8F8, #F0F0F0); /* 白色到浅灰色渐变 */
+    transition: all 3s cubic-bezier(0.19, 1, 0.22, 1); /* 延长过渡时间 */
+    box-shadow: 0 0 100px 80px rgba(255, 255, 255, 1);
+}
+
+/* 粒子闪烁效果 */
+@keyframes sparkle {
+    0% { opacity: 0.3; transform: scale(0.8); filter: blur(1px); }
+    50% { opacity: 1; transform: scale(1.1); filter: blur(0); }
+    100% { opacity: 0.3; transform: scale(0.8); filter: blur(1px); }
+}
+
+/* 3D变换提高视觉效果 */
+.xiaohongshu-grid {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.grid-shrinking .xiaohongshu-item {
+    animation: itemPullIn 4s forwards;
+    animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.grid-shrinking .xiaohongshu-item:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.grid-shrinking .xiaohongshu-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.grid-shrinking .xiaohongshu-item:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes itemPullIn {
+    0% {
+        transform: translateZ(0) rotateX(0) rotateY(0);
+        opacity: 1;
+    }
+    20% {
+        transform: translateZ(-100px) rotateX(15deg) rotateY(10deg);
+        opacity: 0.9;
+    }
+    40% {
+        transform: translateZ(-200px) rotateX(30deg) rotateY(-15deg);
+        opacity: 0.8;
+    }
+    60% {
+        transform: translateZ(-300px) rotateX(45deg) rotateY(20deg);
+        opacity: 0.7;
+    }
+    80% {
+        transform: translateZ(-400px) rotateX(60deg) rotateY(-25deg) rotate(180deg);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateZ(-600px) rotateX(720deg) rotateY(45deg) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* PIXI画布优化 */
+#pixiVortexCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 45;
+    pointer-events: none;
+    will-change: transform;
+    backdrop-filter: blur(0px); /* 初始无模糊 */
+    transition: backdrop-filter 2s ease;
+}
+
+#pixiVortexCanvas.vortex-active {
+    backdrop-filter: blur(2px); /* 激活时轻微模糊背景 */
+}
+
+/* 视频容器增强 */
+.video-container {
+    overflow: hidden;
+}
+
+/* 增加视频过渡效果 */
+.video-container.hide-video {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* 页面标题增强 */
+.page-title {
+    font-weight: 800;
+    color: #FF4500; /* 暖色系标题 */
+    text-shadow: 0 2px 4px rgba(255, 69, 0, 0.2);
+    transform: translateY(-10px);
+    opacity: 0;
+    animation: titleFadeIn 0.8s forwards 0.2s;
+}
+
+@keyframes titleFadeIn {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* 跳过视频按钮 */
+.skip-video-btn {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px 20px;
+    background-color: rgba(255, 69, 0, 0.3); /* 暖色调 */
+    color: white;
+    border: 1px solid rgba(255, 165, 0, 0.5);
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    z-index: 6;
+}
+
+.skip-video-btn:hover {
+    background-color: rgba(255, 69, 0, 0.5);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.6);
+}
+
+/* 添加粒子效果 */
+.particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: rgba(255, 165, 0, 0.7);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1000;
+    will-change: transform, opacity;
+}
+
+/* 星星闪烁效果 */
+.star-particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: rgba(255, 215, 0, 0.8);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1000;
+    box-shadow: 0 0 8px 2px rgba(255, 215, 0, 0.4);
+    will-change: transform, opacity;
+    animation: twinkle 3s infinite alternate ease-in-out;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.2; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.1); }
+    100% { opacity: 0.2; transform: scale(0.8); }
+}
+
+/* 黑洞相关样式已禁用 */
+/*
+.black-hole-center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #000000 60%, rgba(255, 69, 0, 0.5) 80%, transparent 100%);
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 30px 15px rgba(0, 0, 0, 0.6),
+                0 0 60px 30px rgba(255, 69, 0, 0.3);
+    z-index: 100;
+    pointer-events: none;
+    animation: pulseBlackhole 3s infinite ease-in-out;
+}
+
+@keyframes pulseBlackhole {
+    0% { transform: translate(-50%, -50%) scale(0.9); }
+    50% { transform: translate(-50%, -50%) scale(1.05); }
+    100% { transform: translate(-50%, -50%) scale(0.9); }
+}
+
+.black-hole-ring {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 102, 0, 0.5);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 99;
+    opacity: 0.6;
+}
+
+.black-hole-ring:nth-child(1) {
+    width: 120px;
+    height: 120px;
+    animation: rotateRing 10s linear infinite, pulseRing 4s infinite ease-in-out;
+}
+
+.black-hole-ring:nth-child(2) {
+    width: 160px;
+    height: 160px;
+    animation: rotateRing 15s linear infinite reverse, pulseRing 6s infinite ease-in-out 0.5s;
+}
+
+.black-hole-ring:nth-child(3) {
+    width: 200px;
+    height: 200px;
+    animation: rotateRing 20s linear infinite, pulseRing 8s infinite ease-in-out 1s;
+}
+
+@keyframes rotateRing {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes pulseRing {
+    0% { opacity: 0.4; border-width: 1px; }
+    50% { opacity: 0.8; border-width: 3px; }
+    100% { opacity: 0.4; border-width: 1px; }
+}
+*/
+
+/* PIXI画布优化 */
+#pixiVortexCanvas.vortex-active {
+    backdrop-filter: blur(1px); /* 轻微模糊 */
+    transition: backdrop-filter 1s ease;
+}
+
+/* 优化粒子到黑洞的吸收效果 */
+.vortex-active .xiaohongshu-grid {
+    animation: fadeOutGrid 2s forwards ease-in-out;
+}
+
+@keyframes fadeOutGrid {
+    0% { opacity: 1; transform: scale(1); }
+    30% { opacity: 0.9; transform: scale(0.95) rotate(2deg); }
+    60% { opacity: 0.7; transform: scale(0.8) rotate(-2deg); }
+    100% { opacity: 0.4; transform: scale(0.6) rotate(0deg); }
+} 
