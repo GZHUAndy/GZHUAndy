@@ -418,13 +418,8 @@ body {
 .ellipse-container {
     display: flex;
     gap: 20px;
-    padding: 30px;
-    justify-content: flex-start; /* 改为左对齐 */
-    overflow-x: auto; /* 允许横向滚动 */
-    white-space: nowrap; /* 禁止换行 */
-    -webkit-overflow-scrolling: touch; /* iOS滚动顺滑 */
-    scrollbar-width: none; /* 隐藏滚动条 */
-    width: 100%; /* 确保容器宽度 */
+    padding: 20px;
+    box-sizing: border-box;
 }
 
     /* 隐藏滚动条（保持美观） */
