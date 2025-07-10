@@ -59,8 +59,8 @@
                     </ul>
                     <div class="theme-switch-wrapper">
                         <button class="btn theme-toggle" id="theme-toggle">
-                            <i class="bi bi-sun-fill theme-icon-active" data-theme-icon-active="bi-sun-fill"></i>
-                            <i class="bi bi-moon-fill" data-theme-icon="bi-moon-fill"></i>
+                            <i class="bi bi-sun-fill theme-icon-active" data-theme-icon-active="bi-sun-fill">☀</i>
+                            <i class="bi bi-moon-fill" data-theme-icon="bi-moon-fill">🌙</i>
                         </button>
                     </div>
                 </div>
@@ -82,9 +82,9 @@
             </div>
         </section>
 
-        <hr>
+        <div class="black-dashed-line"></div>
 
-        <section class="section-with-animation text-center" id="overview">
+        <section class="section-with-animation text-center mb-3" id="overview">
             <!-- 新增 container-fluid 和 px-0 -->
             <img src="标题图/互联网平台上的付费实习暗流.png"
                  alt="互联网平台上的付费实习暗流">
@@ -103,47 +103,74 @@
                 </div>
 
                 <div class="row g-3 justify-content-center mt-5">
-                    <div class="col-8 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                        <div class="card h-100 stat-card">
-                            <div class="card-body text-center3d-flex flex-column justify-content-between">
-                                <div class="d-flex justify-content-center">
-                                    <!-- 新增Flex容器 -->
-                                    <img src="images/4.png" alt="咸鱼" height="40">
-                                </div>
-                                <h3 class="stat-number" style="margin-top: 10px;margin-bottom: 10px;">1686</h3>
-                                <p class="stat-title mb-0">咸鱼</p>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- 闲鱼卡片 -->
                     <div class="col-8 col-sm-6 col-md-4 col-lg-3 col-xl-2">
                         <div class="card h-100 stat-card">
                             <div class="card-body text-center d-flex flex-column justify-content-between">
                                 <div class="d-flex justify-content-center">
-                                    <!-- 新增Flex容器 -->
+                                    <img src="images/4.png" alt="闲鱼" height="40">
+                                </div>
+                                <h3 class="stat-number" style="margin-top: 10px;margin-bottom: 10px;">1686</h3>
+                                <p class="stat-title mb-0">闲鱼</p>
+
+                                <!-- 悬浮预览内容 -->
+                                <div class="post-preview">
+                                    <div class="preview-header">闲鱼平台典型帖子</div>
+                                    <ul class="preview-list">
+                                        <li><img src="images/XY1.jpg" alt="" width="300"></li>
+                                        <li><img src="images/XY2.jpg" alt="" width="300"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 小红书卡片 -->
+                    <div class="col-8 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <div class="card h-100 stat-card">
+                            <div class="card-body text-center d-flex flex-column justify-content-between position-relative">
+                                <div class="d-flex justify-content-center">
                                     <img src="images/1.png" alt="小红书" height="40">
                                 </div>
                                 <h3 class="stat-number" style="margin-top: 10px;margin-bottom: 10px;">444</h3>
                                 <p class="stat-title mb-0">小红书</p>
                             </div>
+
+                            <!-- 悬浮预览内容 -->
+                            <div class="post-preview">
+                                <div class="preview-header">小红书平台典型帖子</div>
+                                <ul class="preview-list">
+                                    <li><img src="images/XHS1.jpg" alt="" width="300"></li>
+                                    <li><img src="images/XHS2.jpg" alt="" width="300"></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
+                    <!-- 淘宝卡片 -->
                     <div class="col-8 col-sm-6 col-md-4 col-lg-3 col-xl-2">
                         <div class="card h-100 stat-card">
-                            <div class="card-body text-center d-flex flex-column justify-content-between">
+                            <div class="card-body text-center d-flex flex-column justify-content-between position-relative">
                                 <div class="d-flex justify-content-center">
-                                    <!-- 新增Flex容器 -->
                                     <img src="images/2.png" alt="淘宝" height="40">
                                 </div>
                                 <h3 class="stat-number" style="margin-top: 10px;margin-bottom: 10px;">36</h3>
                                 <p class="stat-title mb-0">淘宝</p>
                             </div>
+
+                            <!-- 悬浮预览内容 -->
+                            <div class="post-preview">
+                                <div class="preview-header">淘宝典型商品</div>
+                                <ul class="preview-list">
+                                    <li><img src="images/TB1.jpg" alt="" width="300"></li>
+                                    <li><img src="images/TB2.jpg" alt="" width="300"></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
+                    <!-- 总计卡片 -->
                     <div class="col-8 col-sm-6 col-md-4 col-lg-3 col-xl-2">
                         <div class="card h-100 stat-card">
-                            <div class="card-body text-center d-flex flex-column justify-content-between">
+                            <div class="card-body text-center d-flex flex-column justify-content-between position-relative">
                                 <div class="d-flex justify-content-center">
-                                    <!-- 新增Flex容器 -->
                                     <img src="images/3.png" alt="总计" height="40">
                                 </div>
                                 <h3 class="stat-number" style="margin-top: 10px;margin-bottom: 10px;">2166</h3>
@@ -152,6 +179,9 @@
                         </div>
                     </div>
                 </div>
+                <p style="font-size:12px;margin:10px 0px 0px 200px;color:#e0e0e0">
+                    注：鼠标悬浮可浏览相关帖子
+                </p>
 
                 <div class="row justify-content-center">
                     <div class="col-lg-10">
@@ -168,18 +198,29 @@
 
                 <div class="row justify-content-center">
                     <div class="col-lg-10">
-                        <p class="section-description mt-48">小红书以“种草文化”闻名，是集社交与消费于一体的平台，深受年轻人青睐。在搜索“实习”关键词后，我们发现，小红书的帖子内容包括实习经历分享、公司实习招聘信息、实习评价等形式。通过对<span class="highlight">爬取的444条有效帖子</span>内容进行人工编码后发现，其中<span class="highlight">35.6%（158条）的帖子属于非广告的正常实习交流帖，而其余64.4%（286条）均为付费实习中介发布的广告贴</span>。</p>
+                        <p class="section-description mt-5">小红书以“种草文化”闻名，是集社交与消费于一体的平台，深受年轻人青睐。在搜索“实习”关键词后，我们发现，小红书的帖子内容包括实习经历分享、公司实习招聘信息、实习评价等形式。通过对<span class="highlight">爬取的444条有效帖子</span>内容进行人工编码后发现，其中<span class="highlight">35.6%（158条）的帖子属于非广告的正常实习交流帖，而其余64.4%（286条）均为付费实习中介发布的广告贴</span>。</p>
                         <div class="mt-5">
                             <h5 class="text-center">小红书帖子中关于"实习"内容的帖子占比</h5>
                             <div id="myChart1" style="height: 400px;"></div>
                             <p style="color: #888;font-size: 12px;font-weight: normal;padding-left:10%;">数据来源：在小红书平台采集444条有效数据，<br>并通过excel进行数据整理与清洗。</p>
                         </div>
+
+                        <div class="chart-tooltip" id="chartTooltip">
+                            <div class="tooltip-header" id="tooltipTitle">帖子详情</div>
+                            <div class="tooltip-content" id="tooltipContent">这里是帖子的详细描述内容</div>
+
+                            <div class="tooltip-items">
+                                <!-- 示例内容将通过JS动态生成 -->
+                            </div>
+
+                            <a href="#" class="tooltip-link" id="tooltipLink" target="_blank">查看更多详情</a>
+                        </div>
                     </div>
                 </div>
 
                 <div class="row justify-content-center mb-5">
-                    <div class="col-lg-10">
-                        <p class="section-description mt-48">付费实习中介在小红书上的广告形式更加隐蔽，既有直接宣传的帖子，也有伪装成普通用户的“种草帖”。据统计，在286条广告贴中，180条为硬广帖，内容中清楚标注“内推服务”字样，通常附带联系方式；106条则为伪装成实习经历分享的软广帖，往往在内页或评论区中插入“可以提供实习咨询”或“帮忙内推”等相关字眼，达到间接宣传产品或服务的，吸引潜在客户的目的。<span class="highlight">这些伪装贴往往通过高质量的图文内容赢得信任，用户在评论区咨询后，便进入了付费实习中介预设的引流环节</span>。</p>
+                    <div class="col-lg-10 mb-5">
+                        <p class="section-description">付费实习中介在小红书上的广告形式更加隐蔽，既有直接宣传的帖子，也有伪装成普通用户的“种草帖”。据统计，在286条广告贴中，180条为硬广帖，内容中清楚标注“内推服务”字样，通常附带联系方式；106条则为伪装成实习经历分享的软广帖，往往在内页或评论区中插入“可以提供实习咨询”或“帮忙内推”等相关字眼，达到间接宣传产品或服务的，吸引潜在客户的目的。<span class="highlight">这些伪装贴往往通过高质量的图文内容赢得信任，用户在评论区咨询后，便进入了付费实习中介预设的引流环节</span>。</p>
                         <p class="section-description">在“付费实习”的隐形广告中，尽管帖子发布者、宣传话术有所不同，看似分散，<span class="highlight">但通过分析小红书286条广告帖，我们发现，它们最终指向的中介公司仅有28家</span>。这些中介公司掌控平台数十个账号，同一服务用不同话术触及不同区域或不同需求的用户。</p>
                     </div>
                 </div>
@@ -262,12 +303,12 @@
                 <p style="color: #888;font-size: 12px;font-weight: normal;padding-left:10%;">注：鼠标移动到注册类型圆圈查看其对应的公司名称。</p>
             </div>
         </section>
-        <hr>
+        <div class="black-dashed-line"></div>
         <!-- 薪资分析部分 -->
         <section id="salary" class="py-5 section-with-animation">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-10 text-center">
+                    <div class="col-lg-10">
 
                         <section class="section-with-animation text-center">
                             <!-- 新增 container-fluid 和 px-0 -->
@@ -275,9 +316,9 @@
                                  alt="付费实习中介的暗网生态">
                         </section>
 
-                        <p class="section-description mt-48">通过对28家付费实习中介公司的工商登记信息溯源，我们发现，这一行业存在显著的资本共生现象。形成一个相对紧密的利益网络。天眼查、爱企查等平台数据显示，<span class="highlight">超过半数的机构（16家）存在股权关联</span>，其核心枢纽往往系于特定自然人。同一控制人通过法人任职、交叉持股等方式，构建起一个关联紧密的中介网络。<span class="highlight">例如，“职优你（上海）教育科技有限公司（unicareer）”和“北京淘友天下科技发展有限公司”的关联企业多达12家，形成了一个庞大的资本纽带</span>。</p>
+                        <p class="section-description mt-60 mb-60">通过对28家付费实习中介公司的工商登记信息溯源，我们发现，这一行业存在显著的资本共生现象。形成一个相对紧密的利益网络。天眼查、爱企查等平台数据显示，<span class="highlight">超过半数的机构（16家）存在股权关联</span>，其核心枢纽往往系于特定自然人。同一控制人通过法人任职、交叉持股等方式，构建起一个关联紧密的中介网络。<span class="highlight">例如，“职优你（上海）教育科技有限公司（unicareer）”和“北京淘友天下科技发展有限公司”的关联企业多达12家，形成了一个庞大的资本纽带</span>。</p>
 
-                        <div class="mt-5">
+                        <div class="text-center">
                             <h5>付费实习中介关联网</h5>
                             <div id="myChart4" style="height: 800px;"></div>
                             <p style="color: #888;font-size: 12px;font-weight: normal;text-align:left;padding-left:10%;">注：鼠标移动到公司名称圆圈查看其关联的其他公司,<br>移动至关联网内滚动鼠标可放大或缩小查看。<br>数据来源：通过在天眼查、企查查平台采集26家企业的相关信息进行分析。</p>
@@ -296,7 +337,7 @@
                 </div>
 
                 <!-- 修改后的四列布局 -->
-                <div class="row justify-content-center g-2">
+                <div class="row justify-content-center g-2 mt-60">
                     <div class="col-2 text-center">
                         <img src="images/双非.png" alt="双非" class="img-fluid uniform-img">
                     </div>
@@ -318,7 +359,7 @@
                 </div>
             </div>
         </section>
-        <hr>
+        <div class="black-dashed-line"></div>
         <!-- 行业分布部分 -->
         <section id="industry" class="py-5 section-with-animation">
             <div class="container">
@@ -330,7 +371,7 @@
                             <img src="标题图/付费实习求职者的入圈.png"
                                  alt="付费实习求职者的入圈">
                         </section>
-                        <p class="section-description mt-48 mb-5">与淘宝和闲鱼相比，小红书的商业属性相对较弱，这使其成为我们付费实习中介引流的主要阵地。在小红书上搜索 “实习” 关键词，我们很快被相关帖子引导至中介的私信后台。<span class="highlight">通过与这8家中介机构对话，我们发现，这些中介在未付费阶段均采用标准化的话术，将用户引导至其私域</span>。</p>
+                        <p class="section-description mt-60 mb-60">与淘宝和闲鱼相比，小红书的商业属性相对较弱，这使其成为我们付费实习中介引流的主要阵地。在小红书上搜索 “实习” 关键词，我们很快被相关帖子引导至中介的私信后台。<span class="highlight">通过与这8家中介机构对话，我们发现，这些中介在未付费阶段均采用标准化的话术，将用户引导至其私域</span>。</p>
                     </div>
                 </div>
 
@@ -339,17 +380,17 @@
                     <figcaption class="text-muted text-center">（小红书上的流水化"话术"）</figcaption>
                 </div>
 
-                <div class="row justify-content-center">
+                <div class="row justify-content-center mt-5">
                     <div class="col-lg-10">
                         <div class="dialogue-container">
-                            <p class="dialogue mb-2">“宝宝，我们这边是付费实习项目哈，你要是能接受的话可以留个联系方式，稍后我们老师会加你哦～”</p>
-                            <p class="dialogue mb-2">“好的，没问题。”</p>
-                            <p class="dialogue mb-2">“那先跟你说清楚哦，我们的实习是需要收费的，同学你能接受吗？”</p>
-                            <p class="dialogue mb-2">“方便问一下具体价格吗？”</p>
-                            <p class="dialogue mb-2">“费用在一万到三万不等，具体要看同学你这边的实际情况呢。”</p>
-                            <p class="dialogue mb-2">“‘具体情况’指什么呀？是根据院校级别不同吗？比如 985、211 这样的？”</p>
-                            <p class="dialogue mb-2">“宝宝，咱们这边不看院校背景的哈。具体情况主要是看你想去的公司级别、实习时长，还有选择线下还是线上实习。”</p>
-                            <p class="dialogue mb-2">“可是我有点担心自己的能力和学历……”</p>
+                            <p class="dialogue mb-5">“宝宝，我们这边是付费实习项目哈，你要是能接受的话可以留个联系方式，稍后我们老师会加你哦～”</p>
+                            <p class="dialogue mb-5">“好的，没问题。”</p>
+                            <p class="dialogue mb-5">“那先跟你说清楚哦，我们的实习是需要收费的，同学你能接受吗？”</p>
+                            <p class="dialogue mb-5">“方便问一下具体价格吗？”</p>
+                            <p class="dialogue mb-5">“费用在一万到三万不等，具体要看同学你这边的实际情况呢。”</p>
+                            <p class="dialogue mb-5">“‘具体情况’指什么呀？是根据院校级别不同吗？比如 985、211 这样的？”</p>
+                            <p class="dialogue mb-5">“宝宝，咱们这边不看院校背景的哈。具体情况主要是看你想去的公司级别、实习时长，还有选择线下还是线上实习。”</p>
+                            <p class="dialogue mb-5">“可是我有点担心自己的能力和学历……”</p>
                             <p class="dialogue mb-5">“是这样，宝宝，我们这里很多事情有钱就能解决的。”</p>
                         </div>
                         <p class="text-muted text-center">（截取自我们与中介的聊天记录）</p>
@@ -358,7 +399,7 @@
             </div>
         </section>
         
-        <hr>
+        <div class="black-dashed-line"></div>
 
         <div class="modal" id="modal">
             <div class="modal-dialog modal-xl modal-dialog-scrollable">
@@ -401,7 +442,7 @@
                                  alt="钱——双方暗通款曲的定情信物">
                         </section>
 
-                        <p class="section-description mt-48">当我们表示能够接受价格后，8家中介机构纷纷要求我们提交简历，以便推荐合适的岗位。然而，中介并未详细说明简历是如何与岗位进行匹配的，仅是简单了解了我们的求职意向后，便推送了他们所掌握的岗位资源。<span class="highlight">这8家中介共提供了185个线上线下岗位</span>。</p>
+                        <p class="section-description mt-60">当我们表示能够接受价格后，8家中介机构纷纷要求我们提交简历，以便推荐合适的岗位。然而，中介并未详细说明简历是如何与岗位进行匹配的，仅是简单了解了我们的求职意向后，便推送了他们所掌握的岗位资源。<span class="highlight">这8家中介共提供了185个线上线下岗位</span>。</p>
                     </div>
                 </div>
                 <div class="row align-items-center justify-content-center">
@@ -610,17 +651,17 @@
                                         row.innerHTML = "";
                                         if (index === 0) {
                                             row.innerHTML = `
-                                                                                                                        <td class="p-3 text-nowrap" rowspan="${tableData.items.length}">${tableData.col1}</td>
-                                                                                                                        <td class="p-3 text-nowrap" rowspan="${tableData.items.length}">${tableData.col2}</td>
-                                                                                                                        `;
+                                                                                                                                                <td class="p-3 text-nowrap" rowspan="${tableData.items.length}">${tableData.col1}</td>
+                                                                                                                                                <td class="p-3 text-nowrap" rowspan="${tableData.items.length}">${tableData.col2}</td>
+                                                                                                                                                `;
                                         }
                                         row.innerHTML += `
-                                                                                                                        <td class="p-3">${item.col3}</td>
-                                                                                                                        <td class="p-3">${item.col4}</td>
-                                                                                                                        <td class="p-3">${item.col5}</td>
-                                                                                                                        <td class="p-3">${item.col6}</td>
-                                                                                                                        <td class="p-3">${item.col7}</td>
-                                                                                                                    `;
+                                                                                                                                                <td class="p-3">${item.col3}</td>
+                                                                                                                                                <td class="p-3">${item.col4}</td>
+                                                                                                                                                <td class="p-3">${item.col5}</td>
+                                                                                                                                                <td class="p-3">${item.col6}</td>
+                                                                                                                                                <td class="p-3">${item.col7}</td>
+                                                                                                                                            `;
                                         tableBody.appendChild(row);
                                     });
 
@@ -820,11 +861,12 @@
                         </style>
                     </div>
                 </div>
+                <p style="color: #888;font-size: 12px;font-weight: normal;padding-left:10%;">注：点击图中泡泡可了解该企业详细信息</p>
 
 
                 <div class="row justify-content-center mb-5">
                     <div class="col-lg-10">
-                        <p class="section-description mt-48">这185个岗位中，以下公司的以下岗位出现频率较高，分别是——腾讯的软件开发、新媒体运营、商业分析岗位，华为的技术、通信工程、运营岗位，奥美的新媒体运营、媒介策划、咨询岗位，中信证券的投行、资产管理岗位，美团的商业分析、战略投资岗位，芒果tv的内容策划、新媒体运营岗位，小红书的新媒体运营、商业分析岗位，网易的产品运营、音乐策划岗位，字节跳动的产品运营、数据运营岗位，<span class="highlight">这些岗位大多属于通用型岗位</span>。</p>
+                        <p class="section-description">这185个岗位中，以下公司的以下岗位出现频率较高，分别是——腾讯的软件开发、新媒体运营、商业分析岗位，华为的技术、通信工程、运营岗位，奥美的新媒体运营、媒介策划、咨询岗位，中信证券的投行、资产管理岗位，美团的商业分析、战略投资岗位，芒果tv的内容策划、新媒体运营岗位，小红书的新媒体运营、商业分析岗位，网易的产品运营、音乐策划岗位，字节跳动的产品运营、数据运营岗位，<span class="highlight">这些岗位大多属于通用型岗位</span>。</p>
                         <p class="section-description">在岗位定价上除了与实习的时长、实习地点（线上线下）有关以外，<span class="highlight">还与中介公司所提供的实习所属公司的所有权类型、私企公司的规模、付费实习岗位所属行业有关</span>。</p>
                         <p class="section-description">在公司的所有权类型当中，<span class="highlight">其中国企岗位的实习定价最高，且国企类岗位资源稀缺程度较高</span>，其定价接近于在私企行业头部岗位实习三个月（最低价格）的价格。</p>
                         <p class="section-description">按照私企公司的规模而言，其中<span class="highlight">行业头部企业</span>（企业市场份额前10%，市值超千亿）如腾讯、字节跳动的等<span class="highlight">定价最高</span>，价格在26800左右一个月；其次是<span class="highlight">垂直领域行业领军者企业</span>（即细分市场占有率超30%，市值百亿级）以米哈游、B站等为例，定价约在15000左右一个月；而高速成长型企业（年增长率超50%）如得物、Shein等企业则定价约在12800左右一个月。在对比同类岗位中介报价后，可以看出其中企业层级每提升一档，价格平均增长35%。</p>
@@ -834,9 +876,9 @@
                     </div>
                 </div>
 
-                <div class="row align-items-center justify-content-center">
+                <div class="row align-items-center justify-content-center mt-48">
                     <!-- 新增 justify-content-center -->
-                    <div class="col-lg-10 mx-auto">
+                    <div class="col-lg-10 mx-auto mt-5">
                         <!-- 新增 mx-auto -->
                         <div class="card">
                             <div class="card-body">
@@ -1340,7 +1382,7 @@
             </div>
         </section>
 
-        <hr>
+        <div class="black-dashed-line"></div>
 
         <!-- 简历部分 -->
         <section id="CV" class="py-5 section-with-animation">
@@ -1348,13 +1390,13 @@
                 <div class="row justify-content-center mb-5">
                     <div class="col-lg-10 text-center">
 
-                        <section class="section-with-animation text-center">
+                        <section class="section-with-animation text-center mb-60">
                             <!-- 新增 container-fluid 和 px-0 -->
                             <img src="标题图/简历整容术.png"
                                  alt="简历整容术">
                         </section>
 
-                        <p class="section-description mt-48">“宝子，你这简历白得都快把老师眼睛闪瞎了。” 当我们以一名“双非”一本院校、无实习经验、无技能的大三学生身份向一家中介公司缴纳了200元匹配金后，很快收到了发票，并满心欢喜地等待岗位推荐。</p>
+                        <p class="section-description mt-60">“宝子，你这简历白得都快把老师眼睛闪瞎了。” 当我们以一名“双非”一本院校、无实习经验、无技能的大三学生身份向一家中介公司缴纳了200元匹配金后，很快收到了发票，并满心欢喜地等待岗位推荐。</p>
                         <p class="section-description">然而，两天后，我们被告知 CCTV 线下线上的实习名额已满，但中介帮忙对接到了某超一线直辖市电视台的新媒体运营岗。但这一实习岗位要求 “英语能力强、了解海外文化、有相关翻译证”，而我们的“空白”背景显然不符合要求。那么，中介公司是如何让我们能够投递简历的呢？对方的回答是：“<span class="highlight">这些要求没这么严格，进不进就是企业项目组点头或摇头的事。</span>”</p>
 
                         <figure class="fish mt-48">
@@ -1362,7 +1404,7 @@
                             <figcaption class="text-muted text-center">（中介所提供的简历润色和面试课程内容）</figcaption>
                         </figure>
 
-                        <p class="section-description mt-48">更进一步，有的中介机构的职业规划老师为我们提供了一期《个人简历打磨》精品课程，教授中英文简历撰写方法，帮助我们从亲身经历中挖掘闪光点。<span class="highlight">而有的机构直接“赠送”求职者一份为期一周的项目经历，在简历中凭空捏造出一段“新”的实习经历</span>。</p>
+                        <p class="section-description mt-48 mb-48">更进一步，有的中介机构的职业规划老师为我们提供了一期《个人简历打磨》精品课程，教授中英文简历撰写方法，帮助我们从亲身经历中挖掘闪光点。<span class="highlight">而有的机构直接“赠送”求职者一份为期一周的项目经历，在简历中凭空捏造出一段“新”的实习经历</span>。</p>
                     </div>
                 </div>
 
@@ -1392,7 +1434,7 @@
 
                 <div class="row justify-content-center mb-5">
                     <div class="col-lg-10 text-center">
-                        <p class="section-description mt-48">这段经历由中介机构运营的其他业务提供，最终以“实习证明”作为背书。但当我们向中介表示我们的担忧——害怕以后被查出作假经验时，中介则向我们表示，让我们不用担心。</p>
+                        <p class="section-description mt-48 mb-60">这段经历由中介机构运营的其他业务提供，最终以“实习证明”作为背书。但当我们向中介表示我们的担忧——害怕以后被查出作假经验时，中介则向我们表示，让我们不用担心。</p>
                     </div>
                 </div>
 
@@ -1406,7 +1448,7 @@
             </div>
         </section>
 
-        <hr>
+        <div class="black-dashed-line"></div>
 
         <!-- 面试部分 -->
         <section id="interview" class="py-5 section-with-animation">
@@ -1414,13 +1456,13 @@
                 <div class="row justify-content-center mb-5">
                     <div class="col-lg-10 text-center">
 
-                        <section class="section-with-animation text-center">
+                        <section class="section-with-animation text-center mb-60">
                             <!-- 新增 container-fluid 和 px-0 -->
                             <img src="标题图/舞台剧式的面试.png"
                                  alt="舞台剧式的面试">
                         </section>
 
-                        <p class="section-description mt-48">“面试就是走个流程而已。”在中介的精心包装后，我们的简历成功匹配上了某超一线直辖市电视台的新媒体岗位。面对即将到来的面试，我们佯装担忧，生怕自己被刷下来。<span class="highlight">对此，中介向我们承诺，他们已经与的项目组负责人沟通过了：“确认说只要你想去就行，面试只是走个流程，百分百进。”</span></p>
+                        <p class="section-description mt-60">“面试就是走个流程而已。”在中介的精心包装后，我们的简历成功匹配上了某超一线直辖市电视台的新媒体岗位。面对即将到来的面试，我们佯装担忧，生怕自己被刷下来。<span class="highlight">对此，中介向我们承诺，他们已经与的项目组负责人沟通过了：“确认说只要你想去就行，面试只是走个流程，百分百进。”</span></p>
                     </div>
                 </div>
 
@@ -1449,7 +1491,7 @@
 
             </div>
 
-            <hr>
+            <div class="black-dashed-line mt-48 mb-60"></div>
 
             <div class="row justify-content-center mb-5">
                 <div class="col-lg-10 text-center">
@@ -1486,7 +1528,7 @@
 
     </main>
 
-    <hr>
+    <div class="black-dashed-line"></div>
 
     <!-- 页脚 -->
     <footer>
@@ -1506,6 +1548,129 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/echarts.min.js"></script>
     <script src="scripts.js"></script>
+    <script>
+        // 浮窗功能
+        const chartContainer = document.querySelector('.chart-container');
+        const tooltip = document.getElementById('chartTooltip');
+
+        // 浮窗内容数据
+        const tooltipData = {
+            "正常交流贴": {
+                title: "正常交流贴详情",
+                content: "这些是用户自发分享的实习经验和求职心得，内容真实可靠，帮助其他用户了解不同公司的实习环境和要求。",
+                items: [
+                    { title: "实习日记分享", desc: "记录每日实习工作内容", link: "#" },
+                    { title: "面试经验", desc: "分享面试问题和回答技巧", link: "#" },
+                    { title: "公司评价", desc: "实习生的真实工作体验", link: "#" }
+                ],
+                link: "#"
+            },
+            "明广与暗广": {
+                title: "明广与暗广详情",
+                content: "付费实习中介发布的广告贴，有些明确标注广告，有些则伪装成经验分享。",
+                items: [
+                    { title: "内推服务", desc: "付费内推名企实习岗位", link: "#" },
+                    { title: "实习保offer", desc: "承诺实习后获得return offer", link: "#" },
+                    { title: "远程实习", desc: "线上完成的名企实习项目", link: "#" }
+                ],
+                link: "#"
+            },
+            "引流贴": {
+                title: "引流贴详情",
+                content: "表面上分享经验，实际目的将用户引导至微信等私域平台进行付费服务咨询。",
+                items: [
+                    { title: "免费咨询", desc: "引导添加微信进行付费咨询", link: "#" },
+                    { title: "简历模板", desc: "获取模板需添加联系方式", link: "#" },
+                    { title: "模拟面试", desc: "预约后引导付费服务", link: "#" }
+                ],
+                link: "#"
+            },
+            "非广告": {
+                title: "非广告内容详情",
+                content: "真实用户分享的实习相关内容，无商业目的。",
+                items: [
+                    { title: "实习日常", desc: "分享实习中的趣事和经验", link: "#" },
+                    { title: "避坑指南", desc: "提醒注意不良实习经历", link: "#" },
+                    { title: "转正经验", desc: "如何从实习生转为正式员工", link: "#" }
+                ],
+                link: "#"
+            },
+            "广告": {
+                title: "广告内容详情",
+                content: "付费实习中介发布的各类广告，包括明广和暗广。",
+                items: [
+                    { title: "实习内推", desc: "付费内推服务", link: "#" },
+                    { title: "背景提升", desc: "提升简历竞争力的项目", link: "#" },
+                    { title: "求职培训", desc: "提供求职技能培训", link: "#" }
+                ],
+                link: "#"
+            }
+        };
+
+        // 鼠标移动事件处理
+        myChart1.on('mouseover', function (params) {
+            const name = params.name;
+            const data = tooltipData[name] || tooltipData["正常交流贴"];
+
+            // 更新浮窗内容
+            document.getElementById('tooltipTitle').textContent = data.title;
+            document.getElementById('tooltipContent').textContent = data.content;
+            document.getElementById('tooltipLink').href = data.link;
+
+            // 生成项目列表
+            const itemsContainer = document.querySelector('.tooltip-items');
+            itemsContainer.innerHTML = '';
+
+            data.items.forEach(item => {
+                const itemElement = document.createElement('a');
+                itemElement.className = 'tooltip-item';
+                itemElement.href = item.link;
+                itemElement.target = '_blank';
+
+                itemElement.innerHTML = `
+                    <div class="tooltip-img">📝</div>
+                    <div class="tooltip-text">
+                        <div class="tooltip-title">${item.title}</div>
+                        <div class="tooltip-desc">${item.desc}</div>
+                    </div>
+                `;
+
+                itemsContainer.appendChild(itemElement);
+            });
+
+            // 定位浮窗
+            const mouseX = params.event.event.clientX;
+            const mouseY = params.event.event.clientY;
+
+            tooltip.style.left = (mouseX + 20) + 'px';
+            tooltip.style.top = (mouseY + 20) + 'px';
+
+            // 显示浮窗
+            tooltip.style.opacity = '1';
+            tooltip.style.visibility = 'visible';
+        });
+
+        // 鼠标移出事件处理
+        myChart1.on('mouseout', function () {
+            // 延迟隐藏以允许用户移动到浮窗上
+            setTimeout(() => {
+                if (!tooltip.matches(':hover')) {
+                    tooltip.style.opacity = '0';
+                    tooltip.style.visibility = 'hidden';
+                }
+            }, 100);
+        });
+
+        // 确保当鼠标移到浮窗上时不会立即隐藏
+        tooltip.addEventListener('mouseenter', function () {
+            clearTimeout();
+        });
+
+        tooltip.addEventListener('mouseleave', function () {
+            tooltip.style.opacity = '0';
+            tooltip.style.visibility = 'hidden';
+        });
+    </script>
 </body>
 
 </html>
