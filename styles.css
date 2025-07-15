@@ -21,7 +21,7 @@ body {
 
 .row.justify-content-center.mb-5 p.section-description {
   text-align: justify;
-  text-indent: 3em;
+  text-indent: 2.1em;
 }
 
 .highlight {
@@ -247,10 +247,10 @@ body {
 
 .section-description {
     /* color: var(--bs-secondary); */
-    margin: 0 auto;
+    margin: 20px 0px;
     line-height: 2;
     letter-spacing: 1.6px;
-    text-indent: 2em;
+    text-indent: 2.1em;
 }
 
 /* 暗色模式特定样式 */
@@ -654,7 +654,7 @@ body {
 }
 
 .black-dashed-line {
-    border-top: 2px dashed #000; /* 关键样式：黑色虚线 */
+    border-top: 2px dashed #bfbfbf; /* 关键样式：黑色虚线 */
     height: 0; /* 确保只显示边框 */
     margin: 10px 0; /* 上下间距 */
 }
