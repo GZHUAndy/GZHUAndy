@@ -19,787 +19,851 @@
     </style>
 </head>
 <body>
-<div id="splash" style="height: 100vh; transition: all 1s">
-        <img src="首页图.png" 
-             alt="首页图片" 
+    <div id="splash" style="height: 100vh; transition: all 1s">
+        <img src="首页图.png"
+             alt="首页图片"
              class="w-100 h-100 object-fit-cover">
-</div>
-
-<!-- 导航栏 -->
-<header class="sticky-top">
-    <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="images/logo.png" alt="Logo" height="30" class="d-inline-block align-text-top"/>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#overview">暗流</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#salary">暗网</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#industry">入圈</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#money">信物</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#CV">“整容”</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#interview">面试</a>
-                    </li>
-                </ul>
-                <div class="theme-switch-wrapper">
-                    <button class="btn theme-toggle" id="theme-toggle">
-                        <i class="bi bi-sun-fill theme-icon-active" data-theme-icon-active="bi-sun-fill"></i>
-                        <i class="bi bi-moon-fill" data-theme-icon="bi-moon-fill"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </nav>
-</header>
-
-<!-- 主要内容区域 -->
-<main>
-    <!-- 英雄区域 -->
-    <section class="hero-section py-5 mb-0">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10 animate__animated animate__fadeInLeft">
-                    <p class="section-description" style="text-indent: 2em;">2024年7月26日，一段名为“985大一投行实习的一天”的短视频在网络上迅速传播，中信建投实习生事件也冲上当天的微博热搜榜。经查，该学生通过公司投行某团队负责人的违规操作，进入了公司研学项目。这一事件不仅暴露了个别企业内部的管理漏洞，更将“付费实习”这一长期存在却鲜有深究的现象推向公众视野。</p>
-                    <p class="section-description" style="text-indent: 2em;><span class="highlight">付费实习中介是谁？它们主要活跃在哪些平台？其运作逻辑又是如何展开的？</span>为了探究这些问题，我们以不同类型高校学生的身份，<span class="highlight">对多家付费实习中介进行暗访，并结合社交媒体文本数据的采集与分析</span>，试图揭开这一隐秘行业的运作真相。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="section-with-animation text-center">  <!-- 新增 container-fluid 和 px-0 -->
-                <img src="标题图/互联网平台上的付费实习暗流.png" 
-                     alt="互联网平台上的付费实习暗流" 
-                     >
-    </section>
-
-
-    <!-- 推广平台 -->
-    <section class="py-5 section-with-animation">
-        <div class="container">
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-10">
-                    <p class="section-description">“同学你好，你是打算找实习吗？这边可以添加一下我的微信，可以给你提供一些帮助，平台上面发言有限制。”在我们私信小红书上一位付费实习帖主后，他这样回复道。</p>
-                    <p class="section-description">付费实习中介的广告如同暗流，潜藏在二手交易、社交分享与电商平台的缝隙中。他们伪装成普通网民，混迹于正常的实习交流帖之间，让人真假难辨，同时不断吸引着求职心切的大学生。在我们的深入调查下，这些中介的活动轨迹逐渐清晰。</p>
-                    <p class="section-description">截至2024年10月24日，我们以“内推”“实习”“实习推荐”“远程实习”等关键词，在淘宝、咸鱼和小红书三大平台进行搜索，并通过Python爬取相关数据。在剔除无效信息后，<span class="highlight">共收集到2166条有效数据</span>。其中，<span class="highlight">闲鱼以1686条帖子占据绝对主导位置，小红书次之（444条），淘宝则最少（36条）</span>。</p>
-                </div>
-            </div>
-
-            <div class="row g-3 justify-content-center">
-                <div class="col-8 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                    <div class="card h-100 stat-card">
-                        <div class="card-body text-center3d-flex flex-column justify-content-between">
-                            <div class="d-flex justify-content-center">  <!-- 新增Flex容器 -->
-                                <img src="images/4.png" alt="咸鱼" height="40">
-                            </div>
-                            <h3 class="stat-number" style="margin-top: 10px;margin-bottom: 10px;">1686</h3>
-                            <p class="stat-title mb-0">咸鱼</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-8 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                    <div class="card h-100 stat-card">
-                        <div class="card-body text-center d-flex flex-column justify-content-between">
-                            <div class="d-flex justify-content-center">  <!-- 新增Flex容器 -->
-                                <img src="images/1.png" alt="小红书" height="40">
-                            </div>
-                            <h3 class="stat-number" style="margin-top: 10px;margin-bottom: 10px;">444</h3>
-                            <p class="stat-title mb-0">小红书</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-8 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                    <div class="card h-100 stat-card">
-                        <div class="card-body text-center d-flex flex-column justify-content-between">
-                            <div class="d-flex justify-content-center">  <!-- 新增Flex容器 -->
-                                <img src="images/2.png" alt="淘宝" height="40">
-                            </div>
-                            <h3 class="stat-number" style="margin-top: 10px;margin-bottom: 10px;">36</h3>
-                            <p class="stat-title mb-0">淘宝</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-8 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                    <div class="card h-100 stat-card">
-                        <div class="card-body text-center d-flex flex-column justify-content-between">
-                            <div class="d-flex justify-content-center">  <!-- 新增Flex容器 -->
-                                <img src="images/3.png" alt="总计" height="40">
-                            </div>
-                            <h3 class="stat-number" style="margin-top: 10px;margin-bottom: 10px;">2166</h3>
-                            <p class="stat-title mb-0">总计</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-10">
-                    <p class="section-description mt-48">闲鱼作为一款二手交易的社群平台，用户无需提交商家资质即可在平台上发布商品，其低审核门槛成为付费实习中介的温床。<span class="highlight">在我们爬取的1686条“实习内推”相关帖子中，100%与付费实习服务相挂钩</span>，标题高频词包括“名企实习”“远程内推”“全职内推”等。</p>
-                    <p class="section-description">通过对商品页面所显示的卖家IP地址进行统计分析，我们发现付费实习服务的提供方呈现出显著的地域集中性。超大城市（如北京、上海）以816条帖子占据总量的48.4%；特大城市（如武汉）、大城市（如南宁）占比分别为21.8%（367条）和13.5%（227条）。<span class="highlight">值得注意的是，即便在经济活跃度较低的地区，这一行业也依然具有生存空间——中小城市（如厦门）贡献了16.3%（276条）的市场份额</span>。</p>
-                    <p class="section-description">淘宝作为一家拥有较强审查机制、成熟的电商平台，其对商家资质和商品内容的监管力度明显高于闲鱼。由于“付费实习”服务的敏感性，相关商品页面难以通过审查，因此搜索结果数量较少。在36条商品结果中，约30家卖家集中在经济发达的超大城市，其余6家分布在特大城市。综合闲鱼和淘宝两个平台上的卖家数据，可以得知定位在超大城市的卖家数量是特大城市的2.2倍，<span class="highlight">印证了城市经济水平与付费实习供给量的强关联性</span>。</p>
-                    <div class="mt-5">
-                        <h5 class="text-center">淘宝和咸鱼平台中"实习"卖家IP分布</h5>
-                        <div id="myChart2" style="width: 70%; height: 600px; margin: 0 auto;"></div>
-                    </div>
-                </div>
-            </div>
-                    
-
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-10">
-                    <p class="section-description mt-48">小红书以“种草文化”闻名，是集社交与消费于一体的平台，深受年轻人青睐。在搜索“实习”关键词后，我们发现，小红书的帖子内容包括实习经历分享、公司实习招聘信息、实习评价等形式。通过对<span class="highlight">爬取的444条有效帖子</span>内容进行人工编码后发现，其中<span class="highlight">35.6%（158条）的帖子属于非广告的正常实习交流帖，而其余64.4%（286条）均为付费实习中介发布的广告贴</span>。</p>
-                    <div class="mt-5">
-                        <h5 class="text-center">小红书帖子中关于"实习"内容的帖子占比</h5>
-                        <div id="myChart1" style="height: 400px;"></div>
-                        <p style="color: #888;font-size: 12px;font-weight: normal;padding-left:10%;">数据来源：在小红书平台采集444条有效数据，<br>并通过excel进行数据整理与清洗。</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-10">
-                    <p class="section-description mt-48">付费实习中介在小红书上的广告形式更加隐蔽，既有直接宣传的帖子，也有伪装成普通用户的“种草帖”。据统计，在286条广告贴中，180条为硬广帖，内容中清楚标注“内推服务”字样，通常附带联系方式；106条则为伪装成实习经历分享的软广帖，往往在内页或评论区中插入“可以提供实习咨询”或“帮忙内推”等相关字眼，达到间接宣传产品或服务的，吸引潜在客户的目的。<span class="highlight">这些伪装贴往往通过高质量的图文内容赢得信任，用户在评论区咨询后，便进入了付费实习中介预设的引流环节</span>。</p>
-                    <p class="section-description">在“付费实习”的隐形广告中，尽管帖子发布者、宣传话术有所不同，看似分散，<span class="highlight">但通过分析小红书286条广告帖，我们发现，它们最终指向的中介公司仅有28家</span>。这些中介公司掌控平台数十个账号，同一服务用不同话术触及不同区域或不同需求的用户。</p>
-                </div>
-            </div>
-            
-
-        <div class="mt-5">
-            <h5 class="text-center">28家中介公司的注册类型</h5>
-        <div class="company">
-        <div class="ellipse-container">
-        <div class="ellipse-item">
-            <div class="ellipse ellipse-1">
-                <div class="ellipse-text">以从事教育为主</div>
-            </div>
-            <div class="tooltip">新吴区凌远留学信息咨询服务中心</div>
-        </div>
-        
-        <div class="ellipse-item">
-            <div class="ellipse ellipse-2">
-                <div class="ellipse-text">以从事科技推广和应用服务业为主</div>
-            </div>
-            <div class="tooltip">北京旷智信息科技有限公司、海马中际教育科技集团有限公司、上海职咖科技有限公司、上海瀚泊科技集团有限公司、远方有录科技（北京）股份有限公司、环宇优聘（北京）教育科技有限公司、北京肯思沃德教育科技有限公司、北京淘友天下科技发展有限公司、深圳市职询信息咨询有限公司、上海搞定文化科技有限公司、北京集思未来科技有限公司</div>
-        </div>
-        
-        <div class="ellipse-item">
-            <div class="ellipse ellipse-3">
-                <div class="ellipse-text">以从事其他服务业为主</div>
-            </div>
-            <div class="tooltip">奥弗（深圳）科技有限公司</div>
-        </div>
-        
-        <div class="ellipse-item">
-            <div class="ellipse ellipse-4">
-                <div class="ellipse-text">以从事软件和信息技术服务业为主</div>
-            </div>
-            <div class="tooltip">互联派教育科技（大连）有限公司、成都先胜信息科技有限公司</div>
-        </div>
-        
-        <div class="ellipse-item">
-            <div class="ellipse ellipse-5">
-                <div class="ellipse-text">以从事商务服务业为主</div>
-            </div>
-            <div class="tooltip">南京冠升杰咨询有限公司、筑梦（杭州）出国留学咨询服务有限公司、北京爱思益咨询有限公司、蔓藤教育咨询（北京）有限公司、苏州细雨前程商务咨询有限公司、西安猎人阿尔法商务信息咨询有限公司、南京美之桥教育咨询有限公司、南京职向生涯国际教育咨询有限公司、宁波签语留学服务有限公司、广州卓思德咨询服务有限公司</div>
-        </div>
-        
-        <div class="ellipse-item">
-            <div class="ellipse ellipse-6">
-                <div class="ellipse-text">以从事研究和试验发展为主</div>
-            </div>
-            <div class="tooltip">成都来者教育科技有限公司、成都萌想科技有限责任公司、圈里网络科技（广州）有限公司</div>
-        </div>
     </div>
-    </div>
-        </div>
-        <p style="color: #888;font-size: 12px;font-weight: normal;padding-left:10%;">注：鼠标移动到注册类型圆圈查看其对应的公司名称。</p>
-        </div>
-    </section>
 
-    <!-- 薪资分析部分 -->
-    <section id="salary" class="py-5 section-with-animation">
-        <div class="container">
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-10 text-center">
-
-                <section class="section-with-animation text-center">  <!-- 新增 container-fluid 和 px-0 -->
-                    <img src="标题图/付费实习中介的暗网生态.png" 
-                     alt="付费实习中介的暗网生态">
-                </section>
-
-                    <p class="section-description mt-48">通过对28家付费实习中介公司的工商登记信息溯源，我们发现，这一行业存在显著的资本共生现象。形成一个相对紧密的利益网络。天眼查、爱企查等平台数据显示，<span class="highlight">超过半数的机构（16家）存在股权关联</span>，其核心枢纽往往系于特定自然人。同一控制人通过法人任职、交叉持股等方式，构建起一个关联紧密的中介网络。<span class="highlight">例如，“职优你（上海）教育科技有限公司（unicareer）”和“北京淘友天下科技发展有限公司”的关联企业多达12家，形成了一个庞大的资本纽带</span>。</p>
-
-                    <div class="mt-5">
-                        <h5 class="mb-5">付费实习中介关联网</h5>
-                        <div id="myChart4" style="height: 800px;"></div>
-                        <p style="color: #888;font-size: 12px;font-weight: normal;text-align:left;padding-left:10%;">注：鼠标移动到公司名称圆圈查看其关联的其他公司,<br>移动至关联网内滚动鼠标可放大或缩小查看。<br>数据来源：通过在天眼查、企查查平台采集26家企业的相关信息进行分析。</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-10">
-                    <p class="section-description mt-48">这种资本纽带催生了特殊的行业生态。经过数据整合，<span class="highlight">我们发现，这些表面“独立”的中介机构在主营业务、定价体系、服务流程和客户资源上呈现出高度趋同的特征</span>。这种协同效应不仅可能降低运营风险，还能实现客户资源的多次转化。</p>
-                    <p class="section-description">值得注意的是，该行业普遍存在"异业注册"现象。统计显示，仅新吴区凌远留学信息咨询服务中心以教育咨询为主营注册，余下27家机构中，科技类占比达57.1%，商业服务类占35.7%。与之形成鲜明对比的是，近八成机构（23家）业务范围又涵盖教育咨询服务，暴露出注册资质与实际业务的显著偏差。"教育部办公厅指导社会成人教育培训机构严格按照民办学校办学许可证或法人登记证照确定的经营范围开展教育培训，不得以教育咨询、科技咨询、技术咨询、企业管理咨询等各种咨询名义开展教育培训。</p>
-                    <p class="section-description">但实践中大量机构以科技公司名义开展培训业务。<span class="highlight">这种现象既反映出行业监管的灰色地带，也暴露出市场主体对教育资质的规避心态，规避教育领域特殊监管的套利行为</span>。</p>
-                    <p class="section-description">在长期运作下，付费实习中介的实习内推流程已形成了一套成熟且可复制的模板，犹如一条高效运转的生产流水线。我们将这一过程拆解为<span class="highlight">以下四个关键环节：一是“入圈”，二是“定金交易”，三是“简历‘整容’”，四是“‘舞台剧’式面试”</span>。</p>
-                    <p class="section-description">为了深入了解这一流程，<span class="highlight">我们精心准备了四份985、211、双非、二本不同类型高校学生的简历</span>，这些简历在学历背景、实习经历和技能掌握上各有差异。</p>
-                </div>
-            </div>
-
-            <!-- 修改后的四列布局 -->
-            <div class="row justify-content-center g-2">
-                <div class="col-2 text-center">
-                    <img src="images/双非.png" alt="双非" class="img-fluid uniform-img">
-                </div>
-                <div class="col-2 text-center">
-                    <img src="images/普二.png" alt="普二" class="img-fluid uniform-img">
-                </div>
-                <div class="col-2 text-center">
-                    <img src="images/211.png" alt="211" class="img-fluid uniform-img">
-                </div>
-                <div class="col-2 text-center">
-                    <img src="images/985.png" alt="985" class="img-fluid uniform-img">
-                </div>
-            </div>
-
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-10">
-                    <p class="section-description mt-48">随后，<span class="highlight">我们对市面上8家规模较大的中介机构进行了初步探查</span>。调查发现，在未付费阶段，这些机构的流程和话术高度相似，似乎有着统一的“剧本”。为了进一步揭开付费实习中介的“灰色”操作，<span class="highlight">我们随机选择了其中三家机构交付定金，深入体验其定制化服务流程</span>。</p>
-                </div>
-            </div>
-
-
-        </div>
-    </section>
-
-    <!-- 行业分布部分 -->
-    <section id="industry" class="py-5 section-with-animation">
-        <div class="container">
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-10 text-center">
-
-                <section class="section-with-animation text-center">  <!-- 新增 container-fluid 和 px-0 -->
-                    <img src="标题图/付费实习求职者的入圈.png" 
-                     alt="付费实习求职者的入圈">
-                </section>
-                    <p class="section-description mt-48">与淘宝和闲鱼相比，小红书的商业属性相对较弱，这使其成为我们付费实习中介引流的主要阵地。在小红书上搜索 “实习” 关键词，我们很快被相关帖子引导至中介的私信后台。<span class="highlight">通过与这8家中介机构对话，我们发现，这些中介在未付费阶段均采用标准化的话术，将用户引导至其私域</span>。</p>
-                </div>
-            </div>
-
-            <figure class="fish">
-                <img src="images/话术.webp" alt="话术" width="600" class="photo img-fluid mb-2">
-                <figcaption class="text-muted text-center">（小红书上的流水化"话术"）</figcaption>
-            </figure>
-
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-10">
-                    <div class="dialogue-container">
-                        <p class="dialogue">“宝宝，我们这边是付费实习项目哈，你要是能接受的话可以留个联系方式，稍后我们老师会加你哦～”</p>
-                        <p class="dialogue">“好的，没问题。”</p>
-                        <p class="dialogue">“那先跟你说清楚哦，我们的实习是需要收费的，同学你能接受吗？”</p>
-                        <p class="dialogue">“方便问一下具体价格吗？”</p>
-                        <p class="dialogue">“费用在一万到三万不等，具体要看同学你这边的实际情况呢。”</p>
-                        <p class="dialogue">“‘具体情况’指什么呀？是根据院校级别不同吗？比如 985、211 这样的？”</p>
-                        <p class="dialogue">“宝宝，咱们这边不看院校背景的哈。具体情况主要是看你想去的公司级别、实习时长，还有选择线下还是线上实习。”</p>
-                        <p class="dialogue">“可是我有点担心自己的能力和学历……”</p>
-                        <p class="dialogue">“是这样，宝宝，我们这里很多事情有钱就能解决的。”</p>
-                    </div>
-                    <p class="text-muted text-center">（截取自我们与中介的聊天记录）</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <div class="modal" id="modal">
-        <div class="modal-dialog modal-xl modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">企业详细信息</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <table class="table table-striped table-bordered">
-                        <thead>
-                        <tr>
-                            <th class="p-3 fs-6 text-start">法人</th>
-                            <th class="p-3 fs-6 text-start">成立时间</th>
-                            <th class="p-3 fs-6 text-start">提供付费实习岗位所属公司</th>
-                            <th class="p-3 fs-6 text-start">提供岗位名称</th>
-                            <th class="p-3 fs-6 text-start">公司所有制</th>
-                            <th class="p-3 fs-6 text-start">公司所属行业</th>
-                            <th class="p-3 fs-6 text-start">价格</th>
-                        </tr>
-                        </thead>
-                        <tbody id="table-body" class="table-group-divider">
-                        <!-- 表格内容将通过 JavaScript 动态添加 -->
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- 钱款交易部分 -->
-    <section id="money" class="py-5 section-with-animation">
-        <div class="container">
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-10 text-center">
-
-                <section class="section-with-animation text-center">  <!-- 新增 container-fluid 和 px-0 -->
-                    <img src="标题图/钱——双方暗通款曲的定情信物.png" 
-                     alt="钱——双方暗通款曲的定情信物">
-                </section>
-
-                    <p class="section-description mt-48">当我们表示能够接受价格后，8家中介机构纷纷要求我们提交简历，以便推荐合适的岗位。然而，中介并未详细说明简历是如何与岗位进行匹配的，仅是简单了解了我们的求职意向后，便推送了他们所掌握的岗位资源。<span class="highlight">这8家中介共提供了185个线上线下岗位</span>。</p>
-                </div>
-            </div>
-            <div class="row align-items-center justify-content-center">  <!-- 新增 justify-content-center -->
-                <div class="col-lg-10 mx-auto position-relative">  <!-- 新增 position-relative -->
-                    <!-- 侧边标签 - 改为相对于泡泡表单容器定位 -->
-                    <div class="summary-btn-container" style="position: absolute; left: 60px; bottom: 10%; transform: translateY(-50%); z-index: 100;">
-                        <button class="btn rounded-pill mb-2 summary-btn" style="background-color: #ffae4d;color: #fff;" data-target="summary-page1">
-                            <i class="bi bi-file-text"></i> 点击解锁更多
+    <!-- 导航栏 -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="images/logo.png" alt="Logo" height="30" class="d-inline-block align-text-top" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#overview">暗流</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#salary">暗网</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#industry">入圈</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#money">信物</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#CV">“整容”</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#interview">面试</a>
+                        </li>
+                    </ul>
+                    <div class="theme-switch-wrapper">
+                        <button class="btn theme-toggle" id="theme-toggle">
+                            <i class="bi bi-sun-fill theme-icon-active" data-theme-icon-active="bi-sun-fill">☀</i>
+                            <i class="bi bi-moon-fill" data-theme-icon="bi-moon-fill">🌙</i>
                         </button>
                     </div>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-                    <!-- 泡泡图表容器 -->
-                    <div id="bubble-chart" class="circle-container">
-                        <!-- 修改圆点颜色为自定义颜色 -->
-                        <div
-                                class="circle"
-                                data-company="海马中际教育科技集团有限公司（海马职加）"
-                                style="background-color: #E1CAFC;"
-                        >
-                            海马中际教育科技集团有限公司（海马职加）
-                        </div>
-                        <div
-                                class="circle"
-                                data-company="上海搞定文化科技有限公司（搞定offer）"
-                                style="background-color: #FFF7C7;"
-                        >
-                            上海搞定文化科技有限公司（搞定offer）
-                        </div>
-                        <div
-                                class="circle"
-                                data-company="成都来者教育科技有限公司（DBC职梦）"
-                                style="background-color: #FFAB5F;"
-                        >
-                            成都来者教育科技有限公司（DBC职梦）
-                        </div>
-                        <div
-                                class="circle"
-                                data-company="北京爱思益咨询有限公司（爱思益）"
-                                style="background-color: #EBF26B;"
-                        >
-                            北京爱思益咨询有限公司（爱思益）
-                        </div>
-                        <div
-                                class="circle"
-                                data-company="南京蒸汽职业咨询有限公司（Steam蒸汽求职）"
-                                style="background-color: #A9D6FF;"
-                        >
-                            南京蒸汽职业咨询有限公司（Steam蒸汽求职）
-                        </div>
-                        <div
-                                class="circle"
-                                data-company="广州卓思德咨询服务有限公司（卓思德）"
-                                style="background-color: #FC7E99;"
-                        >
-                            广州卓思德咨询服务有限公司（卓思德）
-                        </div>
-                        <div
-                                class="circle"
-                                data-company="北京集思未来科技有限公司（集思未来）"
-                                style="background-color: #FF8F43;"
-                        >
-                            北京集思未来科技有限公司（集思未来）
-                        </div>
-                        <div
-                                class="circle"
-                                data-company="互联派教育科技（大连）有限公司（互联派）"
-                                style="background-color: #53DBEA;"
-                        >
-                            互联派教育科技（大连）有限公司（互联派）
-                        </div>
+    <!-- 主要内容区域 -->
+    <main>
+        <!-- 英雄区域 -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 animate__animated animate__fadeInLeft">
+                        <p class="section-description">2024年7月26日，一段名为“985大一投行实习的一天”的短视频在网络上迅速传播，中信建投实习生事件也冲上当天的微博热搜榜。经查，该学生通过公司投行某团队负责人的违规操作，进入了公司研学项目。这一事件不仅暴露了个别企业内部的管理漏洞，更将“付费实习”这一长期存在却鲜有深究的现象推向公众视野。</p>
+                        <p class="section-description"><span class="highlight">付费实习中介是谁？它们主要活跃在哪些平台？其运作逻辑又是如何展开的？</span>为了探究这些问题，我们以不同类型高校学生的身份，<span class="highlight">对多家付费实习中介进行暗访，并结合社交媒体文本数据的采集与分析</span>，试图揭开这一隐秘行业的运作真相。</p>
                     </div>
+                </div>
+            </div>
+        </section>
 
-                    <!-- 总结页面容器 - 使用翻页效果 -->
-                    <div id="summary-container" class="d-none">
-                        <!-- 总结页面1 -->
-                        <div id="summary-page1" class="summary-page">
-                            <div class="position-absolute start-0 top-50 translate-middle-y" style="left: -60px; z-index: 100;">
-                                <button class="btn btn-secondary rounded-pill mb-2 return-btn">
-                                    <i class="bi bi-arrow-left"></i> 返回
-                                </button>
-                            </div>
-                            <div class="position-absolute end-0 top-50 translate-middle-y" style="right: -60px; z-index: 100;">
-                                <button class="btn btn-primary rounded-pill mb-2 next-page-btn" data-target="summary-page2">
-                                    <i class="bi bi-arrow-right"></i>
-                                </button>
-                            </div>
-                            <div class="card">
-                                <div class="card-body"> 
-                                    <div class="text-center">
-                                        <img src="zj/p1.png" alt="八大中介所供实习岗位价格与实习公司所有制的关系" class="img-fluid" style="max-width: 85%; max-height: 500px; object-fit: contain;">
-                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- 总结页面2 -->
-                        <div id="summary-page2" class="summary-page d-none">
-                            <div class="position-absolute start-0 top-50 translate-middle-y" style="left: -60px; z-index: 100;">
-                                <button class="btn btn-secondary rounded-pill mb-2 prev-page-btn" data-target="summary-page1">
-                                    <i class="bi bi-arrow-left"></i>
-                                </button>
-                            </div>
-                            <div class="position-absolute end-0 top-50 translate-middle-y" style="right: -60px; z-index: 100;">
-                                <button class="btn btn-primary rounded-pill mb-2 next-page-btn" data-target="summary-page3">
-                                    <i class="bi bi-arrow-right"></i>
-                                </button>
-                            </div>
-                            <div class="card">
-                                <div class="card-body"> 
-                                    <div class="text-center">
-                                        <img src="zj/p2.png" alt="八大中介机构所供实习岗位中重复实习公司" class="img-fluid" style="max-width: 85%; max-height: 500px; object-fit: contain;">
-                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- 总结页面3 -->
-                        <div id="summary-page3" class="summary-page d-none">
-                            <div class="position-absolute start-0 top-50 translate-middle-y" style="left: -60px; z-index: 100;">
-                                <button class="btn btn-secondary rounded-pill mb-2 prev-page-btn" data-target="summary-page2">
-                                    <i class="bi bi-arrow-left"></i>
-                                </button>
-                            </div>
-                            <div class="card">
-                                <div class="card-body"> 
-                                    <div class="text-center">
-                                        <img src="zj/p3.png" alt="八大中介所供私企实习岗位价格与企业层级的关联" class="img-fluid" style="max-width: 85%; max-height: 500px; object-fit: contain;">
-                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <script src="data.js"></script>
-                    <script>
-                        const circles = document.querySelectorAll(".circle");
-                        const modal = document.getElementById("modal");
-                        const tableBody = document.getElementById("table-body");
-                        const container = document.querySelector(".circle-container");
-                        const minDistance = 80; // 圆圈之间的最小距离
-
-                        // 泡泡图相关代码
-                        function isOverlapping(circle1, circle2) {
-                            const rect1 = circle1.getBoundingClientRect();
-                            const rect2 = circle2.getBoundingClientRect();
-                            const dx =
-                                rect1.left + rect1.width / 2 - (rect2.left + rect2.width / 2);
-                            const dy =
-                                rect1.top + rect1.height / 2 - (rect2.top + rect2.height / 2);
-                            const distance = Math.sqrt(dx * dx + dy * dy);
-                            return distance < minDistance;
-                        }
-
-                        function getRandomPosition() {
-                            const maxX = container.offsetWidth - circles[0].offsetWidth;
-                            const maxY = container.offsetHeight - circles[0].offsetHeight;
-                            // 使用正态分布生成更自然的随机数
-                            function gaussianRandom() {
-                                let u = 0,
-                                    v = 0;
-                                while (u === 0) u = Math.random();
-                                while (v === 0) v = Math.random();
-                                let num = Math.sqrt(-2.0 * Math.log(u)) * Math.cos(2.0 * Math.PI * v);
-                                num = num / 10.0 + 0.5;
-                                if (num > 1 || num < 0) return gaussianRandom();
-                                return num;
-                            }
-                            const randomX = Math.floor(gaussianRandom() * maxX);
-                            const randomY = Math.floor(gaussianRandom() * maxY);
-                            return { x: randomX, y: randomY };
-                        }
-
-                        circles.forEach((circle, index) => {
-                            let position;
-                            let overlaps;
-                            do {
-                                position = getRandomPosition();
-                                circle.style.left = `${position.x}px`;
-                                circle.style.top = `${position.y}px`;
-                                overlaps = false;
-                                for (let i = 0; i < index; i++) {
-                                    if (isOverlapping(circle, circles[i])) {
-                                        overlaps = true;
-                                        break;
-                                    }
-                                }
-                            } while (overlaps);
-
-                            circle.addEventListener("click", () => {
-                                const company = circle.dataset.company;
-                                const index = companies.findIndex(
-                                    (item) => item["中介机构"] === company
-                                );
-                                if (index === -1) {
-                                    alert("not found");
-                                    return;
-                                }
-
-                                const tableData = {
-                                    col1: companies[index]["法人"],
-                                    col2: companies[index]["成立时间"],
-                                    items: [],
-                                };
-
-                                for (let i = index; i < companies.length; i++) {
-                                    if (i === index || companies[i]["中介机构"] === "") {
-                                        tableData.items.push({
-                                            col3: companies[i]["提供付费实习岗位所属公司"],
-                                            col4: companies[i]["提供岗位名称"],
-                                            col5: companies[i]["公司所有制"],
-                                            col6: companies[i]["公司所属行业"],
-                                            col7: companies[i]["价格"],
-                                        });
-                                    } else break;
-                                }
-
-                                tableBody.innerHTML = "";
-                                tableData.items.forEach((item, index) => {
-                                    const row = document.createElement("tr");
-                                    row.innerHTML = "";
-                                    if (index === 0) {
-                                        row.innerHTML = `
-                        <td class="p-3 text-nowrap" rowspan="${tableData.items.length}">${tableData.col1}</td>
-                        <td class="p-3 text-nowrap" rowspan="${tableData.items.length}">${tableData.col2}</td>
-                        `;
-                                    }
-                                    row.innerHTML += `
-                        <td class="p-3">${item.col3}</td>
-                        <td class="p-3">${item.col4}</td>
-                        <td class="p-3">${item.col5}</td>
-                        <td class="p-3">${item.col6}</td>
-                        <td class="p-3">${item.col7}</td>
-                    `;
-                                    tableBody.appendChild(row);
-                                });
-
-                                // 替换原来的显示方式
-                                const modal = new bootstrap.Modal(document.getElementById('modal'))
-                                modal.show()
-                            });
-                        });
-                        
-                        // 初始化页面后立即执行的函数
-                        document.addEventListener('DOMContentLoaded', function() {
-                            // 总结按钮点击事件
-                            const summaryBtn = document.querySelector('.summary-btn');
-                            summaryBtn.addEventListener('click', function() {
-                                const targetPage = this.getAttribute('data-target');
-                                
-                                // 隐藏泡泡图和总结按钮
-                                document.getElementById('bubble-chart').classList.add('d-none');
-                                document.querySelector('.summary-btn-container').classList.add('d-none');
-                                
-                                // 显示总结容器
-                                document.getElementById('summary-container').classList.remove('d-none');
-                                
-                                // 显示目标页面，隐藏其他页面
-                                document.querySelectorAll('.summary-page').forEach(page => {
-                                    page.classList.add('d-none');
-                                });
-                                
-                                // 从右侧滑入动画效果
-                                const targetElement = document.getElementById(targetPage);
-                                targetElement.classList.remove('d-none');
-                                targetElement.classList.add('slide-in-right');
-                                
-                                // 动画结束后移除类
-                                setTimeout(() => {
-                                    targetElement.classList.remove('slide-in-right');
-                                }, 500);
-                            });
-                            
-                            // 返回按钮点击事件
-                            document.querySelector('.return-btn').addEventListener('click', function() {
-                                document.getElementById('summary-container').classList.add('d-none');
-                                document.getElementById('bubble-chart').classList.remove('d-none');
-                                document.querySelector('.summary-btn-container').classList.remove('d-none');
-                            });
-                            
-                            // 下一页按钮点击事件
-                            document.querySelectorAll('.next-page-btn').forEach(btn => {
-                                btn.addEventListener('click', function() {
-                                    const currentPage = this.closest('.summary-page');
-                                    const targetPageId = this.getAttribute('data-target');
-                                    const targetPage = document.getElementById(targetPageId);
-                                    
-                                    // 当前页向左滑出
-                                    currentPage.classList.add('slide-out-left');
-                                    
-                                    setTimeout(() => {
-                                        // 隐藏当前页
-                                        currentPage.classList.add('d-none');
-                                        currentPage.classList.remove('slide-out-left');
-                                        
-                                        // 目标页从右滑入
-                                        targetPage.classList.remove('d-none');
-                                        targetPage.classList.add('slide-in-right');
-                                        
-                                        // 动画结束后移除类
-                                        setTimeout(() => {
-                                            targetPage.classList.remove('slide-in-right');
-                                        }, 500);
-                                    }, 300);
-                                });
-                            });
-                            
-                            // 上一页按钮点击事件
-                            document.querySelectorAll('.prev-page-btn').forEach(btn => {
-                                btn.addEventListener('click', function() {
-                                    const currentPage = this.closest('.summary-page');
-                                    const targetPageId = this.getAttribute('data-target');
-                                    const targetPage = document.getElementById(targetPageId);
-                                    
-                                    // 当前页向右滑出
-                                    currentPage.classList.add('slide-out-right');
-                                    
-                                    setTimeout(() => {
-                                        // 隐藏当前页
-                                        currentPage.classList.add('d-none');
-                                        currentPage.classList.remove('slide-out-right');
-                                        
-                                        // 目标页从左滑入
-                                        targetPage.classList.remove('d-none');
-                                        targetPage.classList.add('slide-in-left');
-                                        
-                                        // 动画结束后移除类
-                                        setTimeout(() => {
-                                            targetPage.classList.remove('slide-in-left');
-                                        }, 500);
-                                    }, 300);
-                                });
-                            });
-                        });
-                    </script>
-                    
-                    <style>
-                        /* 简化的翻页动画样式 */
-                        .summary-container {
-                            position: relative;
-                            width: 100%;
-                        }
-                        
-                        .summary-page {
-                            position: relative;
-                            width: 100%;
-                            transition: all 0.3s ease;
-                        }
-                        
-                        /* 增加横向滑动转场效果 */
-                        .summary-page.slide-in-right {
-                            animation: slideInRight 0.5s forwards;
-                        }
-                        
-                        .summary-page.slide-in-left {
-                            animation: slideInLeft 0.5s forwards;
-                        }
-                        
-                        .summary-page.slide-out-right {
-                            animation: slideOutRight 0.5s forwards;
-                        }
-                        
-                        .summary-page.slide-out-left {
-                            animation: slideOutLeft 0.5s forwards;
-                        }
-                        
-                        @keyframes slideInRight {
-                            from {
-                                transform: translateX(100%);
-                                opacity: 0;
-                            }
-                            to {
-                                transform: translateX(0);
-                                opacity: 1;
-                            }
-                        }
-                        
-                        @keyframes slideOutLeft {
-                            from {
-                                transform: translateX(0);
-                                opacity: 1;
-                            }
-                            to {
-                                transform: translateX(-100%);
-                                opacity: 0;
-                            }
-                        }
-                        
-                        @keyframes slideInLeft {
-                            from {
-                                transform: translateX(-100%);
-                                opacity: 0;
-                            }
-                            to {
-                                transform: translateX(0);
-                                opacity: 1;
-                            }
-                        }
-                        
-                        @keyframes slideOutRight {
-                            from {
-                                transform: translateX(0);
-                                opacity: 1;
-                            }
-                            to {
-                                transform: translateX(100%);
-                                opacity: 0;
-                            }
-                        }
-                        
-                        /* 按钮效果优化 */
-                        .summary-btn, .return-btn, .next-page-btn, .prev-page-btn {
-                            transition: all 0.3s ease;
-                            box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-                        }
-                        
-                        .summary-btn:hover, .return-btn:hover, .next-page-btn:hover, .prev-page-btn:hover {
-                            transform: translateY(-2px);
-                            box-shadow: 0 5px 12px rgba(0,0,0,0.3);
-                        }
-                        
-                        .summary-btn:active, .return-btn:active, .next-page-btn:active, .prev-page-btn:active {
-                            transform: translateY(1px);
-                            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-                        }
-                    </style>
-                                </div>
-                            </div>
+        <section class="section-with-animation text-center mt-5" id="overview">
+            <!-- 新增 container-fluid 和 px-0 -->
+            <img src="标题图/互联网平台上的付费实习暗流.png"
+                 alt="互联网平台上的付费实习暗流">
+        </section>
 
 
-                    <div class="row justify-content-center mb-5">
+        <!-- 推广平台 -->
+        <section class="py-5 section-with-animation">
+            <div class="container">
+                <div class="row justify-content-center">
                     <div class="col-lg-10">
-                        <p class="section-description mt-48">这185个岗位中，以下公司的以下岗位出现频率较高，分别是——腾讯的软件开发、新媒体运营、商业分析岗位，华为的技术、通信工程、运营岗位，奥美的新媒体运营、媒介策划、咨询岗位，中信证券的投行、资产管理岗位，美团的商业分析、战略投资岗位，芒果tv的内容策划、新媒体运营岗位，小红书的新媒体运营、商业分析岗位，网易的产品运营、音乐策划岗位，字节跳动的产品运营、数据运营岗位，<span class="highlight">这些岗位大多属于通用型岗位</span>。</p>
+                        <p class="section-description">“同学你好，你是打算找实习吗？这边可以添加一下我的微信，可以给你提供一些帮助，平台上面发言有限制。”在我们私信小红书上一位付费实习帖主后，他这样回复道。</p>
+                        <p class="section-description">付费实习中介的广告如同暗流，潜藏在二手交易、社交分享与电商平台的缝隙中。他们伪装成普通网民，混迹于正常的实习交流帖之间，让人真假难辨，同时不断吸引着求职心切的大学生。在我们的深入调查下，这些中介的活动轨迹逐渐清晰。</p>
+                        <p class="section-description">截至2024年10月24日，我们以“内推”“实习”“实习推荐”“远程实习”等关键词，在淘宝、咸鱼和小红书三大平台进行搜索，并通过Python爬取相关数据。在剔除无效信息后，<span class="highlight">共收集到2166条有效数据</span>。其中，<span class="highlight">闲鱼以1686条帖子占据绝对主导位置，小红书次之（444条），淘宝则最少（36条）</span>。</p>
+                    </div>
+                </div>
+
+                <div class="row g-3 justify-content-center mt-3">
+                    <!-- 闲鱼卡片 -->
+                    <div class="col-8 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <div class="card h-100 stat-card">
+                            <div class="card-body text-center d-flex flex-column justify-content-between">
+                                <div class="d-flex justify-content-center">
+                                    <img src="images/4.png" alt="闲鱼" height="40">
+                                </div>
+                                <h3 class="stat-number" style="margin-top: 10px;margin-bottom: 10px;">1686</h3>
+                                <p class="stat-title mb-0">闲鱼</p>
+
+                                <!-- 悬浮预览内容 -->
+                                <div class="post-preview">
+                                    <div class="preview-header">闲鱼平台典型帖子</div>
+                                    <ul class="preview-list">
+                                        <li><img src="images/XY1.jpg" alt="" width="300"></li>
+                                        <li><img src="images/XY2.jpg" alt="" width="300"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 小红书卡片 -->
+                    <div class="col-8 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <div class="card h-100 stat-card">
+                            <div class="card-body text-center d-flex flex-column justify-content-between position-relative">
+                                <div class="d-flex justify-content-center">
+                                    <img src="images/1.png" alt="小红书" height="40">
+                                </div>
+                                <h3 class="stat-number" style="margin-top: 10px;margin-bottom: 10px;">444</h3>
+                                <p class="stat-title mb-0">小红书</p>
+                            </div>
+
+                            <!-- 悬浮预览内容 -->
+                            <div class="post-preview">
+                                <div class="preview-header">小红书平台典型帖子</div>
+                                <ul class="preview-list">
+                                    <li><img src="images/XHS1.jpg" alt="" width="300"></li>
+                                    <li><img src="images/XHS2.jpg" alt="" width="300"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 淘宝卡片 -->
+                    <div class="col-8 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <div class="card h-100 stat-card">
+                            <div class="card-body text-center d-flex flex-column justify-content-between position-relative">
+                                <div class="d-flex justify-content-center">
+                                    <img src="images/2.png" alt="淘宝" height="40">
+                                </div>
+                                <h3 class="stat-number" style="margin-top: 10px;margin-bottom: 10px;">36</h3>
+                                <p class="stat-title mb-0">淘宝</p>
+                            </div>
+
+                            <!-- 悬浮预览内容 -->
+                            <div class="post-preview">
+                                <div class="preview-header">淘宝典型商品</div>
+                                <ul class="preview-list">
+                                    <li><img src="images/TB1.jpg" alt="" width="300"></li>
+                                    <li><img src="images/TB2.jpg" alt="" width="300"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 总计卡片 -->
+                    <div class="col-8 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <div class="card h-100 stat-card">
+                            <div class="card-body text-center d-flex flex-column justify-content-between position-relative">
+                                <div class="d-flex justify-content-center">
+                                    <img src="images/3.png" alt="总计" height="40">
+                                </div>
+                                <h3 class="stat-number" style="margin-top: 10px;margin-bottom: 10px;">2166</h3>
+                                <p class="stat-title mb-0">总计</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p style="font-size:12px;margin:10px 0px 0px 200px;color:#e0e0e0">
+                    注：鼠标悬浮可浏览相关帖子
+                </p>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <p class="section-description mt-48">闲鱼作为一款二手交易的社群平台，用户无需提交商家资质即可在平台上发布商品，其低审核门槛成为付费实习中介的温床。<span class="highlight">在我们爬取的1686条“实习内推”相关帖子中，100%与付费实习服务相挂钩</span>，标题高频词包括“名企实习”“远程内推”“全职内推”等。</p>
+                        <p class="section-description">通过对商品页面所显示的卖家IP地址进行统计分析，我们发现付费实习服务的提供方呈现出显著的地域集中性。超大城市（如北京、上海）以816条帖子占据总量的48.4%；特大城市（如武汉）、大城市（如南宁）占比分别为21.8%（367条）和13.5%（227条）。<span class="highlight">值得注意的是，即便在经济活跃度较低的地区，这一行业也依然具有生存空间——中小城市（如厦门）贡献了16.3%（276条）的市场份额</span>。</p>
+                        <p class="section-description">淘宝作为一家拥有较强审查机制、成熟的电商平台，其对商家资质和商品内容的监管力度明显高于闲鱼。由于“付费实习”服务的敏感性，相关商品页面难以通过审查，因此搜索结果数量较少。在36条商品结果中，约30家卖家集中在经济发达的超大城市，其余6家分布在特大城市。综合闲鱼和淘宝两个平台上的卖家数据，可以得知定位在超大城市的卖家数量是特大城市的2.2倍，<span class="highlight">印证了城市经济水平与付费实习供给量的强关联性</span>。</p>
+                        <div class="mt-5">
+                            <h5 class="text-center">淘宝和咸鱼平台中"实习"卖家IP分布</h5>
+                            <div id="myChart2" style="width: 70%; height: 600px; margin: 0 auto;"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <p class="section-description mt-5">小红书以“种草文化”闻名，是集社交与消费于一体的平台，深受年轻人青睐。在搜索“实习”关键词后，我们发现，小红书的帖子内容包括实习经历分享、公司实习招聘信息、实习评价等形式。通过对<span class="highlight">爬取的444条有效帖子</span>内容进行人工编码后发现，其中<span class="highlight">35.6%（158条）的帖子属于非广告的正常实习交流帖，而其余64.4%（286条）均为付费实习中介发布的广告贴</span>。</p>
+                        <div class="mt-5 mb-5">
+                            <h5 class="text-center">小红书帖子中关于"实习"内容的帖子占比</h5>
+                            <div id="myChart1" style="height: 400px;"></div>
+                            <p style="color: #888;font-size: 12px;font-weight: normal;padding-left:10%;">数据来源：在小红书平台采集444条有效数据，<br>并通过excel进行数据整理与清洗。</p>
+                        </div>
+
+                        <div class="chart-tooltip" id="chartTooltip">
+                            <div class="tooltip-header" id="tooltipTitle">帖子详情</div>
+                            <div class="tooltip-content" id="tooltipContent">这里是帖子的详细描述内容</div>
+
+                            <div class="tooltip-items">
+                                <!-- 示例内容将通过JS动态生成 -->
+                            </div>
+
+                            <a href="#" class="tooltip-link" id="tooltipLink" target="_blank">查看更多详情</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 mb-5">
+                        <p class="section-description">付费实习中介在小红书上的广告形式更加隐蔽，既有直接宣传的帖子，也有伪装成普通用户的“种草帖”。据统计，在286条广告贴中，180条为硬广帖，内容中清楚标注“内推服务”字样，通常附带联系方式；106条则为伪装成实习经历分享的软广帖，往往在内页或评论区中插入“可以提供实习咨询”或“帮忙内推”等相关字眼，达到间接宣传产品或服务的，吸引潜在客户的目的。<span class="highlight">这些伪装贴往往通过高质量的图文内容赢得信任，用户在评论区咨询后，便进入了付费实习中介预设的引流环节</span>。</p>
+                        <p class="section-description">在“付费实习”的隐形广告中，尽管帖子发布者、宣传话术有所不同，看似分散，<span class="highlight">但通过分析小红书286条广告帖，我们发现，它们最终指向的中介公司仅有28家</span>。这些中介公司掌控平台数十个账号，同一服务用不同话术触及不同区域或不同需求的用户。</p>
+                    </div>
+                </div>
+
+
+                <div class="mt-5">
+                    <h5 class="text-center">28家中介公司的注册类型</h5>
+                    <div class="company">
+                        <div class="ellipse-container">
+                            <div class="ellipse-item">
+                                <div class="ellipse ellipse-1">
+                                    <div class="ellipse-text">以从事教育为主</div>
+                                </div>
+                                <div class="tooltip" style="white-space: pre-line;">新吴区凌远留学信息咨询服务中心</div>
+                            </div>
+
+                            <div class="ellipse-item">
+                                <div class="ellipse ellipse-2">
+                                    <div class="ellipse-text">以从事科技推广和应用服务业为主</div>
+                                </div>
+                                <div class="tooltip" style="white-space: pre-line;">北京旷智信息科技有限公司
+                                    海马中际教育科技集团有限公司
+                                    上海职咖科技有限公司
+                                    上海瀚泊科技集团有限公司
+                                    远方有录科技（北京）股份有限公司
+                                    环宇优聘（北京）教育科技有限公司
+                                    北京肯思沃德教育科技有限公司
+                                    北京淘友天下科技发展有限公司
+                                    深圳市职询信息咨询有限公司
+                                    上海搞定文化科技有限公司
+                                    北京集思未来科技有限公司
+                                </div>
+                            </div>
+
+                            <div class="ellipse-item">
+                                <div class="ellipse ellipse-3">
+                                    <div class="ellipse-text">以从事其他服务业为主</div>
+                                </div>
+                                <div class="tooltip" style="white-space: pre-line;">奥弗（深圳）科技有限公司</div>
+                            </div>
+
+                            <div class="ellipse-item">
+                                <div class="ellipse ellipse-4">
+                                    <div class="ellipse-text">以从事软件和信息技术服务业为主</div>
+                                </div>
+                                <div class="tooltip" style="white-space: pre-line;">互联派教育科技（大连）有限公司
+                                    成都先胜信息科技有限公司
+                                </div>
+                            </div>
+
+                            <div class="ellipse-item">
+                                <div class="ellipse ellipse-5">
+                                    <div class="ellipse-text">以从事商务服务业为主</div>
+                                </div>
+                                <div class="tooltip" style="white-space: pre-line;">南京冠升杰咨询有限公司
+                                    筑梦（杭州）出国留学咨询服务有限公司
+                                    北京爱思益咨询有限公司
+                                    蔓藤教育咨询（北京）有限公司
+                                    苏州细雨前程商务咨询有限公司
+                                    西安猎人阿尔法商务信息咨询有限公司
+                                    南京美之桥教育咨询有限公司
+                                    南京职向生涯国际教育咨询有限公司
+                                    宁波签语留学服务有限公司
+                                    广州卓思德咨询服务有限公司
+                                </div>
+                            </div>
+
+                            <div class="ellipse-item">
+                                <div class="ellipse ellipse-6">
+                                    <div class="ellipse-text">以从事研究和试验发展为主</div>
+                                </div>
+                                <div class="tooltip" style="white-space: pre-line;">成都来者教育科技有限公司
+                                    成都萌想科技有限责任公司
+                                    圈里网络科技（广州）有限公司
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p style="color: #888;font-size: 12px;font-weight: normal;padding-left:10%;">注：鼠标移动到注册类型圆圈查看其对应的公司名称。</p>
+            </div>
+        </section>
+        <div class="black-dashed-line"></div>
+        <!-- 薪资分析部分 -->
+        <section id="salary" class="py-5 section-with-animation">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+
+                        <section class="section-with-animation text-center">
+                            <!-- 新增 container-fluid 和 px-0 -->
+                            <img src="标题图/付费实习中介的暗网生态.png"
+                                 alt="付费实习中介的暗网生态">
+                        </section>
+
+                        <p class="section-description mt-60 mb-60">通过对28家付费实习中介公司的工商登记信息溯源，我们发现，这一行业存在显著的资本共生现象。形成一个相对紧密的利益网络。天眼查、爱企查等平台数据显示，<span class="highlight">超过半数的机构（16家）存在股权关联</span>，其核心枢纽往往系于特定自然人。同一控制人通过法人任职、交叉持股等方式，构建起一个关联紧密的中介网络。<span class="highlight">例如，“职优你（上海）教育科技有限公司（unicareer）”和“北京淘友天下科技发展有限公司”的关联企业多达12家，形成了一个庞大的资本纽带</span>。</p>
+
+                        <div class="text-center">
+                            <h5>付费实习中介关联网</h5>
+                            <div id="myChart4" style="height: 800px;"></div>
+                            <p style="color: #888;font-size: 12px;font-weight: normal;text-align:left;padding-left:10%;">注：鼠标移动到公司名称圆圈查看其关联的其他公司,<br>移动至关联网内滚动鼠标可放大或缩小查看。<br>数据来源：通过在天眼查、企查查平台采集26家企业的相关信息进行分析。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-10">
+                        <p class="section-description mt-48">这种资本纽带催生了特殊的行业生态。经过数据整合，<span class="highlight">我们发现，这些表面“独立”的中介机构在主营业务、定价体系、服务流程和客户资源上呈现出高度趋同的特征</span>。这种协同效应不仅可能降低运营风险，还能实现客户资源的多次转化。</p>
+                        <p class="section-description">值得注意的是，该行业普遍存在"异业注册"现象。统计显示，仅新吴区凌远留学信息咨询服务中心以教育咨询为主营注册，余下27家机构中，科技类占比达57.1%，商业服务类占35.7%。与之形成鲜明对比的是，近八成机构（23家）业务范围又涵盖教育咨询服务，暴露出注册资质与实际业务的显著偏差。"教育部办公厅指导社会成人教育培训机构严格按照民办学校办学许可证或法人登记证照确定的经营范围开展教育培训，不得以教育咨询、科技咨询、技术咨询、企业管理咨询等各种咨询名义开展教育培训。</p>
+                        <p class="section-description">但实践中大量机构以科技公司名义开展培训业务。<span class="highlight">这种现象既反映出行业监管的灰色地带，也暴露出市场主体对教育资质的规避心态，规避教育领域特殊监管的套利行为</span>。</p>
+                        <p class="section-description">在长期运作下，付费实习中介的实习内推流程已形成了一套成熟且可复制的模板，犹如一条高效运转的生产流水线。我们将这一过程拆解为<span class="highlight">以下四个关键环节：一是“入圈”，二是“定金交易”，三是“简历‘整容’”，四是“‘舞台剧’式面试”</span>。</p>
+                        <p class="section-description">为了深入了解这一流程，<span class="highlight">我们精心准备了四份985、211、双非、二本不同类型高校学生的简历</span>，这些简历在学历背景、实习经历和技能掌握上各有差异。</p>
+                    </div>
+                </div>
+
+                <!-- 修改后的四列布局 -->
+                <div class="row justify-content-center g-2">
+                    <div class="col-2 text-center">
+                        <img src="images/双非.png" alt="双非" class="img-fluid uniform-img">
+                    </div>
+                    <div class="col-2 text-center">
+                        <img src="images/普二.png" alt="普二" class="img-fluid uniform-img">
+                    </div>
+                    <div class="col-2 text-center">
+                        <img src="images/211.png" alt="211" class="img-fluid uniform-img">
+                    </div>
+                    <div class="col-2 text-center">
+                        <img src="images/985.png" alt="985" class="img-fluid uniform-img">
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <p class="section-description mt-48">随后，
+                        <span class="highlight">我们对市面上8家规模较大的中介机构进行了初步探查</span>
+                        。调查发现，在未付费阶段，这些机构的流程和话术高度相似，似乎有着统一的“剧本”。为了进一步揭开付费实习中介的“灰色”操作，
+                        <span class="highlight">我们随机选择了其中三家机构交付定金，深入体验其定制化服务流程</span>
+                        。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="black-dashed-line"></div>
+        <!-- 行业分布部分 -->
+        <section id="industry" class="py-5 section-with-animation">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+
+                        <section class="section-with-animation text-center">
+                            <!-- 新增 container-fluid 和 px-0 -->
+                            <img src="标题图/付费实习求职者的入圈.png"
+                                 alt="付费实习求职者的入圈">
+                        </section>
+                        <p class="section-description mt-48">与淘宝和闲鱼相比，小红书的商业属性相对较弱，这使其成为我们付费实习中介引流的主要阵地。在小红书上搜索 “实习” 关键词，我们很快被相关帖子引导至中介的私信后台。<span class="highlight">通过与这8家中介机构对话，我们发现，这些中介在未付费阶段均采用标准化的话术，将用户引导至其私域</span>。</p>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center mt-5">
+                    <div class="col-lg-10">
+                        <div class="dialogue-container">
+                            <p class="dialogue mb-5">“宝宝，我们这边是付费实习项目哈，你要是能接受的话可以留个联系方式，稍后我们老师会加你哦～”</p>
+                            <p class="dialogue mb-5">“好的，没问题。”</p>
+                            <p class="dialogue mb-5">“那先跟你说清楚哦，我们的实习是需要收费的，同学你能接受吗？”</p>
+                            <p class="dialogue mb-5">“方便问一下具体价格吗？”</p>
+                            <p class="dialogue mb-5">“费用在一万到三万不等，具体要看同学你这边的实际情况呢。”</p>
+                            <p class="dialogue mb-5">“‘具体情况’指什么呀？是根据院校级别不同吗？比如 985、211 这样的？”</p>
+                            <p class="dialogue mb-5">“宝宝，咱们这边不看院校背景的哈。具体情况主要是看你想去的公司级别、实习时长，还有选择线下还是线上实习。”</p>
+                            <p class="dialogue mb-5">“可是我有点担心自己的能力和学历……”</p>
+                            <p class="dialogue mb-5">“是这样，宝宝，我们这里很多事情有钱就能解决的。”</p>
+                        </div>
+                        <p class="text-muted text-center">（截取自记者与中介的聊天记录）</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="black-dashed-line"></div>
+
+        <div class="modal" id="modal">
+            <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">企业详细信息</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th class="p-3 fs-6 text-start">法人</th>
+                                    <th class="p-3 fs-6 text-start">成立时间</th>
+                                    <th class="p-3 fs-6 text-start">提供付费实习岗位所属公司</th>
+                                    <th class="p-3 fs-6 text-start">提供岗位名称</th>
+                                    <th class="p-3 fs-6 text-start">公司所有制</th>
+                                    <th class="p-3 fs-6 text-start">公司所属行业</th>
+                                    <th class="p-3 fs-6 text-start">价格</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table-body" class="table-group-divider">
+                                <!-- 表格内容将通过 JavaScript 动态添加 -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 钱款交易部分 -->
+        <section id="money" class="py-5 section-with-animation">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+
+                        <section class="section-with-animation text-center">
+                            <!-- 新增 container-fluid 和 px-0 -->
+                            <img src="标题图/钱_双方暗通款曲的定情信物.png"
+                                 alt="钱——双方暗通款曲的定情信物">
+                        </section>
+
+                        <p class="section-description mt-60">当我们表示能够接受价格后，8家中介机构纷纷要求我们提交简历，以便推荐合适的岗位。然而，中介并未详细说明简历是如何与岗位进行匹配的，仅是简单了解了我们的求职意向后，便推送了他们所掌握的岗位资源。<span class="highlight">这8家中介共提供了185个线上线下岗位</span>。</p>
+                    </div>
+                </div>
+                <div class="row align-items-center justify-content-center">
+                    <!-- 新增 justify-content-center -->
+                    <div class="col-lg-10 mx-auto position-relative">
+                        <!-- 新增 position-relative -->
+                        <!-- 侧边标签 - 改为相对于泡泡表单容器定位 -->
+                        <div class="summary-btn-container" style="position: absolute; left: 60px; bottom: 10%; transform: translateY(-50%); z-index: 100; display:none">
+                            <button class="btn rounded-pill mb-2 summary-btn" style="background-color: #ffae4d;color: #fff;" data-target="summary-page1">
+                                <i class="bi bi-file-text"></i> 点击解锁更多
+                            </button>
+                        </div>
+
+                        <!-- 泡泡图表容器 -->
+                        <div id="bubble-chart" class="circle-container">
+                            <!-- 修改圆点颜色为自定义颜色 -->
+                            <div class="circle"
+                                 data-company="海马中际教育科技集团有限公司（海马职加）"
+                                 style="background-color: #E1CAFC;">
+                                海马中际教育科技集团有限公司（海马职加）
+                            </div>
+                            <div class="circle"
+                                 data-company="上海搞定文化科技有限公司（搞定offer）"
+                                 style="background-color: #FFF7C7;">
+                                上海搞定文化科技有限公司（搞定offer）
+                            </div>
+                            <div class="circle"
+                                 data-company="成都来者教育科技有限公司（DBC职梦）"
+                                 style="background-color: #FFAB5F;">
+                                成都来者教育科技有限公司（DBC职梦）
+                            </div>
+                            <div class="circle"
+                                 data-company="北京爱思益咨询有限公司（爱思益）"
+                                 style="background-color: #EBF26B;">
+                                北京爱思益咨询有限公司（爱思益）
+                            </div>
+                            <div class="circle"
+                                 data-company="南京蒸汽职业咨询有限公司（Steam蒸汽求职）"
+                                 style="background-color: #A9D6FF;">
+                                南京蒸汽职业咨询有限公司（Steam蒸汽求职）
+                            </div>
+                            <div class="circle"
+                                 data-company="广州卓思德咨询服务有限公司（卓思德）"
+                                 style="background-color: #FC7E99;">
+                                广州卓思德咨询服务有限公司（卓思德）
+                            </div>
+                            <div class="circle"
+                                 data-company="北京集思未来科技有限公司（集思未来）"
+                                 style="background-color: #FF8F43;">
+                                北京集思未来科技有限公司（集思未来）
+                            </div>
+                            <div class="circle"
+                                 data-company="互联派教育科技（大连）有限公司（互联派）"
+                                 style="background-color: #53DBEA;">
+                                互联派教育科技（大连）有限公司（互联派）
+                            </div>
+                        </div>
+
+                        <!-- 总结页面容器 - 使用翻页效果 -->
+                        <div id="summary-container" class="d-none">
+                            <!-- 总结页面1 -->
+                            <div id="summary-page1" class="summary-page">
+                                <div class="position-absolute start-0 top-50 translate-middle-y" style="left: -60px; z-index: 100;">
+                                    <button class="btn btn-secondary rounded-pill mb-2 return-btn">
+                                        <i class="bi bi-arrow-left"></i> 返回
+                                    </button>
+                                </div>
+                                <div class="position-absolute end-0 top-50 translate-middle-y" style="right: -60px; z-index: 100;">
+                                    <button class="btn btn-primary rounded-pill mb-2 next-page-btn" data-target="summary-page2">
+                                        <i class="bi bi-arrow-right"></i>
+                                    </button>
+                                </div>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="text-center">
+                                            <img src="zj/p1.png" alt="八大中介所供实习岗位价格与实习公司所有制的关系" class="img-fluid" style="max-width: 85%; max-height: 500px; object-fit: contain;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 总结页面2 -->
+                            <div id="summary-page2" class="summary-page d-none">
+                                <div class="position-absolute start-0 top-50 translate-middle-y" style="left: -60px; z-index: 100;">
+                                    <button class="btn btn-secondary rounded-pill mb-2 prev-page-btn" data-target="summary-page1">
+                                        <i class="bi bi-arrow-left"></i>
+                                    </button>
+                                </div>
+                                <div class="position-absolute end-0 top-50 translate-middle-y" style="right: -60px; z-index: 100;">
+                                    <button class="btn btn-primary rounded-pill mb-2 next-page-btn" data-target="summary-page3">
+                                        <i class="bi bi-arrow-right"></i>
+                                    </button>
+                                </div>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="text-center">
+                                            <img src="zj/p2.png" alt="八大中介机构所供实习岗位中重复实习公司" class="img-fluid" style="max-width: 85%; max-height: 500px; object-fit: contain;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 总结页面3 -->
+                            <div id="summary-page3" class="summary-page d-none">
+                                <div class="position-absolute start-0 top-50 translate-middle-y" style="left: -60px; z-index: 100;">
+                                    <button class="btn btn-secondary rounded-pill mb-2 prev-page-btn" data-target="summary-page2">
+                                        <i class="bi bi-arrow-left"></i>
+                                    </button>
+                                </div>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="text-center">
+                                            <img src="zj/p3.png" alt="八大中介所供私企实习岗位价格与企业层级的关联" class="img-fluid" style="max-width: 85%; max-height: 500px; object-fit: contain;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script src="data.js"></script>
+                        <script>
+                            const circles = document.querySelectorAll(".circle");
+                            const modal = document.getElementById("modal");
+                            const tableBody = document.getElementById("table-body");
+                            const container = document.querySelector(".circle-container");
+                            const minDistance = 120; // 圆圈之间的最小距离
+
+                            // 泡泡图相关代码
+                            function isOverlapping(circle1, circle2) {
+                                const rect1 = circle1.getBoundingClientRect();
+                                const rect2 = circle2.getBoundingClientRect();
+                                const dx =
+                                    rect1.left + rect1.width / 2 - (rect2.left + rect2.width / 2);
+                                const dy =
+                                    rect1.top + rect1.height / 2 - (rect2.top + rect2.height / 2);
+                                const distance = Math.sqrt(dx * dx + dy * dy);
+                                return distance < minDistance;
+                            }
+
+                            function getRandomPosition() {
+                                const maxX = container.offsetWidth - circles[0].offsetWidth;
+                                const maxY = container.offsetHeight - circles[0].offsetHeight;
+                                // 使用正态分布生成更自然的随机数
+                                function gaussianRandom() {
+                                    let u = 0,
+                                        v = 0;
+                                    while (u === 0) u = Math.random();
+                                    while (v === 0) v = Math.random();
+                                    let num = Math.sqrt(-2.0 * Math.log(u)) * Math.cos(2.0 * Math.PI * v);
+                                    num = num / 10.0 + 0.5;
+                                    if (num > 1 || num < 0) return gaussianRandom();
+                                    return num;
+                                }
+                                const randomX = Math.floor(gaussianRandom() * maxX);
+                                const randomY = Math.floor(gaussianRandom() * maxY);
+                                return { x: randomX, y: randomY };
+                            }
+
+                            circles.forEach((circle, index) => {
+                                let position;
+                                let overlaps;
+                                do {
+                                    position = getRandomPosition();
+                                    circle.style.left = `${position.x}px`;
+                                    circle.style.top = `${position.y}px`;
+                                    overlaps = false;
+                                    for (let i = 0; i < index; i++) {
+                                        if (isOverlapping(circle, circles[i])) {
+                                            overlaps = true;
+                                            break;
+                                        }
+                                    }
+                                } while (overlaps);
+
+                                circle.addEventListener("click", () => {
+                                    const company = circle.dataset.company;
+                                    const index = companies.findIndex(
+                                        (item) => item["中介机构"] === company
+                                    );
+                                    if (index === -1) {
+                                        alert("not found");
+                                        return;
+                                    }
+
+                                    const tableData = {
+                                        col1: companies[index]["法人"],
+                                        col2: companies[index]["成立时间"],
+                                        items: [],
+                                    };
+
+                                    for (let i = index; i < companies.length; i++) {
+                                        if (i === index || companies[i]["中介机构"] === "") {
+                                            tableData.items.push({
+                                                col3: companies[i]["提供付费实习岗位所属公司"],
+                                                col4: companies[i]["提供岗位名称"],
+                                                col5: companies[i]["公司所有制"],
+                                                col6: companies[i]["公司所属行业"],
+                                                col7: companies[i]["价格"],
+                                            });
+                                        } else break;
+                                    }
+
+                                    tableBody.innerHTML = "";
+                                    tableData.items.forEach((item, index) => {
+                                        const row = document.createElement("tr");
+                                        row.innerHTML = "";
+                                        if (index === 0) {
+                                            row.innerHTML = `
+                                                                                                                                                <td class="p-3 text-nowrap" rowspan="${tableData.items.length}">${tableData.col1}</td>
+                                                                                                                                                <td class="p-3 text-nowrap" rowspan="${tableData.items.length}">${tableData.col2}</td>
+                                                                                                                                                `;
+                                        }
+                                        row.innerHTML += `
+                                                                                                                                                <td class="p-3">${item.col3}</td>
+                                                                                                                                                <td class="p-3">${item.col4}</td>
+                                                                                                                                                <td class="p-3">${item.col5}</td>
+                                                                                                                                                <td class="p-3">${item.col6}</td>
+                                                                                                                                                <td class="p-3">${item.col7}</td>
+                                                                                                                                            `;
+                                        tableBody.appendChild(row);
+                                    });
+
+                                    // 替换原来的显示方式
+                                    const modal = new bootstrap.Modal(document.getElementById('modal'))
+                                    modal.show()
+                                });
+                            });
+
+                            // 初始化页面后立即执行的函数
+                            document.addEventListener('DOMContentLoaded', function () {
+                                // 总结按钮点击事件
+                                const summaryBtn = document.querySelector('.summary-btn');
+                                summaryBtn.addEventListener('click', function () {
+                                    const targetPage = this.getAttribute('data-target');
+
+                                    // 隐藏泡泡图和总结按钮
+                                    document.getElementById('bubble-chart').classList.add('d-none');
+                                    document.querySelector('.summary-btn-container').classList.add('d-none');
+
+                                    // 显示总结容器
+                                    document.getElementById('summary-container').classList.remove('d-none');
+
+                                    // 显示目标页面，隐藏其他页面
+                                    document.querySelectorAll('.summary-page').forEach(page => {
+                                        page.classList.add('d-none');
+                                    });
+
+                                    // 从右侧滑入动画效果
+                                    const targetElement = document.getElementById(targetPage);
+                                    targetElement.classList.remove('d-none');
+                                    targetElement.classList.add('slide-in-right');
+
+                                    // 动画结束后移除类
+                                    setTimeout(() => {
+                                        targetElement.classList.remove('slide-in-right');
+                                    }, 500);
+                                });
+
+                                // 返回按钮点击事件
+                                document.querySelector('.return-btn').addEventListener('click', function () {
+                                    document.getElementById('summary-container').classList.add('d-none');
+                                    document.getElementById('bubble-chart').classList.remove('d-none');
+                                    document.querySelector('.summary-btn-container').classList.remove('d-none');
+                                });
+
+                                // 下一页按钮点击事件
+                                document.querySelectorAll('.next-page-btn').forEach(btn => {
+                                    btn.addEventListener('click', function () {
+                                        const currentPage = this.closest('.summary-page');
+                                        const targetPageId = this.getAttribute('data-target');
+                                        const targetPage = document.getElementById(targetPageId);
+
+                                        // 当前页向左滑出
+                                        currentPage.classList.add('slide-out-left');
+
+                                        setTimeout(() => {
+                                            // 隐藏当前页
+                                            currentPage.classList.add('d-none');
+                                            currentPage.classList.remove('slide-out-left');
+
+                                            // 目标页从右滑入
+                                            targetPage.classList.remove('d-none');
+                                            targetPage.classList.add('slide-in-right');
+
+                                            // 动画结束后移除类
+                                            setTimeout(() => {
+                                                targetPage.classList.remove('slide-in-right');
+                                            }, 500);
+                                        }, 300);
+                                    });
+                                });
+
+                                // 上一页按钮点击事件
+                                document.querySelectorAll('.prev-page-btn').forEach(btn => {
+                                    btn.addEventListener('click', function () {
+                                        const currentPage = this.closest('.summary-page');
+                                        const targetPageId = this.getAttribute('data-target');
+                                        const targetPage = document.getElementById(targetPageId);
+
+                                        // 当前页向右滑出
+                                        currentPage.classList.add('slide-out-right');
+
+                                        setTimeout(() => {
+                                            // 隐藏当前页
+                                            currentPage.classList.add('d-none');
+                                            currentPage.classList.remove('slide-out-right');
+
+                                            // 目标页从左滑入
+                                            targetPage.classList.remove('d-none');
+                                            targetPage.classList.add('slide-in-left');
+
+                                            // 动画结束后移除类
+                                            setTimeout(() => {
+                                                targetPage.classList.remove('slide-in-left');
+                                            }, 500);
+                                        }, 300);
+                                    });
+                                });
+
+                            });
+                        </script>
+
+                        <style>
+                            /* 简化的翻页动画样式 */
+                            .summary-container {
+                                position: relative;
+                                width: 100%;
+                            }
+
+                            .summary-page {
+                                position: relative;
+                                width: 100%;
+                                transition: all 0.3s ease;
+                            }
+
+                                /* 增加横向滑动转场效果 */
+                                .summary-page.slide-in-right {
+                                    animation: slideInRight 0.5s forwards;
+                                }
+
+                                .summary-page.slide-in-left {
+                                    animation: slideInLeft 0.5s forwards;
+                                }
+
+                                .summary-page.slide-out-right {
+                                    animation: slideOutRight 0.5s forwards;
+                                }
+
+                                .summary-page.slide-out-left {
+                                    animation: slideOutLeft 0.5s forwards;
+                                }
+
+                            @keyframes slideInRight {
+                                from {
+                                    transform: translateX(100%);
+                                    opacity: 0;
+                                }
+
+                                to {
+                                    transform: translateX(0);
+                                    opacity: 1;
+                                }
+                            }
+
+                            @keyframes slideOutLeft {
+                                from {
+                                    transform: translateX(0);
+                                    opacity: 1;
+                                }
+
+                                to {
+                                    transform: translateX(-100%);
+                                    opacity: 0;
+                                }
+                            }
+
+                            @keyframes slideInLeft {
+                                from {
+                                    transform: translateX(-100%);
+                                    opacity: 0;
+                                }
+
+                                to {
+                                    transform: translateX(0);
+                                    opacity: 1;
+                                }
+                            }
+
+                            @keyframes slideOutRight {
+                                from {
+                                    transform: translateX(0);
+                                    opacity: 1;
+                                }
+
+                                to {
+                                    transform: translateX(100%);
+                                    opacity: 0;
+                                }
+                            }
+
+                            /* 按钮效果优化 */
+                            .summary-btn, .return-btn, .next-page-btn, .prev-page-btn {
+                                transition: all 0.3s ease;
+                                box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+                            }
+
+                                .summary-btn:hover, .return-btn:hover, .next-page-btn:hover, .prev-page-btn:hover {
+                                    transform: translateY(-2px);
+                                    box-shadow: 0 5px 12px rgba(0,0,0,0.3);
+                                }
+
+                                .summary-btn:active, .return-btn:active, .next-page-btn:active, .prev-page-btn:active {
+                                    transform: translateY(1px);
+                                    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+                                }
+                        </style>
+                    </div>
+                </div>
+                <p style="color: #888;font-size: 12px;font-weight: normal;padding-left:10%;">注：点击泡泡可了解该机构所供岗位信息</p>
+
+
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-10">
+                        <p class="section-description">这185个岗位中，以下公司的以下岗位出现频率较高，分别是——腾讯的软件开发、新媒体运营、商业分析岗位，华为的技术、通信工程、运营岗位，奥美的新媒体运营、媒介策划、咨询岗位，中信证券的投行、资产管理岗位，美团的商业分析、战略投资岗位，芒果tv的内容策划、新媒体运营岗位，小红书的新媒体运营、商业分析岗位，网易的产品运营、音乐策划岗位，字节跳动的产品运营、数据运营岗位，<span class="highlight">这些岗位大多属于通用型岗位</span>。</p>
                         <p class="section-description">在岗位定价上除了与实习的时长、实习地点（线上线下）有关以外，<span class="highlight">还与中介公司所提供的实习所属公司的所有权类型、私企公司的规模、付费实习岗位所属行业有关</span>。</p>
                         <p class="section-description">在公司的所有权类型当中，<span class="highlight">其中国企岗位的实习定价最高，且国企类岗位资源稀缺程度较高</span>，其定价接近于在私企行业头部岗位实习三个月（最低价格）的价格。</p>
                         <p class="section-description">按照私企公司的规模而言，其中<span class="highlight">行业头部企业</span>（企业市场份额前10%，市值超千亿）如腾讯、字节跳动的等<span class="highlight">定价最高</span>，价格在26800左右一个月；其次是<span class="highlight">垂直领域行业领军者企业</span>（即细分市场占有率超30%，市值百亿级）以米哈游、B站等为例，定价约在15000左右一个月；而高速成长型企业（年增长率超50%）如得物、Shein等企业则定价约在12800左右一个月。在对比同类岗位中介报价后，可以看出其中企业层级每提升一档，价格平均增长35%。</p>
@@ -809,479 +873,484 @@
                     </div>
                 </div>
 
-                <div class="row align-items-center justify-content-center">  <!-- 新增 justify-content-center -->
-                    <div class="col-lg-10 mx-auto">  <!-- 新增 mx-auto -->
+                <div class="row align-items-center justify-content-center mt-48">
+                    <!-- 新增 justify-content-center -->
+                    <div class="col-lg-10 mx-auto">
+                        <!-- 新增 mx-auto -->
                         <div class="card">
                             <div class="card-body">
                                 <h3 class="card-title text-center">付费实习岗位与官方招聘要求对比</h3>
-                                <div class="table-responsive" style="height: 60vh; overflow-y: scroll;">
-                                    <table class="company-table">
+                                <div class="table-responsive" style="height: 70vh; overflow-y: scroll;">
+                                    <table class="company-table text-center">
                                         <!-- 表头 -->
-                                        <thead style="position: sticky; top: 0;">
-                                        <tr>
-                                            <th rowspan="2">公司名称</th>
-                                            <th rowspan="2">岗位名称</th>
-                                            <th rowspan="2">有提供此岗位付费实习的中介及其价格</th>
-                                            <th colspan="2">工作地点</th>
-                                            <th colspan="2">实习时长</th>
-                                            <th colspan="2">入职要求</th>
-                                        </tr>
-                                        <tr>
-                                            <th>官网要求</th>
-                                            <th>中介要求</th>
-                                            <th>官网要求</th>
-                                            <th>中介要求</th>
-                                            <th>官网要求</th>
-                                            <th>中介要求</th>
-                                        </tr>
+                                        <thead style="position: sticky;">
+                                            <tr>
+                                                <th rowspan="2">公司名称</th>
+                                                <th rowspan="2">岗位名称</th>
+                                                <th rowspan="2">
+                                                    有提供此岗位付费
+                                                    实习的中介及其价格
+                                                </th>
+                                                <th colspan="2" position: sticky>工作地点</th>
+                                                <th colspan="2" position: sticky>实习时长</th>
+                                                <th colspan="2" position: sticky>入职要求</th>
+                                            </tr>
+                                            <tr>
+                                                <th>官网要求</th>
+                                                <th>中介要求</th>
+                                                <th>官网要求</th>
+                                                <th>中介要求</th>
+                                                <th>官网要求</th>
+                                                <th>中介要求</th>
+                                            </tr>
                                         </thead>
 
                                         <!-- 数据行示例 -->
-                                         <tbody>
-                                        <tr>
-                                            <td>科蒂集团</td>
-                                            <td>市场实习</td>
-                                            <td>卓思德 33800</td>
-                                            <td>阿姆斯特丹，新罕布什尔州，荷兰，1082 VA</td>
-                                            <td>线下</td>
-                                            <td>6个月</td>
-                                            <td>1-2个月</td>
-                                            <td>本科及以上、有专业要求、有相关技能和语言要求</td>
-                                            <td>无明确要求</td>
-                                        </tr>
+                                        <tbody>
+                                            <tr>
+                                                <td>科蒂集团</td>
+                                                <td>市场实习</td>
+                                                <td>卓思德 33800</td>
+                                                <td>阿姆斯特丹，新罕布什尔州，荷兰，1082 VA</td>
+                                                <td>线下</td>
+                                                <td>6个月</td>
+                                                <td>1-2个月</td>
+                                                <td>本科及以上、有专业要求、有相关技能和语言要求</td>
+                                                <td>无明确要求</td>
+                                            </tr>
 
-                                        <tr>
-                                            <td>环球网</td>
-                                            <td>社媒运营</td>
-                                            <td>卓思德 22800</td>
-                                            <td>-</td>
-                                            <td>线上</td>
-                                            <td>-</td>
-                                            <td>1-2个月</td>
-                                            <td>本科及以上、有经验要求、有相关技能要求</td>
-                                            <td>无明确要求</td>
-                                        </tr>
+                                            <tr>
+                                                <td>环球网</td>
+                                                <td>社媒运营</td>
+                                                <td>卓思德 22800</td>
+                                                <td>-</td>
+                                                <td>线上</td>
+                                                <td>-</td>
+                                                <td>1-2个月</td>
+                                                <td>本科及以上、有经验要求、有相关技能要求</td>
+                                                <td>无明确要求</td>
+                                            </tr>
 
-                                        <tr>
-                                            <td rowspan="2">阳狮集团</td>
-                                            <td>市场营销</td>
-                                            <td>卓思德 22800</td>
-                                            <td>-</td>
-                                            <td>线上</td>
-                                            <td>3个月以上</td>
-                                            <td>1-2个月</td>
-                                            <td>有相关技能和语言要求</td>
-                                            <td>无明确要求</td>
-                                        </tr>
-                                        <tr>
-                                            <td>媒介策划</td>
-                                            <td>集思未来 30800</td>
-                                            <td>-</td>
-                                            <td>线上</td>
-                                            <td>3个月以上</td>
-                                            <td>2-3个月</td>
-                                            <td>本科及以上、有经验优先、有相关技能要求</td>
-                                            <td>无明确要求</td>
-                                        </tr>
+                                            <tr>
+                                                <td rowspan="2">阳狮集团</td>
+                                                <td>市场营销</td>
+                                                <td>卓思德 22800</td>
+                                                <td>-</td>
+                                                <td>线上</td>
+                                                <td>3个月以上</td>
+                                                <td>1-2个月</td>
+                                                <td>有相关技能和语言要求</td>
+                                                <td>无明确要求</td>
+                                            </tr>
+                                            <tr>
+                                                <td>媒介策划</td>
+                                                <td>集思未来 30800</td>
+                                                <td>-</td>
+                                                <td>线上</td>
+                                                <td>3个月以上</td>
+                                                <td>2-3个月</td>
+                                                <td>本科及以上、有经验优先、有相关技能要求</td>
+                                                <td>无明确要求</td>
+                                            </tr>
 
-                                        <tr>
-                                            <td>奥美集团</td>
-                                            <td>新媒体运营/媒介策划</td>
-                                            <td>集思未来 30800</td>
-                                            <td>-</td>
-                                            <td>线上</td>
-                                            <td>-</td>
-                                            <td>2-3个月</td>
-                                            <td>有经验优先、有相关技能和语言要求</td>
-                                            <td>无明确要求</td>
-                                        </tr>
+                                            <tr>
+                                                <td>奥美集团</td>
+                                                <td>新媒体运营/媒介策划</td>
+                                                <td>集思未来 30800</td>
+                                                <td>-</td>
+                                                <td>线上</td>
+                                                <td>-</td>
+                                                <td>2-3个月</td>
+                                                <td>有经验优先、有相关技能和语言要求</td>
+                                                <td>无明确要求</td>
+                                            </tr>
 
-                                        <tr>
-                                            <td>腾讯集团</td>
-                                            <td>新媒体运营</td>
-                                            <td>搞定offer 8800-12800（受实习时长影响）</td>
-                                            <td>-</td>
-                                            <td>线上</td>
-                                            <td>-</td>
-                                            <td>1-3个月</td>
-                                            <td>本科及以上、有专业要求、有经验优先、有相关技能要求</td>
-                                            <td>无明确要求</td>
-                                        </tr>
+                                            <tr>
+                                                <td>腾讯集团</td>
+                                                <td>新媒体运营</td>
+                                                <td>搞定offer 8800-12800（受实习时长影响）</td>
+                                                <td>-</td>
+                                                <td>线上</td>
+                                                <td>-</td>
+                                                <td>1-3个月</td>
+                                                <td>本科及以上、有专业要求、有经验优先、有相关技能要求</td>
+                                                <td>无明确要求</td>
+                                            </tr>
 
-                                        <tr>
-                                            <td rowspan="7">字节跳动</td>
-                                            <td>产品运营</td>
-                                            <td>互联派 28800</td>
-                                            <td>-</td>
-                                            <td>线上</td>
-                                            <td>4个月以上</td>
-                                            <td>2-3个月</td>
-                                            <td>本科及以上、有专业要求、有经验优先</td>
-                                            <td>无明确要求</td>
-                                        </tr>
-                                        <tr>
-                                            <td>数据运营</td>
-                                            <td>互联派 28800</td>
-                                            <td>-</td>
-                                            <td>线上</td>
-                                            <td>4个月以上</td>
-                                            <td>2-3个月</td>
-                                            <td>本科及以上、有专业要求、有经验优先</td>
-                                            <td>无明确要求</td>
-                                        </tr>
-                                        <tr>
-                                            <td>zero36工作室游戏运营</td>
-                                            <td>-</td>
-                                            <td>上海市</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>本科及以上、有专业要求、有经验优先</td>
-                                            <td>无明确要求</td>
-                                        </tr>
-                                        <tr>
-                                            <td>onestudio海外游戏运营实习实习生</td>
-                                            <td>-</td>
-                                            <td>深圳市</td>
-                                            <td>-</td>
-                                            <td>3个月及以上</td>
-                                            <td>-</td>
-                                            <td>本科及以上、有专业要求、有经验优先、有相关语言要求</td>
-                                            <td>无明确要求</td>
-                                        </tr>
-                                        <tr>
-                                            <td>绿洲工作室游戏社区运营实习生</td>
-                                            <td>-</td>
-                                            <td>北京市</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>本科及以上、有专业要求、有相关技能和语言要求</td>
-                                            <td>无明确要求</td>
-                                        </tr>
-                                        <tr>
-                                            <td>onestudio游戏社区运营实习实习生</td>
-                                            <td>-</td>
-                                            <td>深圳市</td>
-                                            <td>-</td>
-                                            <td>3个月及以上</td>
-                                            <td>-</td>
-                                            <td>本科及以上、相关专业优先、有相关技能和语言要求</td>
-                                            <td>无明确要求</td>
-                                        </tr>
-                                        <tr>
-                                            <td>游戏直播运营实习生</td>
-                                            <td>-</td>
-                                            <td>深圳市</td>
-                                            <td>-</td>
-                                            <td>3个月及以上</td>
-                                            <td>-</td>
-                                            <td>本科及以上、相关专业优先、有经验优先、有相关语言要求</td>
-                                            <td>无明确要求</td>
-                                        </tr>
+                                            <tr>
+                                                <td rowspan="7">字节跳动</td>
+                                                <td>产品运营</td>
+                                                <td>互联派 28800</td>
+                                                <td>-</td>
+                                                <td>线上</td>
+                                                <td>4个月以上</td>
+                                                <td>2-3个月</td>
+                                                <td>本科及以上、有专业要求、有经验优先</td>
+                                                <td>无明确要求</td>
+                                            </tr>
+                                            <tr>
+                                                <td>数据运营</td>
+                                                <td>互联派 28800</td>
+                                                <td>-</td>
+                                                <td>线上</td>
+                                                <td>4个月以上</td>
+                                                <td>2-3个月</td>
+                                                <td>本科及以上、有专业要求、有经验优先</td>
+                                                <td>无明确要求</td>
+                                            </tr>
+                                            <tr>
+                                                <td>zero36工作室游戏运营</td>
+                                                <td>-</td>
+                                                <td>上海市</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>本科及以上、有专业要求、有经验优先</td>
+                                                <td>无明确要求</td>
+                                            </tr>
+                                            <tr>
+                                                <td>onestudio海外游戏运营实习实习生</td>
+                                                <td>-</td>
+                                                <td>深圳市</td>
+                                                <td>-</td>
+                                                <td>3个月及以上</td>
+                                                <td>-</td>
+                                                <td>本科及以上、有专业要求、有经验优先、有相关语言要求</td>
+                                                <td>无明确要求</td>
+                                            </tr>
+                                            <tr>
+                                                <td>绿洲工作室游戏社区运营实习生</td>
+                                                <td>-</td>
+                                                <td>北京市</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>本科及以上、有专业要求、有相关技能和语言要求</td>
+                                                <td>无明确要求</td>
+                                            </tr>
+                                            <tr>
+                                                <td>onestudio游戏社区运营实习实习生</td>
+                                                <td>-</td>
+                                                <td>深圳市</td>
+                                                <td>-</td>
+                                                <td>3个月及以上</td>
+                                                <td>-</td>
+                                                <td>本科及以上、相关专业优先、有相关技能和语言要求</td>
+                                                <td>无明确要求</td>
+                                            </tr>
+                                            <tr>
+                                                <td>游戏直播运营实习生</td>
+                                                <td>-</td>
+                                                <td>深圳市</td>
+                                                <td>-</td>
+                                                <td>3个月及以上</td>
+                                                <td>-</td>
+                                                <td>本科及以上、相关专业优先、有经验优先、有相关语言要求</td>
+                                                <td>无明确要求</td>
+                                            </tr>
 
-                                        <tr>
-                                            <td rowspan="3">芒果tv</td>
-                                            <td>国际app内容运营</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>本科及以上、相关专业优先、有相关技能和语言要求</td>
-                                            <td>无明确要求</td>
-                                        </tr>
-                                        <tr>
-                                            <td>综艺内容运营</td>
-                                            <td>互联派 28800</td>
-                                            <td>-</td>
-                                            <td>线上</td>
-                                            <td>-</td>
-                                            <td>2-3个月</td>
-                                            <td>有经验优先、有相关技能要求</td>
-                                            <td>无明确要求</td>
-                                        </tr>
-                                        <tr>
-                                            <td>内容运营</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>3个月以上</td>
-                                            <td>-</td>
-                                            <td>本科及以上、有专业要求、有经验优先、有相关技能要求</td>
-                                            <td>无明确要求</td>
-                                        </tr>
+                                            <tr>
+                                                <td rowspan="3">芒果tv</td>
+                                                <td>国际app内容运营</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>本科及以上、相关专业优先、有相关技能和语言要求</td>
+                                                <td>无明确要求</td>
+                                            </tr>
+                                            <tr>
+                                                <td>综艺内容运营</td>
+                                                <td>互联派 28800</td>
+                                                <td>-</td>
+                                                <td>线上</td>
+                                                <td>-</td>
+                                                <td>2-3个月</td>
+                                                <td>有经验优先、有相关技能要求</td>
+                                                <td>无明确要求</td>
+                                            </tr>
+                                            <tr>
+                                                <td>内容运营</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>3个月以上</td>
+                                                <td>-</td>
+                                                <td>本科及以上、有专业要求、有经验优先、有相关技能要求</td>
+                                                <td>无明确要求</td>
+                                            </tr>
 
-                                        <tr>
-                                            <td rowspan="18">网易</td>
-                                            <td>新媒体运营</td>
-                                            <td>Stem蒸汽求职 29000</td>
-                                            <td>北京市</td>
-                                            <td>线上</td>
-                                            <td>-</td>
-                                            <td>2-3个月</td>
-                                            <td>本科及以上、相关专业优先、有经验要求、有相关技能要求</td>
-                                            <td>无明确要求</td>
-                                        </tr>
-                                        <tr>
-                                            <td>新媒体运营</td>
-                                            <td>-</td>
-                                            <td>北京市</td>
-                                            <td>-</td>
-                                            <td>4个月以上</td>
-                                            <td>-</td>
-                                            <td>本科及以上、有专业要求、有经验优先、有相关技能要求</td>
-                                            <td>无明确要求</td>
-                                        </tr>
-                                        <tr>
-                                            <td>新媒体运营</td>
-                                            <td>-</td>
-                                            <td>北京市</td>
-                                            <td>-</td>
-                                            <td>4-6个月以上</td>
-                                            <td>-</td>
-                                            <td>本科及以上、有经验优先、有相关技能要求</td>
-                                            <td>无明确要求</td>
-                                        </tr>
-                                        <tr>
-                                            <td>新媒体运营—雷火UX</td>
-                                            <td>-</td>
-                                            <td>杭州市</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>有经验要求、有相关技能要求</td>
-                                            <td>无明确要求</td>
-                                        </tr>
-                                        <tr>
-                                            <td>新媒体账号矩阵运营实习生</td>
-                                            <td>-</td>
-                                            <td>杭州市</td>
-                                            <td>-</td>
-                                            <td>4个月以上</td>
-                                            <td>-</td>
-                                            <td>本科及以上、有专业要求、有经验优先、有相关技能要求</td>
-                                            <td>无明确要求</td>
-                                        </tr>
-                                        <tr>
-                                            <td>新媒体运营</td>
-                                            <td>-</td>
-                                            <td>杭州市</td>
-                                            <td>-</td>
-                                            <td>3个月及以上</td>
-                                            <td>-</td>
-                                            <td>本科及以上</td>
-                                            <td>无明确要求</td>
-                                        </tr>
-                                        <tr>
-                                            <td>新媒体运营</td>
-                                            <td>-</td>
-                                            <td>北京市</td>
-                                            <td>-</td>
-                                            <td>3个月及以上</td>
-                                            <td>-</td>
-                                            <td>本科及以上、有相关技能要求</td>
-                                            <td>无明确要求</td>
-                                        </tr>
-                                        <tr>
-                                            <td>网易新闻社区-产品运营</td>
-                                            <td>-</td>
-                                            <td>北京市</td>
-                                            <td>-</td>
-                                            <td>3个月及以上</td>
-                                            <td>-</td>
-                                            <td>有经验优先、有相关技能要求</td>
-                                            <td>无明确要求</td>
-                                        </tr>
-                                        <tr>
-                                            <td>产品运营实习生（课程方向）</td>
-                                            <td>-</td>
-                                            <td>广州市</td>
-                                            <td>-</td>
-                                            <td>3个月及以上</td>
-                                            <td>-</td>
-                                            <td>本科及以上、有经验优先</td>
-                                            <td>无明确要求</td>
-                                        </tr>
-                                        <tr>
-                                            <td>产品运营实习生（物料方向）</td>
-                                            <td>-</td>
-                                            <td>广州市</td>
-                                            <td>-</td>
-                                            <td>3个月及以上</td>
-                                            <td>-</td>
-                                            <td>本科及以上、有经验优先</td>
-                                            <td>无明确要求</td>
-                                        </tr>
-                                        <tr>
-                                            <td>产品运营实习生（音乐AI内容）</td>
-                                            <td>互联派 28800</td>
-                                            <td>杭州市</td>
-                                            <td>线上</td>
-                                            <td>3-6个月</td>
-                                            <td>2-3个月</td>
-                                            <td>本科及以上、有相关技能要求</td>
-                                            <td>无明确要求</td>
-                                        </tr>
-                                        <tr>
-                                            <td>产品运营实习生</td>
-                                            <td>DBC职梦求职 13036—20278（受实习时长影响）</td>
-                                            <td>杭州市</td>
-                                            <td>线上或线下</td>
-                                            <td>6个月以上</td>
-                                            <td>2-3个月</td>
-                                            <td>本科及以上、有经验优先</td>
-                                            <td>无明确要求</td>
-                                        </tr>
-                                        <tr>
-                                            <td>音乐人B端产品实习生</td>
-                                            <td>-</td>
-                                            <td>杭州市</td>
-                                            <td>-</td>
-                                            <td>6个月以上</td>
-                                            <td>-</td>
-                                            <td>本科及以上、有经验优先</td>
-                                            <td>无明确要求</td>
-                                        </tr>
-                                        <tr>
-                                            <td>产品实习生</td>
-                                            <td>DBC职梦求职 13036—20278（受实习时长影响）</td>
-                                            <td>杭州市</td>
-                                            <td>线上或线下</td>
-                                            <td>3个月及以上</td>
-                                            <td>2-3个月</td>
-                                            <td>研究生及以上、有经验优先</td>
-                                            <td>无明确要求</td>
-                                        </tr>
-                                        <tr>
-                                            <td>数据策略产品实习生</td>
-                                            <td>-</td>
-                                            <td>杭州市</td>
-                                            <td>-</td>
-                                            <td>4个月以上</td>
-                                            <td>-</td>
-                                            <td>研究生及以上、有专业要求、有经验优先、有相关技能要求</td>
-                                            <td>无明确要求</td>
-                                        </tr>
-                                        <tr>
-                                            <td>用户运营</td>
-                                            <td>DBC职梦求职 13036—20278（受实习时长影响）</td>
-                                            <td>广州市</td>
-                                            <td>线上或线下</td>
-                                            <td>3个月及以上</td>
-                                            <td>2-3个月</td>
-                                            <td>本科及以上、有经验优先、有相关技能和语言要求</td>
-                                            <td>无明确要求</td>
-                                        </tr>
-                                        <tr>
-                                            <td>网易新闻社区——用户运营</td>
-                                            <td>-</td>
-                                            <td>北京市</td>
-                                            <td>-</td>
-                                            <td>3个月及以上</td>
-                                            <td>-</td>
-                                            <td>有经验优先、有相关技能要求</td>
-                                            <td>无明确要求</td>
-                                        </tr>
-                                        <tr>
-                                            <td>用户运营</td>
-                                            <td>-</td>
-                                            <td>北京市</td>
-                                            <td>-</td>
-                                            <td>3个月及以上</td>
-                                            <td>-</td>
-                                            <td>本科及以上、有经验优先、有相关技能要求</td>
-                                            <td>无明确要求</td>
-                                        </tr>
+                                            <tr>
+                                                <td rowspan="18">网易</td>
+                                                <td>新媒体运营</td>
+                                                <td>Stem蒸汽求职 29000</td>
+                                                <td>北京市</td>
+                                                <td>线上</td>
+                                                <td>-</td>
+                                                <td>2-3个月</td>
+                                                <td>本科及以上、相关专业优先、有经验要求、有相关技能要求</td>
+                                                <td>无明确要求</td>
+                                            </tr>
+                                            <tr>
+                                                <td>新媒体运营</td>
+                                                <td>-</td>
+                                                <td>北京市</td>
+                                                <td>-</td>
+                                                <td>4个月以上</td>
+                                                <td>-</td>
+                                                <td>本科及以上、有专业要求、有经验优先、有相关技能要求</td>
+                                                <td>无明确要求</td>
+                                            </tr>
+                                            <tr>
+                                                <td>新媒体运营</td>
+                                                <td>-</td>
+                                                <td>北京市</td>
+                                                <td>-</td>
+                                                <td>4-6个月以上</td>
+                                                <td>-</td>
+                                                <td>本科及以上、有经验优先、有相关技能要求</td>
+                                                <td>无明确要求</td>
+                                            </tr>
+                                            <tr>
+                                                <td>新媒体运营—雷火UX</td>
+                                                <td>-</td>
+                                                <td>杭州市</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>有经验要求、有相关技能要求</td>
+                                                <td>无明确要求</td>
+                                            </tr>
+                                            <tr>
+                                                <td>新媒体账号矩阵运营实习生</td>
+                                                <td>-</td>
+                                                <td>杭州市</td>
+                                                <td>-</td>
+                                                <td>4个月以上</td>
+                                                <td>-</td>
+                                                <td>本科及以上、有专业要求、有经验优先、有相关技能要求</td>
+                                                <td>无明确要求</td>
+                                            </tr>
+                                            <tr>
+                                                <td>新媒体运营</td>
+                                                <td>-</td>
+                                                <td>杭州市</td>
+                                                <td>-</td>
+                                                <td>3个月及以上</td>
+                                                <td>-</td>
+                                                <td>本科及以上</td>
+                                                <td>无明确要求</td>
+                                            </tr>
+                                            <tr>
+                                                <td>新媒体运营</td>
+                                                <td>-</td>
+                                                <td>北京市</td>
+                                                <td>-</td>
+                                                <td>3个月及以上</td>
+                                                <td>-</td>
+                                                <td>本科及以上、有相关技能要求</td>
+                                                <td>无明确要求</td>
+                                            </tr>
+                                            <tr>
+                                                <td>网易新闻社区-产品运营</td>
+                                                <td>-</td>
+                                                <td>北京市</td>
+                                                <td>-</td>
+                                                <td>3个月及以上</td>
+                                                <td>-</td>
+                                                <td>有经验优先、有相关技能要求</td>
+                                                <td>无明确要求</td>
+                                            </tr>
+                                            <tr>
+                                                <td>产品运营实习生（课程方向）</td>
+                                                <td>-</td>
+                                                <td>广州市</td>
+                                                <td>-</td>
+                                                <td>3个月及以上</td>
+                                                <td>-</td>
+                                                <td>本科及以上、有经验优先</td>
+                                                <td>无明确要求</td>
+                                            </tr>
+                                            <tr>
+                                                <td>产品运营实习生（物料方向）</td>
+                                                <td>-</td>
+                                                <td>广州市</td>
+                                                <td>-</td>
+                                                <td>3个月及以上</td>
+                                                <td>-</td>
+                                                <td>本科及以上、有经验优先</td>
+                                                <td>无明确要求</td>
+                                            </tr>
+                                            <tr>
+                                                <td>产品运营实习生（音乐AI内容）</td>
+                                                <td>互联派 28800</td>
+                                                <td>杭州市</td>
+                                                <td>线上</td>
+                                                <td>3-6个月</td>
+                                                <td>2-3个月</td>
+                                                <td>本科及以上、有相关技能要求</td>
+                                                <td>无明确要求</td>
+                                            </tr>
+                                            <tr>
+                                                <td>产品运营实习生</td>
+                                                <td>DBC职梦求职 13036—20278（受实习时长影响）</td>
+                                                <td>杭州市</td>
+                                                <td>线上或线下</td>
+                                                <td>6个月以上</td>
+                                                <td>2-3个月</td>
+                                                <td>本科及以上、有经验优先</td>
+                                                <td>无明确要求</td>
+                                            </tr>
+                                            <tr>
+                                                <td>音乐人B端产品实习生</td>
+                                                <td>-</td>
+                                                <td>杭州市</td>
+                                                <td>-</td>
+                                                <td>6个月以上</td>
+                                                <td>-</td>
+                                                <td>本科及以上、有经验优先</td>
+                                                <td>无明确要求</td>
+                                            </tr>
+                                            <tr>
+                                                <td>产品实习生</td>
+                                                <td>DBC职梦求职 13036—20278（受实习时长影响）</td>
+                                                <td>杭州市</td>
+                                                <td>线上或线下</td>
+                                                <td>3个月及以上</td>
+                                                <td>2-3个月</td>
+                                                <td>研究生及以上、有经验优先</td>
+                                                <td>无明确要求</td>
+                                            </tr>
+                                            <tr>
+                                                <td>数据策略产品实习生</td>
+                                                <td>-</td>
+                                                <td>杭州市</td>
+                                                <td>-</td>
+                                                <td>4个月以上</td>
+                                                <td>-</td>
+                                                <td>研究生及以上、有专业要求、有经验优先、有相关技能要求</td>
+                                                <td>无明确要求</td>
+                                            </tr>
+                                            <tr>
+                                                <td>用户运营</td>
+                                                <td>DBC职梦求职 13036—20278（受实习时长影响）</td>
+                                                <td>广州市</td>
+                                                <td>线上或线下</td>
+                                                <td>3个月及以上</td>
+                                                <td>2-3个月</td>
+                                                <td>本科及以上、有经验优先、有相关技能和语言要求</td>
+                                                <td>无明确要求</td>
+                                            </tr>
+                                            <tr>
+                                                <td>网易新闻社区——用户运营</td>
+                                                <td>-</td>
+                                                <td>北京市</td>
+                                                <td>-</td>
+                                                <td>3个月及以上</td>
+                                                <td>-</td>
+                                                <td>有经验优先、有相关技能要求</td>
+                                                <td>无明确要求</td>
+                                            </tr>
+                                            <tr>
+                                                <td>用户运营</td>
+                                                <td>-</td>
+                                                <td>北京市</td>
+                                                <td>-</td>
+                                                <td>3个月及以上</td>
+                                                <td>-</td>
+                                                <td>本科及以上、有经验优先、有相关技能要求</td>
+                                                <td>无明确要求</td>
+                                            </tr>
 
-                                        <!-- 上海电视台 -->
-                                        <tr>
-                                            <td rowspan="2">上海电视台</td>
-                                            <td rowspan="2">新媒体运营</td>
-                                            <td>Stem蒸汽求职 29000</td>
-                                            <td>-</td>
-                                            <td>线上</td>
-                                            <td>-</td>
-                                            <td>2-3个月</td>
-                                            <td>本科及以上、有经验要求、有相关技能要求</td>
-                                            <td>无明确要求</td>
-                                        </tr>
-                                        <tr>
-                                            <td>爱思益 13000-16000（受实习时长影响）</td>
-                                            <td>-</td>
-                                            <td>线上</td>
-                                            <td>-</td>
-                                            <td>1-2个月</td>
-                                            <td>-</td>
-                                            <td>无明确要求</td>
-                                        </tr>
+                                            <!-- 上海电视台 -->
+                                            <tr>
+                                                <td rowspan="2">上海电视台</td>
+                                                <td rowspan="2">新媒体运营</td>
+                                                <td>Stem蒸汽求职 29000</td>
+                                                <td>-</td>
+                                                <td>线上</td>
+                                                <td>-</td>
+                                                <td>2-3个月</td>
+                                                <td>本科及以上、有经验要求、有相关技能要求</td>
+                                                <td>无明确要求</td>
+                                            </tr>
+                                            <tr>
+                                                <td>爱思益 13000-16000（受实习时长影响）</td>
+                                                <td>-</td>
+                                                <td>线上</td>
+                                                <td>-</td>
+                                                <td>1-2个月</td>
+                                                <td>-</td>
+                                                <td>无明确要求</td>
+                                            </tr>
 
-                                        <!-- 华为 -->
-                                        <tr>
-                                            <td rowspan="1">华为</td>
-                                            <td>网站运营实习生</td>
-                                            <td>DBC职梦求职 13036.14—20278.44（受实习时长影响）</td>
-                                            <td>深圳市</td>
-                                            <td>线上或线下</td>
-                                            <td>-</td>
-                                            <td>2-3个月</td>
-                                            <td>有专业要求、有经验优先、有相关技能要求</td>
-                                            <td>无明确要求</td>
-                                        </tr>
+                                            <!-- 华为 -->
+                                            <tr>
+                                                <td rowspan="1">华为</td>
+                                                <td>网站运营实习生</td>
+                                                <td>DBC职梦求职 13036.14—20278.44（受实习时长影响）</td>
+                                                <td>深圳市</td>
+                                                <td>线上或线下</td>
+                                                <td>-</td>
+                                                <td>2-3个月</td>
+                                                <td>有专业要求、有经验优先、有相关技能要求</td>
+                                                <td>无明确要求</td>
+                                            </tr>
 
-                                        <!-- 京东 -->
-                                        <tr>
-                                            <td rowspan="2">京东</td>
-                                            <td>产品运营</td>
-                                            <td>DBC职梦求职 13036.14—20278.44（受实习时长影响）</td>
-                                            <td>北京市</td>
-                                            <td>线上或线下</td>
-                                            <td>-</td>
-                                            <td>2-3个月</td>
-                                            <td>本科及以上、有相关技能要求</td>
-                                            <td>无明确要求</td>
-                                        </tr>
-                                        <tr>
-                                            <td>产品运营</td>
-                                            <td>Stem蒸汽求职 29000</td>
-                                            <td>湖北恩施土家族苗族自治州/南京市</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>本科及以上、有相关技能要求</td>
-                                            <td>无明确要求</td>
-                                        </tr>
+                                            <!-- 京东 -->
+                                            <tr>
+                                                <td rowspan="2">京东</td>
+                                                <td>产品运营</td>
+                                                <td>DBC职梦求职 13036.14—20278.44（受实习时长影响）</td>
+                                                <td>北京市</td>
+                                                <td>线上或线下</td>
+                                                <td>-</td>
+                                                <td>2-3个月</td>
+                                                <td>本科及以上、有相关技能要求</td>
+                                                <td>无明确要求</td>
+                                            </tr>
+                                            <tr>
+                                                <td>产品运营</td>
+                                                <td>Stem蒸汽求职 29000</td>
+                                                <td>湖北恩施土家族苗族自治州/南京市</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>本科及以上、有相关技能要求</td>
+                                                <td>无明确要求</td>
+                                            </tr>
 
-                                        <!-- 小红书 -->
-                                        <tr>
-                                            <td rowspan="3">小红书</td>
-                                            <td rowspan="3">新媒体运营</td>
-                                            <td>Stem蒸汽求职 29000</td>
-                                            <td>上海市</td>
-                                            <td>线上</td>
-                                            <td>3个月以上</td>
-                                            <td>2-3个月</td>
-                                            <td>本科及以上、有经验优先、有相关技能要求</td>
-                                            <td>无明确要求</td>
-                                        </tr>
-                                        <tr>
-                                            <td>DBC职梦求职 13036—20278（受实习时长影响）</td>
-                                            <td>-</td>
-                                            <td>线上或线下</td>
-                                            <td>-</td>
-                                            <td>2-3个月</td>
-                                            <td>-</td>
-                                            <td>无明确要求</td>
-                                        </tr>
-                                        <tr>
-                                            <td>爱思益 13000-16000（受实习时长影响）</td>
-                                            <td>-</td>
-                                            <td>线上</td>
-                                            <td>-</td>
-                                            <td>1-2个月</td>
-                                            <td>-</td>
-                                            <td>无明确要求</td>
-                                        </tr>
+                                            <!-- 小红书 -->
+                                            <tr>
+                                                <td rowspan="3">小红书</td>
+                                                <td rowspan="3">新媒体运营</td>
+                                                <td>Stem蒸汽求职 29000</td>
+                                                <td>上海市</td>
+                                                <td>线上</td>
+                                                <td>3个月以上</td>
+                                                <td>2-3个月</td>
+                                                <td>本科及以上、有经验优先、有相关技能要求</td>
+                                                <td>无明确要求</td>
+                                            </tr>
+                                            <tr>
+                                                <td>DBC职梦求职 13036—20278（受实习时长影响）</td>
+                                                <td>-</td>
+                                                <td>线上或线下</td>
+                                                <td>-</td>
+                                                <td>2-3个月</td>
+                                                <td>-</td>
+                                                <td>无明确要求</td>
+                                            </tr>
+                                            <tr>
+                                                <td>爱思益 13000-16000（受实习时长影响）</td>
+                                                <td>-</td>
+                                                <td>线上</td>
+                                                <td>-</td>
+                                                <td>1-2个月</td>
+                                                <td>-</td>
+                                                <td>无明确要求</td>
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -1293,186 +1362,309 @@
 
                     <div class="row justify-content-center mb-5">
                         <div class="col-lg-10">
-                           <p class="section-description mt-48">当我们质疑这些岗位为何无法通过公司正常招聘渠道投递时，中介坦言：“<span class="highlight">在企业官网上当然找不到啦。这些都是我们公司自己的人脉资源，市面上的社招找不到，都是人脉公司提供的。</span>”他进一步补充道：“我们可以直接把简历投到HR手上，简化一些审核流程，减少被刷下的概率。”</p>
-                           <p class="section-description">当被问及企业与中介<span class="highlight">是否有利益分红时</span>，中介起初闪烁其词，但在多次明里暗里追问后，她说：“<span class="highlight">是，是分红。</span>”</p>
-                           <p class="section-description">至此，付费实习中介的操作模式逐渐浮出水面：<span class="highlight">中介通过金钱与企业或项目组建立合作关系，再将实习资源变现，卖给求职者</span>。</p>
+                            <p class="section-description mt-48">当我们质疑这些岗位为何无法通过公司正常招聘渠道投递时，中介坦言：“<span class="highlight">在企业官网上当然找不到啦。这些都是我们公司自己的人脉资源，市面上的社招找不到，都是人脉公司提供的。</span>”他进一步补充道：“我们可以直接把简历投到HR手上，简化一些审核流程，减少被刷下的概率。”</p>
+                            <p class="section-description">当被问及企业与中介<span class="highlight">是否有利益分红时</span>，中介起初闪烁其词，但在多次明里暗里追问后，她说：“<span class="highlight">是，是分红。</span>”</p>
+                            <p class="section-description">至此，付费实习中介的操作模式逐渐浮出水面：<span class="highlight">中介通过金钱与企业或项目组建立合作关系，再将实习资源变现，卖给求职者</span>。</p>
                         </div>
                     </div>
 
                     <figure class="fish">
                         <img src="images/记录1.jpg" alt="记录1" width="600" class="photo img-fluid mb-2">
                         <img src="images/录音.webp" alt="录音" width="600" class="photo img-fluid mb-2">
-                        <figcaption class="text-muted text-center">（与中介机构沟通时录音文件的语音转文字内容）
+                        <figcaption class="text-muted text-center">
+                            （与中介机构沟通时录音文件的语音转文字内容）
                         </figcaption>
                     </figure>
-
-        </div>
-    </section>
-
-    <!-- 简历部分 -->
-    <section id="CV2" class="py-5 section-with-animation">
-        <div class="container">
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-10 text-center">
-
-                <section class="section-with-animation text-center">  <!-- 新增 container-fluid 和 px-0 -->
-                    <img src="标题图/简历整容术.png" 
-                     alt="简历整容术">
-                </section>
-
-                    <p class="section-description mt-48">“宝子，你这简历白得都快把老师眼睛闪瞎了。” 当我们以一名“双非”一本院校、无实习经验、无技能的大三学生身份向一家中介公司缴纳了200元匹配金后，很快收到了发票，并满心欢喜地等待岗位推荐。</p>
-                    <p class="section-description">然而，两天后，我们被告知 CCTV 线下线上的实习名额已满，但中介帮忙对接到了某超一线直辖市电视台的新媒体运营岗。但这一实习岗位要求 “英语能力强、了解海外文化、有相关翻译证”，而我们的“空白”背景显然不符合要求。那么，中介公司是如何让我们能够投递简历的呢？对方的回答是：“<span class="highlight">这些要求没这么严格，进不进就是企业项目组点头或摇头的事。</span>”</p>
-            
-            <figure class="fish mt-48">
-                <img src="images/面试流程.jpg" alt="面试流程" width="600" class="photo img-fluid mb-2">
-                <figcaption class="text-muted text-center">（中介所提供的简历润色和面试课程内容）</figcaption>
-            </figure>
-
-                    <p class="section-description mt-48">更进一步，有的中介机构的职业规划老师为我们提供了一期《个人简历打磨》精品课程，教授中英文简历撰写方法，帮助我们从亲身经历中挖掘闪光点。<span class="highlight">而有的机构直接“赠送”求职者一份为期一周的项目经历，在简历中凭空捏造出一段“新”的实习经历</span>。</p>
                 </div>
             </div>
+        </section>
 
-            <figure class="fish">
-                <div class="row justify-content-center">  <!-- 新增居中布局 -->
-                    <div class="col-lg-5 text-center">  <!-- 调整列宽并添加居中 -->
-                        <div class="mx-auto" style="max-width: 85%">  <!-- 新增内容容器 -->
-                            <img src="images/简历1.webp" alt="简历1" class="photo img-fluid mb-2">
-                            <figcaption class="text-muted">（原简历）</figcaption>
-                        </div>
-                    </div>
-                    <div class="col-lg-5 text-center">  <!-- 调整列宽并添加居中 -->
-                        <div class="mx-auto" style="max-width: 85%">  <!-- 新增内容容器 -->
-                            <img src="images/简历2.webp" alt="简历2" class="photo img-fluid mb-2">
-                            <figcaption class="text-muted">
-                                （中介"润色"后的简历，其中红色框标红部分为原简历中不存在的实习经历）
-                            </figcaption>
-                        </div>
+        <div class="black-dashed-line"></div>
+
+        <!-- 简历部分 -->
+        <section id="CV" class="py-5 section-with-animation">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-10 text-center">
+
+                        <section class="section-with-animation text-center mb-60">
+                            <!-- 新增 container-fluid 和 px-0 -->
+                            <img src="标题图/简历整容术.png"
+                                 alt="简历整容术">
+                        </section>
+
+                        <p class="section-description mt-60">“宝子，你这简历白得都快把老师眼睛闪瞎了。” 当我们以一名“双非”一本院校、无实习经验、无技能的大三学生身份向一家中介公司缴纳了200元匹配金后，很快收到了发票，并满心欢喜地等待岗位推荐。</p>
+                        <p class="section-description">然而，两天后，我们被告知 CCTV 线下线上的实习名额已满，但中介帮忙对接到了某超一线直辖市电视台的新媒体运营岗。但这一实习岗位要求 “英语能力强、了解海外文化、有相关翻译证”，而我们的“空白”背景显然不符合要求。那么，中介公司是如何让我们能够投递简历的呢？对方的回答是：“<span class="highlight">这些要求没这么严格，进不进就是企业项目组点头或摇头的事。</span>”</p>
+
+
+                        <p class="section-description mb-48">更进一步，有的中介机构的职业规划老师为我们提供了一期《个人简历打磨》精品课程，教授中英文简历撰写方法，帮助我们从亲身经历中挖掘闪光点。<span class="highlight">而有的机构直接“赠送”求职者一份为期一周的项目经历，在简历中凭空捏造出一段“新”的实习经历</span>。</p>
+
+                        <figure class="fish mt-48">
+                            <img src="images/面试流程.jpg" alt="面试流程" width="600" class="photo img-fluid mb-2">
+                            <figcaption class="text-muted text-center">（中介所提供的简历润色和面试课程内容）</figcaption>
+                        </figure>
                     </div>
                 </div>
-            </figure>
 
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-10 text-center">
-                    <p class="section-description mt-48">这段经历由中介机构运营的其他业务提供，最终以“实习证明”作为背书。但当我们向中介表示我们的担忧——害怕以后被查出作假经验时，中介则向我们表示，让我们不用担心。</p>
+                <figure class="fish">
+                    <div class="row justify-content-center">
+                        <!-- 新增居中布局 -->
+                        <div class="col-lg-5 text-center">
+                            <!-- 调整列宽并添加居中 -->
+                            <div class="mx-auto" style="max-width: 85%">
+                                <!-- 新增内容容器 -->
+                                <img src="images/简历1.webp" alt="简历1" class="photo img-fluid mb-2">
+                                <figcaption class="text-muted">（原简历）</figcaption>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 text-center">
+                            <!-- 调整列宽并添加居中 -->
+                            <div class="mx-auto" style="max-width: 85%">
+                                <!-- 新增内容容器 -->
+                                <img src="images/简历2.webp" alt="简历2" class="photo img-fluid mb-2">
+                                <figcaption class="text-muted">
+                                    （中介"润色"后的简历，其中红色框标红部分为原简历中不存在的实习经历）
+                                </figcaption>
+                            </div>
+                        </div>
+                    </div>
+                </figure>
+
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-10 text-center">
+                        <p class="section-description mt-48">这段经历由中介机构运营的其他业务提供，最终以“实习证明”作为背书。但当我们向中介表示我们的担忧——害怕以后被查出作假经验时，中介则向我们表示，让我们不用担心。</p>
+                    </div>
                 </div>
+
+                <figure class="fish">
+                    <img src="images/录音2.jpg" alt="录音2" width="600" class="photo img-fluid mb-2">
+                    <figcaption class="text-muted text-center">
+                        （与中介机构沟通时录音文件的语音转文字内容）
+                    </figcaption>
+                </figure>
+
             </div>
+        </section>
 
-            <figure class="fish">
-                <img src="images/录音2.jpg" alt="录音2" width="600" class="photo img-fluid mb-2">
-                <figcaption class="text-muted text-center">（与中介机构沟通时录音文件的语音转文字内容）
-                </figcaption>
-            </figure>
+        <div class="black-dashed-line"></div>
 
-        </div>
-    </section>
+        <!-- 面试部分 -->
+        <section id="interview" class="section-with-animation">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-10 text-center">
 
+                        <section class="section-with-animation text-center mb-60 mt-5">
+                            <!-- 新增 container-fluid 和 px-0 -->
+                            <img src="标题图/舞台剧式的面试.png"
+                                 alt="舞台剧式的面试">
+                        </section>
 
-    <!-- 面试部分 -->
-    <section id="interview" class="py-5 section-with-animation">
-        <div class="container">
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-10 text-center">
-
-                <section class="section-with-animation text-center">  <!-- 新增 container-fluid 和 px-0 -->
-                    <img src="标题图/舞台剧式的面试.png" 
-                     alt="舞台剧式的面试">
-                </section>
-
-                    <p class="section-description mt-48">“面试就是走个流程而已。”在中介的精心包装后，我们的简历成功匹配上了某超一线直辖市电视台的新媒体岗位。面对即将到来的面试，我们佯装担忧，生怕自己被刷下来。<span class="highlight">对此，中介向我们承诺，他们已经与的项目组负责人沟通过了：“确认说只要你想去就行，面试只是走个流程，百分百进。”</span></p>
+                        <p class="section-description mt-60">“面试就是走个流程而已。”在中介的精心包装后，我们的简历成功匹配上了某超一线直辖市电视台的新媒体岗位。面对即将到来的面试，我们佯装担忧，生怕自己被刷下来。<span class="highlight">对此，中介向我们承诺，他们已经与的项目组负责人沟通过了：“确认说只要你想去就行，面试只是走个流程，百分百进。”</span></p>
+                    </div>
                 </div>
-            </div>
 
-            <figure class="fish">
-                <img src="images/记录2.jpg" alt="记录2" width="600" class="photo img-fluid mb-2">
-            </figure>
+                <figure class="fish">
+                    <img src="images/记录2.jpg" alt="记录2" width="600" class="photo img-fluid mb-2">
+                </figure>
 
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-10 text-center">
-                    <p class="section-description mt-48">另一家中介机构还提供了一期《面试能力提升》课程，职业规划老师教授面试技巧，并分享企业面试题库和“参考答案”。</p>
+                <div class="row justify-content-center mb-3">
+                    <div class="col-lg-10">
+                        <p class="section-description mt-48">另一家中介机构还提供了一期《面试能力提升》课程，职业规划老师教授面试技巧，并分享企业面试题库和“参考答案”。</p>
+                    </div>
                 </div>
-            </div>
 
-            <figure class="fish">
-                <img src="images/流程.jpg" alt="流程" width="600" class="photo img-fluid mb-2">
-                <img src="images/流程.webp" alt="流程" width="600" class="photo img-fluid mb-2">
-                <figcaption class="text-muted text-center">（中介公司向实习组提供的面试题库答案）</figcaption>
-            </figure>
+                <figure class="fish">
+                    <img src="images/流程.jpg" alt="流程" width="600" class="photo img-fluid mb-2">
+                    <img src="images/流程.webp" alt="流程" width="600" class="photo img-fluid mb-2">
+                    <figcaption class="text-muted text-center">（中介公司向实习组提供的面试题库答案）</figcaption>
+                </figure>
 
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-10 text-center">
-                    <p class="section-description mt-48">中介表示，如果学生自己投递简历并收到面试通知，他们会提供冲刺面试训练的服务；如果学生靠自己的简历无法通过时，他们则会帮忙润色简历，定期推送周边公司的实习资源，并对学员进行笔试、面试技术方面的指导。对于想跳槽到更好企业的学员，他们能够找到目标大厂的在职导师，为学员提供面试技术指导。总之无论是笔试还是面试，中介机构都会安排好，我们只需按照“剧本”走完这一套流程，便可以毫无后顾之忧地拿到实习offer。最终，在走完这一系列流程后，三家中介机构开始催促我们缴纳尾款。</p>
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <p class="section-description mt-48">中介表示，如果学生自己投递简历并收到面试通知，他们会提供冲刺面试训练的服务；如果学生靠自己的简历无法通过时，他们则会帮忙润色简历，定期推送周边公司的实习资源，并对学员进行笔试、面试技术方面的指导。对于想跳槽到更好企业的学员，他们能够找到目标大厂的在职导师，为学员提供面试技术指导。总之无论是笔试还是面试，中介机构都会安排好，我们只需按照“剧本”走完这一套流程，便可以毫无后顾之忧地拿到实习offer。最终，在走完这一系列流程后，三家中介机构开始催促我们缴纳尾款。</p>
+                    </div>
                 </div>
-            </div>
 
 
             </div>
+
+            <div class="black-dashed-line mt-48 mb-60"></div>
 
             <div class="row justify-content-center mb-5">
                 <div class="col-lg-10 text-center">
-                    <p class="section-description mt-48">教育部数据显示，2025届高校毕业生将突破1222万人，同比增加43万。在岗位供给与人才需求的倒挂压力下，实习已从能力培养的实践场蜕变为简历镀金的竞技场——中介机构通过虚构经历、操控面试、打通企业关系、垄断实习资源，<span class="highlight">将本该公平开放的成长机会包装成明码标价的商品</span>。</p>
+                    <p class="section-description">教育部数据显示，2025届高校毕业生将突破1222万人，同比增加43万。在岗位供给与人才需求的倒挂压力下，实习已从能力培养的实践场蜕变为简历镀金的竞技场——中介机构通过虚构经历、操控面试、打通企业关系、垄断实习资源，<span class="highlight">将本该公平开放的成长机会包装成明码标价的商品</span>。</p>
                     <p class="section-description">我们访谈了16位像晓明和淳淳这样参与过付费实习项目的同学，他们中的大多数都表示自己在付费实习期间主要从事复印、跑腿等机械工作，"虽然付费实习含金量存疑，但别无选择"。</p>
-                                                                                <!-- 左边图片，右边文字 -->
-                                                                                <div class="row align-items-center mb-5 g-5 mt-48">
-                                                                                    <div class="col-md-4 d-flex justify-content-center">
-                                                                                        <img src="插画男.png" alt="Left Image" class="img-fluid" style="max-width: 80%;">
-                                                                                    </div>
-                                                                                    <div class="col-md-8">
+                    <!-- 左边图片，右边文字 -->
+                    <div class="row align-items-center mb-5 g-5 mt-48">
+                        <div class="col-md-4 d-flex justify-content-center">
+                            <img src="插画男.png" alt="Left Image" class="img-fluid" style="max-width: 80%;">
+                        </div>
+                        <div class="col-md-8">
 
-                                                                                        <p class="section-description fs-6 lh-lg">晓明（化名）是某高校金融工程专业的大四学生，尽管手握3.8/4.0的绩点排名、省级竞赛奖项以及量化投资作品集，但仍被残酷的秋招压得喘不过气：“<span class="highlight">一个名企的岗位，有数千人抢破头，这是完全令人难以想象的。</span>”他选择了某中介机构的“名企内推计划”，各类实习项目价格清晰：四大会计师事务所审计岗实训2.8万元、顶级咨询公司PTA项目4.5万元、投行部实习生6万元。当被问及为什么选择这条路时，他无奈地摇头：“没办法，如果没有名企的实习经历，秋招春招的时候很可能因为没有足够的实习经历被刷下去。<span class="highlight">比如说腾讯产培生计划录取率0.38%，中金投行部暑期实习投录比超1000:1，没有大厂实习背书，简历根本过不了机筛</span>。”</p>
-                                                                                    </div>
-                                                                                </div>
+                            <p class="section-description fs-6 lh-lg">晓明（化名）是某高校金融工程专业的大四学生，尽管手握3.8/4.0的绩点排名、省级竞赛奖项以及量化投资作品集，但仍被残酷的秋招压得喘不过气：“<span class="highlight">一个名企的岗位，有数千人抢破头，这是完全令人难以想象的。</span>”他选择了某中介机构的“名企内推计划”，各类实习项目价格清晰：四大会计师事务所审计岗实训2.8万元、顶级咨询公司PTA项目4.5万元、投行部实习生6万元。当被问及为什么选择这条路时，他无奈地摇头：“没办法，如果没有名企的实习经历，秋招春招的时候很可能因为没有足够的实习经历被刷下去。<span class="highlight">比如说腾讯产培生计划录取率0.38%，中金投行部暑期实习投录比超1000:1，没有大厂实习背书，简历根本过不了机筛</span>。”</p>
+                        </div>
+                    </div>
 
-                                                                                <hr color="#ffae4d">
-                                                            
-                                                                                <!-- 右边图片，左边文字 -->
-                                                                                <div class="row align-items-center mb-5 g-5 flex-row-reverse">
-                                                                                    <div class="col-md-4 d-flex justify-content-center">
-                                                                                        <img src="插画女.png" alt="Right Image" class="img-fluid" style="max-width: 80%;">
-                                                                                    </div>
-                                                                                    <div class="col-md-8">
-                                                                                        <p class="section-description fs-6 lh-lg">计划申请伦敦政治经济学院的淳淳（化名）发现，尽管她已有三段传统媒体的实习经历，但却仍然很难触碰到院校的要求。她苦笑着向我们展示一份来自留学机构的评估报告：<span class="highlight">2025年QS前50院校的传媒类专业录取者中，83.6%拥有国际4A公司实习经历，而此类岗位录取率不足3%</span>。面对如此狭窄的通道，淳淳不得已走上“付费实习”这条道路。</p>
-                                                                                    </div>
-                                                                                </div>
+
+                    <!-- 右边图片，左边文字 -->
+                    <div class="row align-items-center mb-5 g-5 flex-row-reverse">
+                        <div class="col-md-4 d-flex justify-content-center">
+                            <img src="插画女.png" alt="Right Image" class="img-fluid" style="max-width: 80%;">
+                        </div>
+                        <div class="col-md-8">
+                            <p class="section-description fs-6 lh-lg">计划申请伦敦政治经济学院的淳淳（化名）发现，尽管她已有三段传统媒体的实习经历，但却仍然很难触碰到院校的要求。她苦笑着向我们展示一份来自留学机构的评估报告：<span class="highlight">2025年QS前50院校的传媒类专业录取者中，83.6%拥有国际4A公司实习经历，而此类岗位录取率不足3%</span>。面对如此狭窄的通道，淳淳不得已走上“付费实习”这条道路。</p>
+                        </div>
+                    </div>
                     <p class="section-description">我们访谈了16位像晓明和淳淳这样参与过付费实习项目的同学，他们中的大多数都表示自己在付费实习期间主要从事复印、跑腿等机械工作，“<span class="highlight">虽然付费实习含金量存疑，但别无选择</span>”。</p>
                     <p class="section-description">实习的意义究竟何在？是追逐那一纸千金的证明，还是构建从校园到社会的成长桥梁？当“付费实习”悄然成为就业内卷中的灰色产业，这个问题的答案正在被异化。在这场精心设计的交易闭环里，表面的共赢遮蔽着深层危机：中介收割焦虑溢价，企业获得廉价劳力，学生换取简历背书。<span class="highlight">被消解的不仅是实习本身承载的实践价值，更是教育公平的底线</span>。</p>
-                    <p class="section-description">调查结束的三个月后，我们依然持续收到中介机构的精准推送：“<span class="highlight">春招冲刺！29800元锁定头部券商offer，赠送CEO推荐信</span>。”</p>
-                    <p class="section-description">从实习蔓延到春招，这些精心设计的话术如同一面镜子，既映照出中介与就业市场的扭曲生态，也折射出年轻人在理想与现实夹缝中的艰难抉择。<span class="highlight">当机会成为可以被购买的消费品，勤奋的价值坐标也正在不断偏移。这不仅是个体面临的困境，更是整个社会在努力与成功之间遭遇的一场严峻的认知危机</span>。</p>
+                    <p class="section-description">调查结束的三个月后，我们依然持续收到中介机构的精准推送：“<span class="highlight">春招冲刺！29800元锁定头部券商offer，赠送CEO推荐信</span>。”
+                    从实习蔓延到春招，这些精心设计的话术如同一面镜子，既映照出中介与就业市场的扭曲生态，也折射出年轻人在理想与现实夹缝中的艰难抉择。<span class="highlight">当机会成为可以被购买的消费品，勤奋的价值坐标也正在不断偏移。这不仅是个体面临的困境，更是整个社会在努力与成功之间遭遇的一场严峻的认知危机</span>。</p>
                 </div>
             </div>
+        </section>
+
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container" style="margin:0px 150px ;text-align:left">
+            <p style="font-size:12px">
+                作者 | 杨颖、邱娈淳、吴家耀、赵倩婷、孙良硕
+            </p>
+            <p style="font-size:12px">
+                指导老师 | 张灵敏
+            </p>
         </div>
-    </section>
 
-</main>
+    </footer>
 
-<!-- 页脚 -->
-<footer>
-    <div class="container text-center">
-                <h5>项目成员及分工</h5>
-                <p style="font-size: x-small;">
-                    文案撰写：杨颖、赵倩婷、邱娈淳、吴家耀<br>
-                    图表制作：邱娈淳、吴家耀、赵倩婷、杨颖<br> 
-                    选题策划：杨颖、邱娈淳、吴家耀、赵倩婷<br>
-                    数据收集：赵倩婷、杨颖、邱娈淳、吴家耀<br>
-                    资料整理：吴家耀、邱娈淳、杨颖、赵倩婷<br>
-                    网页制作：邱娈淳<br>
-                    指导老师：张灵敏
-                </p>
-            
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="scripts.js"></script>
+    <script>
+        // 浮窗功能
+        const chartContainer = document.querySelector('.chart-container');
+        const tooltip = document.getElementById('chartTooltip');
 
-            <!-- 联系列 -->
-                <h5>联系我们</h5>
-                <ul class="list-unstyled" style="font-size: x-small;">
-                    <li class="mb-2">广州大学</li>
-                    <li class="mb-2">-</li>
-                    <li class="mb-2"></i>-</li>
-                </ul>
-    </div>
+        // 浮窗内容数据
+        const tooltipData = {
+            "正常交流贴": {
+                title: "正常交流贴详情",
+                content: "这些是用户自发分享的实习经验和求职心得，内容真实可靠，帮助其他用户了解不同公司的实习环境和要求。",
+                items: [
+                    { title: "实习日记分享", desc: "记录每日实习工作内容", link: "#" },
+                    { title: "面试经验", desc: "分享面试问题和回答技巧", link: "#" },
+                    { title: "公司评价", desc: "实习生的真实工作体验", link: "#" }
+                ],
+                link: "#"
+            },
+            "明广与暗广": {
+                title: "明广与暗广详情",
+                content: "付费实习中介发布的广告贴，有些明确标注广告，有些则伪装成经验分享。",
+                items: [
+                    { title: "内推服务", desc: "付费内推名企实习岗位", link: "#" },
+                    { title: "实习保offer", desc: "承诺实习后获得return offer", link: "#" },
+                    { title: "远程实习", desc: "线上完成的名企实习项目", link: "#" }
+                ],
+                link: "#"
+            },
+            "引流贴": {
+                title: "引流贴详情",
+                content: "表面上分享经验，实际目的将用户引导至微信等私域平台进行付费服务咨询。",
+                items: [
+                    { title: "免费咨询", desc: "引导添加微信进行付费咨询", link: "#" },
+                    { title: "简历模板", desc: "获取模板需添加联系方式", link: "#" },
+                    { title: "模拟面试", desc: "预约后引导付费服务", link: "#" }
+                ],
+                link: "#"
+            },
+            "非广告": {
+                title: "非广告内容详情",
+                content: "真实用户分享的实习相关内容，无商业目的。",
+                items: [
+                    { title: "实习日常", desc: "分享实习中的趣事和经验", link: "#" },
+                    { title: "避坑指南", desc: "提醒注意不良实习经历", link: "#" },
+                    { title: "转正经验", desc: "如何从实习生转为正式员工", link: "#" }
+                ],
+                link: "#"
+            },
+            "广告": {
+                title: "广告内容详情",
+                content: "付费实习中介发布的各类广告，包括明广和暗广。",
+                items: [
+                    { title: "实习内推", desc: "付费内推服务", link: "#" },
+                    { title: "背景提升", desc: "提升简历竞争力的项目", link: "#" },
+                    { title: "求职培训", desc: "提供求职技能培训", link: "#" }
+                ],
+                link: "#"
+            }
+        };
 
-</footer>
+        // 鼠标移动事件处理
+        myChart1.on('mouseover', function (params) {
+            const name = params.name;
+            const data = tooltipData[name] || tooltipData["正常交流贴"];
 
-<script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/echarts.min.js"></script>
-<script src="scripts.js"></script>
+            // 更新浮窗内容
+            document.getElementById('tooltipTitle').textContent = data.title;
+            document.getElementById('tooltipContent').textContent = data.content;
+            document.getElementById('tooltipLink').href = data.link;
+
+            // 生成项目列表
+            const itemsContainer = document.querySelector('.tooltip-items');
+            itemsContainer.innerHTML = '';
+
+            data.items.forEach(item => {
+                const itemElement = document.createElement('a');
+                itemElement.className = 'tooltip-item';
+                itemElement.href = item.link;
+                itemElement.target = '_blank';
+
+                itemElement.innerHTML = `
+                    <div class="tooltip-img">📝</div>
+                    <div class="tooltip-text">
+                        <div class="tooltip-title">${item.title}</div>
+                        <div class="tooltip-desc">${item.desc}</div>
+                    </div>
+                `;
+
+                itemsContainer.appendChild(itemElement);
+            });
+
+            // 定位浮窗
+            const mouseX = params.event.event.clientX;
+            const mouseY = params.event.event.clientY;
+
+            tooltip.style.left = (mouseX + 20) + 'px';
+            tooltip.style.top = (mouseY + 20) + 'px';
+
+            // 显示浮窗
+            tooltip.style.opacity = '1';
+            tooltip.style.visibility = 'visible';
+        });
+
+        // 鼠标移出事件处理
+        myChart1.on('mouseout', function () {
+            // 延迟隐藏以允许用户移动到浮窗上
+            setTimeout(() => {
+                if (!tooltip.matches(':hover')) {
+                    tooltip.style.opacity = '0';
+                    tooltip.style.visibility = 'hidden';
+                }
+            }, 100);
+        });
+
+        // 确保当鼠标移到浮窗上时不会立即隐藏
+        tooltip.addEventListener('mouseenter', function () {
+            clearTimeout();
+        });
+
+        tooltip.addEventListener('mouseleave', function () {
+            tooltip.style.opacity = '0';
+            tooltip.style.visibility = 'hidden';
+        });
+    </script>
 </body>
 
 </html>
