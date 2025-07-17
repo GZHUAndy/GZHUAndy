@@ -424,6 +424,7 @@ body {
         }
 
 .ellipse-container {
+    margin-top:30px;
     display: flex;
     gap: 20px;
     padding: 20px;
