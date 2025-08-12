@@ -19,7 +19,7 @@
     </style>
 </head>
 <body>
-    <div id="splash" style="height: 100vh; transition: all 1s">
+    <div style="height: 100vh; transition: all 1s" >
         <img src="首页图.png"
              alt="首页图片"
              class="w-100 h-100 object-fit-cover">
@@ -1535,6 +1535,14 @@
     <script src="js/echarts.min.js"></script>
     <script src="scripts.js"></script>
     <script>
+        document.body.style.overflow = 'hidden';
+        setTimeout(() => {
+            document.body.style.overflow = '';
+            window.scrollTo({
+                top: 779,
+                behavior: 'smooth'
+            });
+        }, 3000);
         // 浮窗功能
         const chartContainer = document.querySelector('.chart-container');
         const tooltip = document.getElementById('chartTooltip');
@@ -1592,60 +1600,6 @@
                 link: "#"
             }
         };
-
-        // 鼠标移动事件处理
-        myChart1.on('mouseover', function (params) {
-            const name = params.name;
-            const data = tooltipData[name] || tooltipData["正常交流贴"];
-
-            // 更新浮窗内容
-            document.getElementById('tooltipTitle').textContent = data.title;
-            document.getElementById('tooltipContent').textContent = data.content;
-            document.getElementById('tooltipLink').href = data.link;
-
-            // 生成项目列表
-            const itemsContainer = document.querySelector('.tooltip-items');
-            itemsContainer.innerHTML = '';
-
-            data.items.forEach(item => {
-                const itemElement = document.createElement('a');
-                itemElement.className = 'tooltip-item';
-                itemElement.href = item.link;
-                itemElement.target = '_blank';
-
-                itemElement.innerHTML = `
-                    <div class="tooltip-img">📝</div>
-                    <div class="tooltip-text">
-                        <div class="tooltip-title">${item.title}</div>
-                        <div class="tooltip-desc">${item.desc}</div>
-                    </div>
-                `;
-
-                itemsContainer.appendChild(itemElement);
-            });
-
-            // 定位浮窗
-            const mouseX = params.event.event.clientX;
-            const mouseY = params.event.event.clientY;
-
-            tooltip.style.left = (mouseX + 20) + 'px';
-            tooltip.style.top = (mouseY + 20) + 'px';
-
-            // 显示浮窗
-            tooltip.style.opacity = '1';
-            tooltip.style.visibility = 'visible';
-        });
-
-        // 鼠标移出事件处理
-        myChart1.on('mouseout', function () {
-            // 延迟隐藏以允许用户移动到浮窗上
-            setTimeout(() => {
-                if (!tooltip.matches(':hover')) {
-                    tooltip.style.opacity = '0';
-                    tooltip.style.visibility = 'hidden';
-                }
-            }, 100);
-        });
 
         // 确保当鼠标移到浮窗上时不会立即隐藏
         tooltip.addEventListener('mouseenter', function () {

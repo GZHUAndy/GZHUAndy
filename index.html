@@ -5,27 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>付费实习</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
           rel="stylesheet" />
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: "#000000",
-                        secondary: "#EC4899",
-                        dark: "#1E293B",
-                        light: "#F8FAFC",
-                        grayIndicator: "#333", // 黑灰色
-                    },
-                    fontFamily: {
-                        inter: ["Inter", "sans-serif"],
-                    },
-                },
-            },
-        };
-    </script>
     <style type="text/tailwindcss">
         @layer utilities {
             .content-auto {
@@ -250,51 +231,251 @@
                 opacity: 0.5;
             }
         }
+
+        .dialogue {
+            max-width: 35%;
+            padding: 22px 26px;
+            margin: 35px;
+            border-radius: 18px;
+            position: relative;
+            opacity: 0;
+            animation: fadeInUp 0.4s cubic-bezier(0.2, 0.8, 0.3, 1) forwards;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            line-height: 1.8;
+            font-size: 1.05rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+            .dialogue:nth-child(odd) {
+                background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+                border: 1px solid rgba(0, 0, 0, 0.05);
+                color: #333;
+            }
+
+            .dialogue:nth-child(even) {
+                background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+                border: 1px solid rgba(0, 0, 0, 0.05);
+                color: #333;
+            }
+
+            .dialogue:nth-child(1) {
+                top: 3%;
+                left: 40%;
+                animation-delay: 1s;
+            }
+
+            .dialogue:nth-child(2) {
+                top: 5%;
+                left: 65%;
+                animation-delay: 2s;
+            }
+
+            .dialogue:nth-child(3) {
+                top: 8%;
+                left: 40%;
+                animation-delay: 3s;
+                max-width: 45%;
+                padding: 32px 40px;
+                margin: 45px;
+                line-height: 2.2;
+            }
+
+            .dialogue:nth-child(4) {
+                top: 10%;
+                left: 70%;
+                animation-delay: 4s;
+            }
+
+            .dialogue:nth-child(5) {
+                top: -12%;
+                left: 5%;
+                animation-delay: 5s;
+            }
+
+            .dialogue:nth-child(6) {
+                top: -8%;
+                left: 26%;
+                animation-delay: 6s;
+            }
+
+            .dialogue:nth-child(7) {
+                top: -85%;
+                left: 6%;
+                animation-delay: 7s;
+            }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(15px) scale(0.95);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .img-con {
+            max-width: 20%;
+        }
+
+        .fade-image {
+            opacity: 0;
+            transition: opacity 1.5s ease;
+            display: block;
+        }
+
+            .fade-image.active {
+                opacity: 1;
+            }
+
+        #video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 9999;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+            background: #000;
+        }
+
+        #fullscreen-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* 基础样式 */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Microsoft YaHei', sans-serif;
+            background-color: #222;
+            color: #fff;
+        }
+
+        /* 遮罩层样式 */
+        .audio-mask {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(40, 40, 40, 0.95);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            color: #fff;
+        }
+
+        .headphone-icon {
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            background-color: #FFD700;
+            border-radius: 50%;
+            position: relative;
+            margin: 0 0.2em;
+            vertical-align: middle;
+        }
+
+            .headphone-icon::before,
+            .headphone-icon::after {
+                content: "";
+                position: absolute;
+                width: 0.4em;
+                height: 0.4em;
+                background-color: #222;
+                border-radius: 50%;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .headphone-icon::before {
+                left: 0.1em;
+            }
+
+            .headphone-icon::after {
+                right: 0.1em;
+            }
+
+        .tip {
+            color: #FFD700;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 80%;
+            line-height: 1.6;
+        }
+
+        .play-button {
+            background-color: #FFD700;
+            color: #222;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+            .play-button:hover {
+                background-color: #fff;
+                transform: scale(1.05);
+            }
     </style>
 </head>
 
 <body class="font-inter overflow-x-hidden scrollbar-hide transparent-bg">
+
+    <!-- 音频提示遮罩层 -->
+    <div class="audio-mask" id="audio-mask">
+        <div class="title">温馨提示</div>
+        <div class="tip">
+            本作品嵌有少量音频<br>
+            如在公共场合<br>
+            请关闭电脑声音或戴上耳机
+        </div>
+        <button class="play-button" id="play-button">开始体验</button>
+    </div>
+
+    <audio id="sound1" src="mp3/申请我们.wav" preload="auto"></audio>
+    <audio id="sound2" src="mp3/没有经验.wav" preload="auto"></audio>
+    <audio id="sound3" src="mp3/实习证明.wav" preload="auto"></audio>
     <!-- 透明背景 -->
-    <!-- 第一页：全屏视频 -->
-    <section id="page1" class="h-screen w-full relative overflow-hidden">
-        <video autoplay
-               muted
-               loop
-               playsinline
-               class="absolute min-w-full min-h-full object-cover opacity-70">
-            <source src="弹幕.mp4" type="video/mp4" />
-        </video><!-- 内容区域 -->
-        <div class="absolute inset-0 flex flex-col items-center justify-center z-10 px-4">
-            <div class="text-center max-w-3xl">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6 animate-fade-in"  style="color: #000000a0">
-                    付费实习产业链调查&emsp;&emsp;&emsp;&emsp;
-                </h1>
-                <p class="text-4xl md:text-5xl font-bold mb-6 animate-fade-in" style="animation-delay: 0.3s; color: #000000a0 ">
-                    &emsp;&emsp;&emsp;&emsp;谁在售卖"镀金"机会？
-                </p>
-
-                <!-- 交互提示 -->
-                <div id="playIndicator" class="mt-12 animate-fade-in" style="animation-delay: 0.6s;">
-                    <div class="flex flex-col items-center">
-                        <button class="bg-gradient-to-r from-amber-500 to-yellow-600 text-white px-8 py-3
-rounded-full font-semibold shadow-lg hover:shadow-xl
-transition-all duration-500 hover:from-amber-600 hover:to-yellow-700
-transform hover:scale-105 active:scale-95 animate-pulse">
-                            开始探索
-                        </button>
-                        <div class="flex items-center text-sm opacity-80" style="margin:10px">
-                            <i class="fas fa-mouse-pointer mr-2"></i>
-                            <span>点击按钮</span>
-                        </div>
-                    </div>
-                </div>
+    <section id="page2" class="h-screen w-full relative overflow-hidden" style="display:none">
+        <div style="display: flex; height: 100%; min-width: 100%;">
+            <div class="dialogue-container" style="height: 100%; min-width: 90%;">
+                <p class="dialogue mb-5">“申请我们学校需要有出色的实习经验”</p>
+                <p class="dialogue mb-5">“我们发现您的过往实习经历与当前岗位的匹配度存在一定差距”</p>
+                <p class="dialogue mb-5">“我们更倾向于选择在相关行业具有成熟经验背景的候选人”</p>
+                <p class="dialogue mb-5">“不好意思，我们不招没有实习经验的实习生”</p>
+                <p class="dialogue mb-5">“根据最新培养方案，无互联网大厂实习经历的学生将不能选修高级实践课程”</p>
+                <p class="dialogue mb-5">“很遗憾，您学生时期的三段实习都集中在初创公司，这与我们的筛选标准不太吻合”</p>
+                <p class="dialogue mb-5">“没有实习证明，就无法获得相应的学分，就没有办法毕业”</p>
             </div>
-
+            <div id="video-container" style="display:none">
+                <video id="fullscreen-video" preload="auto">
+                    <source src="indexmp4.mp4" type="video/mp4">
+                </video>
+            </div>
         </div>
     </section>
 
     <!-- 第二页：女孩图片和交互图片 -->
-    <section id="page2" class="h-screen w-full relative overflow-hidden hidden">
+    <section id="page3" class="h-screen w-full relative overflow-hidden hidden" style="display:none">
         <div class="absolute bottom-0 left-20 z-10">
             <img id="girlImage"
                  src="插画.png"
@@ -372,14 +553,13 @@ transform hover:scale-105 active:scale-95 animate-pulse">
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // 获取所有页面元素
             const pages = {
-                page1: document.getElementById("page1"),
                 page2: document.getElementById("page2"),
+                page3: document.getElementById("page3"),
             };
-
             // 获取交互元素
-            const playIndicator = document.getElementById("playIndicator");
+            const audioMask = document.getElementById('audio-mask');
+            const playButton = document.getElementById('play-button');
             const girlImage = document.getElementById("girlImage");
             const imageContainer = document.getElementById("imageContainer");
             const imageA = document.getElementById("imageA");
@@ -387,14 +567,11 @@ transform hover:scale-105 active:scale-95 animate-pulse">
             const scrollDownIndicator = document.getElementById("scrollDownIndicator");
             const clickForReferral = document.getElementById("clickForReferral");
             const imageI = document.getElementById("imageI");
+            const videoContainer = document.getElementById('video-container');
+            const video = document.getElementById('fullscreen-video');
 
             // 图片ID数组
             const imageIds = ['B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'];
-
-            // 页面1到页面2的过渡
-            playIndicator.addEventListener("click", function () {
-                transitionToPage2();
-            });
 
             // 图片A点击事件 - 切换到图片B
             imageA.addEventListener("click", function () {
@@ -410,44 +587,27 @@ transform hover:scale-105 active:scale-95 animate-pulse">
 
                 // 移除旧的窗口滚动监听
                 window.onscroll = null;
-
                 // 为图片绑定滚轮事件
                 bindWheelEvents();
+
 
                 setTimeout(() => scrollDownIndicator.classList.remove("hidden"), 500);
             });
 
-            // 图片I点击事件 - 跳转到百度
+            // 图片I点击事件
             imageI.addEventListener("click", function () {
                 window.location.href = "main.html";
             });
 
-            // 滚动事件处理
-            let currentImageIndex = 0;
-            let isScrolling = false;
-            window.addEventListener("scroll", throttle(function () {
-                if (
-                    !isScrolling &&
-                    currentImageIndex < imageIds.length &&
-                    window.scrollY > 50 &&
-                    !pages.page2.classList.contains("hidden")
-                ) {
-                    isScrolling = true;
-                    showNextImage();
-                    setTimeout(() => {
-                        isScrolling = false;
-                    }, 500);
-                }
-            }, 200));
-
             // 过渡到第二页
-            function transitionToPage2() {
-                pages.page1.classList.add("hidden");
-                pages.page2.classList.remove("hidden");
+            function transitionTopage3() {
+                pages.page2.classList.add("hidden");
+                pages.page3.classList.remove("hidden");
                 // 延迟显示点击指示
                 setTimeout(() => {
                     clickIndicator.classList.remove("hidden");
                 }, 500);
+
 
                 // 延迟显示图片A和点击指示
                 setTimeout(() => {
@@ -456,24 +616,48 @@ transform hover:scale-105 active:scale-95 animate-pulse">
 
                 }, 1000);
             }
+            // 点击播放按钮
+            playButton.addEventListener('click', function () {
+                // 隐藏遮罩层
+                audioMask.style.display = 'none';
+                // 显示视频容器
+                setTimeout(() => {
+                    videoContainer.style.opacity = 1;
+                    videoContainer.style.display = "block";
 
-            // 绑定滚轮事件
-            function bindWheelEvents() {
-                imageIds.forEach((id) => {
-                    const image = document.getElementById(`image${id}`);
-                    if (image) {
-                        image.addEventListener("wheel", handleWheel);
-                    }
-                });
-            }
+                    video.play().catch(e => { console.error('播放失败:', e); });
 
-            // 处理滚轮事件
-            function handleWheel(e) {
-                if (e.deltaY > 5) {
-                    showNextImage();
-                }
-            }
+                }, 11000);
 
+                // 视频结束事件保持不变
+                video.onended = function () {
+                    transitionTopage3();
+                    videoContainer.style.opacity = 0;
+                    setTimeout(() => { // 跳转到下一页
+                        videoContainer.remove();
+                    }, 1000);
+                };
+
+                const sound1 = document.getElementById("sound1");
+                const sound2 = document.getElementById("sound2");
+                const sound3 = document.getElementById("sound3");
+
+                page2.style.display = "";
+                page3.style.display = "";
+                videoContainer.style.display = "";
+                sound1.volume = 0.5;
+                sound2.volume = 0.5;
+                sound3.volume = 0.5;
+                setTimeout(() => {
+                    sound1.play().catch(e => console.error("音效播放失败:", e));
+                }, 1000);
+                setTimeout(() => {
+                    sound2.play().catch(e => console.error("音效播放失败:", e));
+                }, 4000);
+                setTimeout(() => {
+                    sound3.play().catch(e => console.error("音效播放失败:", e));
+                }, 7000);
+            });
             // 显示下一张图片
             function showNextImage() {
                 const currentImage = document.getElementById(`image${String.fromCharCode(66 + currentImageIndex)}`);
@@ -507,8 +691,45 @@ transform hover:scale-105 active:scale-95 animate-pulse">
                     }
                 };
             }
+
+            // 滚动事件处理
+            let currentImageIndex = 0;
+            let isScrolling = false;
+            window.addEventListener("scroll", throttle(function () {
+                if (
+                    !isScrolling &&
+                    currentImageIndex < imageIds.length &&
+                    window.scrollY > 50 &&
+                    !pages.page2.classList.contains("hidden")
+                ) {
+                    isScrolling = true;
+                    showNextImage();
+                    setTimeout(() => {
+                        isScrolling = false;
+                    }, 500);
+                }
+            }, 200));
+
+            // 绑定滚轮事件
+            function bindWheelEvents() {
+                imageIds.forEach((id) => {
+                    const image = document.getElementById(`image${id}`);
+                    if (image) {
+                        image.addEventListener("wheel", handleWheel);
+                    }
+                });
+            }
+
+            // 处理滚轮事件
+            function handleWheel(e) {
+                if (e.deltaY > 5) {
+                    showNextImage();
+                }
+            }
         });
     </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
 </body>
 
 </html>
