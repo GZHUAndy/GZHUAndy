@@ -17,9 +17,6 @@
             margin: 0 auto;
         }
     </style>
-    <script>
-        document.body.style.overflow = 'hidden';
-    </script>
 </head>
 <body>
     <div style="height: 100vh; transition: all 1s" >
@@ -28,7 +25,6 @@
              class="w-100 h-100 object-fit-cover">
     </div>
 
-    <!-- 导航栏 -->
     <header class="sticky-top">
         <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
             <div class="container">
@@ -564,6 +560,8 @@
 
                         <script src="data.js"></script>
                         <script>
+
+                            document.body.style.overflow = 'hidden';
                             const circles = document.querySelectorAll(".circle");
                             const modal = document.getElementById("modal");
                             const tableBody = document.getElementById("table-body");
@@ -1394,7 +1392,7 @@
                         <p class="section-description mb-48">更进一步，有的中介机构的职业规划老师为我们提供了一期《个人简历打磨》精品课程，教授中英文简历撰写方法，帮助我们从亲身经历中挖掘闪光点。<span class="highlight">而有的机构直接“赠送”求职者一份为期一周的项目经历，在简历中凭空捏造出一段“新”的实习经历</span>。</p>
 
                         <figure class="fish mt-48">
-                            <img src="images/面试流程.jpg" alt="面试流程" width="600" class="photo img-fluid mb-2">
+                            <img src="images/面试流程.jpg" alt="面试流程" width="600" class="photo img-fluid mb-2" loading="lazy" >
                             <figcaption class="text-muted text-center">（中介所提供的简历润色和面试课程内容）</figcaption>
                         </figure>
                     </div>
@@ -1404,7 +1402,7 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-5 text-center">
                             <div class="mx-auto" style="max-width: 85%">
-                                <img src="images/简历1.webp" alt="简历1" class="photo img-fluid mb-2">
+                                <img src="images/简历1.webp" alt="简历1" class="photo img-fluid mb-2" loading="lazy" >
                                 <figcaption class="text-muted">（原简历）</figcaption>
                             </div>
                         </div>
@@ -1412,7 +1410,7 @@
                             <!-- 调整列宽并添加居中 -->
                             <div class="mx-auto" style="max-width: 85%">
                                 <!-- 新增内容容器 -->
-                                <img src="images/简历2.webp" alt="简历2" class="photo img-fluid mb-2">
+                                <img src="images/简历2.webp" alt="简历2" class="photo img-fluid mb-2" loading="lazy" >
                                 <figcaption class="text-muted">
                                     （中介"润色"后的简历，其中红色框标红部分为原简历中不存在的实习经历）
                                 </figcaption>
@@ -1428,7 +1426,7 @@
                 </div>
 
                 <figure class="fish">
-                    <img src="images/录音2.jpg" alt="录音2" width="600" class="photo img-fluid mb-2">
+                    <img src="images/录音2.jpg" alt="录音2" width="600" class="photo img-fluid mb-2" loading="lazy" >
                     <figcaption class="text-muted text-center">
                         （中介安慰调查团队的部分聊天记录截图)）
                     </figcaption>
@@ -1454,7 +1452,7 @@
                 </div>
 
                 <figure class="fish">
-                    <img src="images/记录2.jpg" alt="记录2" width="600" class="photo img-fluid mb-2">
+                    <img src="images/记录2.jpg" alt="记录2" width="600" class="photo img-fluid mb-2" loading="lazy" >
                 </figure>
 
                 <div class="row justify-content-center mb-3">
@@ -1464,8 +1462,8 @@
                 </div>
 
                 <figure class="fish">
-                    <img src="images/流程.jpg" alt="流程" width="600" class="photo img-fluid mb-2">
-                    <img src="images/流程.webp" alt="流程" width="600" class="photo img-fluid mb-2">
+                    <img src="images/流程.jpg" alt="流程" width="600" class="photo img-fluid mb-2" loading="lazy" >
+                    <img src="images/流程.webp" alt="流程" width="600" class="photo img-fluid mb-2" loading="lazy" >
                     <figcaption class="text-muted text-center">（中介公司向调查团队提供的面试题库答案）</figcaption>
                 </figure>
 
@@ -1486,7 +1484,7 @@
                     <p class="section-description">我们访谈了16位像晓明和淳淳这样参与过付费实习项目的同学，他们中的大多数都表示自己在付费实习期间主要从事复印、跑腿等机械工作，"虽然付费实习含金量存疑，但别无选择"。</p>
                     <div class="row align-items-center mb-5 g-5 mt-48">
                         <div class="col-md-4 d-flex justify-content-center">
-                            <img src="插画男.png" alt="Left Image" class="img-fluid" style="max-width: 80%;">
+                            <img src="插画男.png" alt="Left Image" class="img-fluid" style="max-width: 80%;" loading="lazy" >
                         </div>
                         <div class="col-md-8">
 
@@ -1495,7 +1493,7 @@
                     </div>
                     <div class="row align-items-center mb-5 g-5 flex-row-reverse">
                         <div class="col-md-4 d-flex justify-content-center">
-                            <img src="插画女.png" alt="Right Image" class="img-fluid" style="max-width: 80%;">
+                            <img src="插画女.png" alt="Right Image" class="img-fluid" style="max-width: 80%;"  loading="lazy" >
                         </div>
                         <div class="col-md-8">
                             <p class="section-description fs-6 lh-lg">计划申请伦敦政治经济学院的淳淳（化名）发现，尽管她已有三段传统媒体的实习经历，但却仍然很难触碰到院校的要求。她苦笑着向我们展示一份来自留学机构的评估报告：<span class="highlight">2025年QS前50院校的传媒类专业录取者中，83.6%拥有国际4A公司实习经历，而此类岗位录取率不足3%</span>。面对如此狭窄的通道，淳淳不得已走上“付费实习”这条道路。</p>
