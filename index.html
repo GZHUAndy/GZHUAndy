@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, viewport-fit=cover" />
     <title>付费实习</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
           rel="stylesheet" />
@@ -472,8 +472,8 @@
                 <p class="dialogue mb-5">“很遗憾，您学生时期的三段实习都集中在初创公司，这与我们的筛选标准不太吻合”</p>
                 <p class="dialogue mb-5">“没有实习证明，就无法获得相应的学分，就没有办法毕业”</p>
             </div>
-            <div id="video-container" style="display:none">
-                <video id="fullscreen-video" preload="auto">
+            <div id="video-container" style="display: none; width: 100%; margin: auto; background: #000; ">
+                <video id="fullscreen-video" preload="auto" style="width: 100%; height: auto; margin:auto 0px;">
                     <source src="indexmp4.mp4" type="video/mp4">
                 </video>
             </div>
@@ -482,11 +482,11 @@
 
     <!-- 第二页：女孩图片和交互图片 -->
     <section id="page3" class="h-screen w-full relative overflow-hidden hidden" style="display:none">
-        <div class="absolute bottom-0 left-20 z-10">
+        <div class="absolute bottom-0  z-10">
             <img id="girlImage"
                  src="插画.png"
                  alt="女孩背影"
-                 class="w-32 h-auto animate-fade-in translate-x-1/2 bottom-0" />
+                 class="w-32 h-auto animate-fade-in translate-x-1/2 bottom-0" style="margin-left:10%"/>
         </div>
         <div class="container mx-auto px-4 py-16 flex items-center justify-center h-full" style="max-height:92% !important">
             <div id="imageContainer"
@@ -596,10 +596,12 @@
                 // 为图片绑定滚轮事件
                 bindWheelEvents();
 
+
                 setTimeout(() => scrollDownIndicator.classList.remove("hidden"), 500);
             });
 
             // 图片I点击事件
+
             imageB.addEventListener("click", function () {
                 showNextImage();
             });
@@ -625,8 +627,6 @@
                 window.location.href = "main.html";
             });
 
-
-
             // 过渡到第二页
             function transitionTopage3() {
                 pages.page2.classList.add("hidden");
@@ -651,7 +651,7 @@
                 // 显示视频容器
                 setTimeout(() => {
                     videoContainer.style.opacity = 1;
-                    videoContainer.style.display = "block";
+                    videoContainer.style.display = "flex";
 
                     video.play().catch(e => { console.error('播放失败:', e); });
 
@@ -661,9 +661,6 @@
                 video.onended = function () {
                     transitionTopage3();
                     videoContainer.style.opacity = 0;
-                    setTimeout(() => { // 跳转到下一页
-                        videoContainer.remove();
-                    }, 1000);
                 };
 
                 const sound1 = document.getElementById("sound1");
@@ -684,7 +681,7 @@
                 }, 4000);
                 setTimeout(() => {
                     sound3.play().catch(e => console.error("音效播放失败:", e));
-                }, 7000);
+                }, 6800);
             });
             // 显示下一张图片
             function showNextImage() {
@@ -746,6 +743,16 @@
                         image.addEventListener("wheel", handleWheel);
                     }
                 });
+            }
+
+            // 处理滚轮事件
+            function handleWheel(e) {
+                if (e.deltaY > 5) {
+                    showNextImage();
+                }
+            }
+            if (('ontouchstart' in window) || (navigator.maxTouchPoints > 0)) {
+                document.getElementById('ifmobile').textContent = "点击聊天页继续";
             }
         });
     </script>
