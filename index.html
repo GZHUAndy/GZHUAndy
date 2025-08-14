@@ -543,7 +543,7 @@
              id="scrollDownIndicator">
             <div class="animate-bounce flex flex-col items-center">
                 <div class="click-indicator mb-2"></div>
-                <span class="text-center indicator-text">向下滚动鼠标</span>
+                <span class="text-center indicator-text" id="ifmobile">向下滚动鼠标</span>
             </div>
         </div>
 
@@ -596,14 +596,36 @@
                 // 为图片绑定滚轮事件
                 bindWheelEvents();
 
-
                 setTimeout(() => scrollDownIndicator.classList.remove("hidden"), 500);
             });
 
             // 图片I点击事件
+            imageB.addEventListener("click", function () {
+                showNextImage();
+            });
+            imageC.addEventListener("click", function () {
+                showNextImage();
+            });
+            imageD.addEventListener("click", function () {
+                showNextImage();
+            });
+            imageE.addEventListener("click", function () {
+                showNextImage();
+            });
+            imageF.addEventListener("click", function () {
+                showNextImage();
+            });
+            imageG.addEventListener("click", function () {
+                showNextImage();
+            });
+            imageH.addEventListener("click", function () {
+                showNextImage();
+            });
             imageI.addEventListener("click", function () {
                 window.location.href = "main.html";
             });
+
+
 
             // 过渡到第二页
             function transitionTopage3() {
@@ -724,13 +746,6 @@
                         image.addEventListener("wheel", handleWheel);
                     }
                 });
-            }
-
-            // 处理滚轮事件
-            function handleWheel(e) {
-                if (e.deltaY > 5) {
-                    showNextImage();
-                }
             }
         });
     </script>
