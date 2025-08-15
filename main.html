@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="zh" data-bs-theme="auto">
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, viewport-fit=cover"/>
-    <meta name="description" content=""/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
     <title>付费实习</title>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="images/bs-icons/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="css/animate.min.css"/>
-    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="data.css">
     <style>
         header div.container, main, footer div.container {
@@ -68,7 +68,7 @@
     </header>
 
     <!-- 主要内容区域 -->
-    <main style="max-width:75%">
+    <main>
         <!-- 英雄区域 -->
         <section class="hero-section mt-5">
             <div class="container">
@@ -565,12 +565,11 @@
                         <script src="data.js"></script>
                         <script>
 
-                            document.body.style.overflow = 'hidden';
                             const circles = document.querySelectorAll(".circle");
                             const modal = document.getElementById("modal");
                             const tableBody = document.getElementById("table-body");
                             const container = document.querySelector(".circle-container");
-                            const minDistance = 120; // 圆圈之间的最小距离
+                            const minDistance = 40; // 圆圈之间的最小距离
 
                             // 泡泡图相关代码
                             function isOverlapping(circle1, circle2) {
@@ -653,17 +652,17 @@
                                         row.innerHTML = "";
                                         if (index === 0) {
                                             row.innerHTML = `
-                                                                                                                                                <td class="p-3 text-nowrap" rowspan="${tableData.items.length}">${tableData.col1}</td>
-                                                                                                                                                <td class="p-3 text-nowrap" rowspan="${tableData.items.length}">${tableData.col2}</td>
-                                                                                                                                                `;
+                            <td class="p-3 text-nowrap" rowspan="${tableData.items.length}">${tableData.col1}</td>
+                            <td class="p-3 text-nowrap" rowspan="${tableData.items.length}">${tableData.col2}</td>
+                            `;
                                         }
                                         row.innerHTML += `
-                                                                                                                                                <td class="p-3">${item.col3}</td>
-                                                                                                                                                <td class="p-3">${item.col4}</td>
-                                                                                                                                                <td class="p-3">${item.col5}</td>
-                                                                                                                                                <td class="p-3">${item.col6}</td>
-                                                                                                                                                <td class="p-3">${item.col7}</td>
-                                                                                                                                            `;
+                            <td class="p-3">${item.col3}</td>
+                            <td class="p-3">${item.col4}</td>
+                            <td class="p-3">${item.col5}</td>
+                            <td class="p-3">${item.col6}</td>
+                            <td class="p-3">${item.col7}</td>
+`;
                                         tableBody.appendChild(row);
                                     });
 
@@ -672,7 +671,6 @@
                                     modal.show()
                                 });
                             });
-
                             // 初始化页面后立即执行的函数
                             document.addEventListener('DOMContentLoaded', function () {
                                 // 总结按钮点击事件
@@ -1532,13 +1530,6 @@
     <script src="js/echarts.min.js"></script>
     <script src="scripts.js"></script>
     <script>
-        setTimeout(() => {
-            document.body.style.overflow = '';
-            window.scrollTo({
-                top: 779,
-                behavior: 'smooth'
-            });
-        }, 3000);
         // 浮窗功能
         const chartContainer = document.querySelector('.chart-container');
         const tooltip = document.getElementById('chartTooltip');

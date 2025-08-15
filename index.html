@@ -324,19 +324,79 @@
             }
         }
 
-        .img-con {
-            max-width: 20%;
-        }
-
-        .fade-image {
-            opacity: 0;
-            transition: opacity 1.5s ease;
-            display: block;
-        }
-
-            .fade-image.active {
-                opacity: 1;
+        @media(max-width:600px){
+            .dialogue {
+                max-width: 40%;
+                padding: 8px 12px;
+                margin: 20px;
+                border-radius: 15px;
+                position: relative;
+                opacity: 0;
+                animation: fadeInUp 0.4s cubic-bezier(0.2, 0.8, 0.3, 1) forwards;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+                line-height: 1.5;
+                font-size: 1.05rem;
+                transition: transform 0.2s, box-shadow 0.2s;
             }
+
+                .dialogue:nth-child(odd) {
+                    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+                    border: 1px solid rgba(0, 0, 0, 0.05);
+                    color: #333;
+                }
+
+                .dialogue:nth-child(even) {
+                    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+                    border: 1px solid rgba(0, 0, 0, 0.05);
+                    color: #333;
+                }
+
+                .dialogue:nth-child(1) {
+                    top: 3%;
+                    left: 40%;
+                    animation-delay: 1s;
+                }
+
+                .dialogue:nth-child(2) {
+                    top: 5%;
+                    left: 55%;
+                    animation-delay: 2s;
+                }
+
+                .dialogue:nth-child(3) {
+                    top: 8%;
+                    left: 35%;
+                    animation-delay: 3s;
+                    max-width: 40%;
+                    padding: 8px 12px;
+                    margin: 20px;
+                    line-height: 1.5;
+                }
+
+                .dialogue:nth-child(4) {
+                    top: 10%;
+                    left: 55%;
+                    animation-delay: 4s;
+                }
+
+                .dialogue:nth-child(5) {
+                    top: -5%;
+                    left: 5%;
+                    animation-delay: 5s;
+                }
+
+                .dialogue:nth-child(6) {
+                    top: -3%;
+                    left: 26%;
+                    animation-delay: 6s;
+                }
+
+                .dialogue:nth-child(7) {
+                    top: -80%;
+                    left: 4%;
+                    animation-delay: 7s;
+                }
+        }
 
         #video-container {
             position: fixed;
@@ -497,7 +557,7 @@
                      class="w-80 h-auto rounded-lg shadow-2xl cursor-pointer" />
                 <!-- 新增指示器容器 -->
                 <div id="clickIndicator"
-                     class="absolute -bottom-10 left-1/2 -translate-x-1/2 text-center hidden">
+                     class="absolute -bottom-10 left-1/2 -translate-x-1/2 text-center hidden" style="z-index:11;">
                     <div class="click-indicator mb-2 mx-auto animate-float"></div>
                     <p class="indicator-text">点击任意帖子继续</p>
                 </div>
