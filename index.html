@@ -241,9 +241,9 @@
         }
 
         .dialogue {
-            max-width: 35%;
-            padding: 22px 26px;
-            margin: 35px;
+            max-width: 45%;
+            padding: 16px 20px;
+            margin: 16px;
             border-radius: 18px;
             position: relative;
             opacity: 0;
@@ -258,60 +258,71 @@
                 background: linear-gradient(135deg, #f8f9fa, #e9ecef);
                 border: 1px solid rgba(0, 0, 0, 0.05);
                 color: #333;
+                margin-right: auto;
+                margin-left: 10%;
             }
 
             .dialogue:nth-child(even) {
                 background: linear-gradient(135deg, #f8f9fa, #e9ecef);
                 border: 1px solid rgba(0, 0, 0, 0.05);
                 color: #333;
+                margin-left: auto;
+                margin-right: 6%;
             }
 
             .dialogue:nth-child(1) {
-                top: 3%;
-                left: 40%;
+                margin-top: 2vh;
                 animation-delay: 1s;
+                margin-left: 14%;
             }
 
             .dialogue:nth-child(2) {
-                top: 5%;
-                left: 65%;
+                margin-top: 1vh;
                 animation-delay: 2s;
+                margin-right: 10%;
             }
 
             .dialogue:nth-child(3) {
-                top: 8%;
-                left: 40%;
+                margin-top: 1vh;
                 animation-delay: 3s;
-                max-width: 45%;
-                padding: 32px 40px;
-                margin: 45px;
-                line-height: 2.2;
+                margin-left: 10%;
+                margin-right: 6%;
             }
 
             .dialogue:nth-child(4) {
-                top: 10%;
-                left: 70%;
+                margin-top: 2vh;
                 animation-delay: 4s;
+                margin-right: 18%;
             }
 
             .dialogue:nth-child(5) {
-                top: -12%;
-                left: 5%;
+                margin-top: 1vh;
                 animation-delay: 5s;
+                margin-left: 14%;
             }
 
             .dialogue:nth-child(6) {
-                top: -8%;
-                left: 26%;
+                margin-top: 1vh;
                 animation-delay: 6s;
+                margin-right: 20%;
             }
 
             .dialogue:nth-child(7) {
-                top: -85%;
-                left: 6%;
+                margin-top: 1vh;
                 animation-delay: 7s;
+                margin-left: 17%;
             }
 
+        /* 容器样式 */
+        .dialogue-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            height: 100%;
+            width: 100%;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
         @keyframes fadeInUp {
             0% {
                 opacity: 0;
@@ -326,16 +337,18 @@
 
         @media(max-width:600px){
             .dialogue {
-                max-width: 40%;
-                padding: 8px 12px;
-                margin: 20px;
-                border-radius: 15px;
+                max-width: 60%;
+                padding: 12px 16px;
+                margin: 0px;
+                margin-top: 12px;
+                margin-bottom: 12px;
+                border-radius: 12px;
                 position: relative;
                 opacity: 0;
                 animation: fadeInUp 0.4s cubic-bezier(0.2, 0.8, 0.3, 1) forwards;
-                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
                 line-height: 1.5;
-                font-size: 1.05rem;
+                font-size: 1.0rem;
                 transition: transform 0.2s, box-shadow 0.2s;
             }
 
@@ -352,49 +365,45 @@
                 }
 
                 .dialogue:nth-child(1) {
-                    top: 3%;
-                    left: 40%;
+                    margin-top: 2vh;
                     animation-delay: 1s;
+                    margin-left: 2%;
                 }
 
                 .dialogue:nth-child(2) {
-                    top: 5%;
-                    left: 55%;
+                    margin-top: 1vh;
                     animation-delay: 2s;
+                    margin-right: 10%;
                 }
 
                 .dialogue:nth-child(3) {
-                    top: 8%;
-                    left: 35%;
+                    margin-top: 1vh;
                     animation-delay: 3s;
-                    max-width: 40%;
-                    padding: 8px 12px;
-                    margin: 20px;
-                    line-height: 1.5;
+                    margin-left: 10%;
                 }
 
                 .dialogue:nth-child(4) {
-                    top: 10%;
-                    left: 55%;
+                    margin-top: 2vh;
                     animation-delay: 4s;
+                    margin-right: 1%;
                 }
 
                 .dialogue:nth-child(5) {
-                    top: -5%;
-                    left: 5%;
+                    margin-top: 1vh;
                     animation-delay: 5s;
+                    margin-left: 5%;
                 }
 
                 .dialogue:nth-child(6) {
-                    top: -3%;
-                    left: 26%;
+                    margin-top: 1vh;
                     animation-delay: 6s;
+                    margin-right: 20%;
                 }
 
                 .dialogue:nth-child(7) {
-                    top: -80%;
-                    left: 4%;
+                    margin-top: 1vh;
                     animation-delay: 7s;
+                    margin-left: 25%;
                 }
         }
 
@@ -612,7 +621,7 @@
              id="clickForReferral">
             <div class="flex flex-col items-center animate-pulse">
                 <i class="fa fa-hand-pointer-o text-3xl text-primary mb-2"></i>
-                <span class="text-center text-primary font-bold text-lg" style="color:#7c7c7c">点击中介内推</span>
+                <span class="text-center text-primary font-bold text-lg" style="color:#7c7c7c">点击左边中介头像直通内推</span>
             </div>
         </div>
     </section>
