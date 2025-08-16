@@ -569,7 +569,17 @@
                             const modal = document.getElementById("modal");
                             const tableBody = document.getElementById("table-body");
                             const container = document.querySelector(".circle-container");
-                            const minDistance = 40; // 圆圈之间的最小距离
+
+                            let minDistance = 50; // 圆圈之间的最小距离
+                            if (window.innerWidth > 1000) {
+                                minDistance = 120; 
+                            }
+                            if (window.innerWidth > 800) {
+                                minDistance = 90;
+                            }
+                            if (window.innerWidth > 600) {
+                                minDistance = 70;
+                            }
 
                             // 泡泡图相关代码
                             function isOverlapping(circle1, circle2) {
